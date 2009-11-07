@@ -10,6 +10,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: kdelibs4-devel
 
 %description
+Choqok is a Free/Open Source micro-blogging client for K Desktop 
 
 %files -f %name.lang
 %defattr(-,root,root)
