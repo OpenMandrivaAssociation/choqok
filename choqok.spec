@@ -1,6 +1,6 @@
 Name:    choqok
 Version: 0.9.4
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: KDE Micro-Blogging Client
 Source0: http://d10xg45o6p6dbl.cloudfront.net/projects/c/choqok/%name-%version.tar.bz2
 License: GPLv2+
