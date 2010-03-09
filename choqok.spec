@@ -1,6 +1,6 @@
 Name:    choqok
-Version: 0.9.4
-Release: %mkrel 2
+Version: 0.9.55
+Release: %mkrel 1
 Summary: KDE Micro-Blogging Client
 Source0: http://d10xg45o6p6dbl.cloudfront.net/projects/c/choqok/%name-%version.tar.bz2
 License: GPLv2+
@@ -8,6 +8,7 @@ Group: Office
 Url:          http://choqok.gnufolks.org/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: kdelibs4-devel
+Requires:      kdebase4-runtime
 
 %description
 Choqok is a Free/Open Source micro-blogging client for K Desktop 
@@ -19,7 +20,11 @@ Choqok is a Free/Open Source micro-blogging client for K Desktop
 %_kde_libdir/kde4/kcm_choqok_*.so
 %_kde_datadir/applications/kde4/choqok.desktop
 %_kde_appsdir/choqok
-%_kde_appsdir/choqok_nowlistening/nowlisteningui.rc
+%_kde_appsdir/choqok_searchaction
+%_kde_appsdir/choqok_twitpic
+%_kde_appsdir/choqok_nowlistening
+%_kde_datadir/config.kcfg/twitpicsettings.kcfg
+%_kde_datadir/config.kcfg/yourlssettings.kcfg
 %_kde_datadir/config.kcfg/choqokappearancesettings.kcfg
 %_kde_datadir/config.kcfg/choqokbehaviorsettings.kcfg
 %_kde_datadir/config.kcfg/nowlisteningsettings.kcfg
