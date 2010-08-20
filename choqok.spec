@@ -1,13 +1,16 @@
 Name:    choqok
-Version: 0.9.55
+Version: 0.9.85
 Release: %mkrel 1
 Summary: KDE Micro-Blogging Client
 Source0: http://d10xg45o6p6dbl.cloudfront.net/projects/c/choqok/%name-%version.tar.bz2
+Patch0: choqok-0.9.85-dbus-service-dir.patch
 License: GPLv2+
 Group: Office
 Url:          http://choqok.gnufolks.org/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: kdelibs4-devel
+BuildRequires: libqjson-devel
+BuildRequires: qoauth-devel
 Requires:      kdebase4-runtime
 
 %description
@@ -15,22 +18,17 @@ Choqok is a Free/Open Source micro-blogging client for K Desktop
 
 %files -f %name.lang
 %defattr(-,root,root)
-%_kde_bindir/choqok                           
-%_kde_libdir/kde4/choqok_*.so              
-%_kde_libdir/kde4/kcm_choqok_*.so
+%_kde_bindir/choqok
+%_kde_libdir/kde4/*.so
 %_kde_datadir/applications/kde4/choqok.desktop
-%_kde_appsdir/choqok
-%_kde_appsdir/choqok_searchaction
-%_kde_appsdir/choqok_twitpic
-%_kde_appsdir/choqok_nowlistening
-%_kde_datadir/config.kcfg/twitpicsettings.kcfg
-%_kde_datadir/config.kcfg/yourlssettings.kcfg
-%_kde_datadir/config.kcfg/choqokappearancesettings.kcfg
-%_kde_datadir/config.kcfg/choqokbehaviorsettings.kcfg
-%_kde_datadir/config.kcfg/nowlisteningsettings.kcfg
+%_kde_appsdir/choqok*
+%_kde_appsdir/khtml/kpartplugins/*
+%_kde_datadir/config.kcfg/*.kcfg
 %_kde_iconsdir/*/*/*/*
-%_kde_datadir/kde4/services/choqok_*.desktop
-%_kde_datadir/kde4/servicetypes/choqok*.desktop
+%_kde_services/choqok_*.desktop
+%_kde_servicetypes/choqok*.desktop
+%_kde_services/ServiceMenus/*.desktop
+%_datadir/dbus-1/services/org.kde.choqok.service
 
 #-------------------------------------------------------------------
 
@@ -81,11 +79,13 @@ based on %name.
 %_kde_libdir/libchoqok.so
 %_kde_libdir/libtwitterapihelper.so
 %_kde_includedir/choqok
+%_kde_appsdir/cmake/modules/*
 
 #--------------------------------------------------------------------
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %cmake_kde4
@@ -94,7 +94,6 @@ based on %name.
 %install
 rm -rf %{buildroot}
 %{makeinstall_std} -C build
-
 
 %find_lang %name --with-html
 
