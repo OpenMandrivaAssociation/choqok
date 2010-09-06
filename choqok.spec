@@ -9,7 +9,7 @@ Group: Office
 Url:          http://choqok.gnufolks.org/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: kdelibs4-devel
-BuildRequires: libqjson-devel
+BuildRequires: qjson-devel
 BuildRequires: qoauth-devel
 Requires:      kdebase4-runtime
 
