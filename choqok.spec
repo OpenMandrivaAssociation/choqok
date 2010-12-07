@@ -1,8 +1,8 @@
 Name:    choqok
-Version: 0.9.92
+Version: 0.9.98
 Release: %mkrel 1
 Summary: KDE Micro-Blogging Client
-Source0: http://d10xg45o6p6dbl.cloudfront.net/projects/c/choqok/%name-%version.tar.bz2
+Source0: http://choqok.gnufolks.org/pkgs/%{name}_%{version}.tar.bz2
 Patch0: choqok-0.9.85-dbus-service-dir.patch
 License: GPLv2+
 Group: Office
@@ -11,6 +11,8 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: kdelibs4-devel
 BuildRequires: qjson-devel
 BuildRequires: qoauth-devel
+BuildRequires: attica-devel
+BuildRequires: libindicate-qt-devel
 Requires:      kdebase4-runtime
 
 %description
