@@ -1,8 +1,8 @@
 Name:    choqok
-Version: 0.9.98
+Version: 1.0
 Release: %mkrel 1
 Summary: KDE Micro-Blogging Client
-Source0: http://choqok.gnufolks.org/pkgs/%{name}_%{version}.tar.bz2
+Source0: http://choqok.gnufolks.org/pkgs/%{name}-%{version}.tar.bz2
 Patch0: choqok-0.9.85-dbus-service-dir.patch
 License: GPLv2+
 Group: Office
@@ -34,7 +34,7 @@ Choqok is a Free/Open Source micro-blogging client for K Desktop
 
 #-------------------------------------------------------------------
 
-%define choqok_major 0
+%define choqok_major 1
 %define libchoqok %mklibname choqok %{choqok_major}
 
 %package -n %libchoqok
@@ -50,7 +50,7 @@ Group: System/Libraries
 
 #-------------------------------------------------------------------
 
-%define twitterapihelper_major 0
+%define twitterapihelper_major 1
 %define libtwitterapihelper %mklibname twitterapihelper %twitterapihelper_major
 
 %package -n %libtwitterapihelper
