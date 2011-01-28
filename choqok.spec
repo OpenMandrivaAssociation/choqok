@@ -1,19 +1,19 @@
-Name:    choqok
-Version: 1.0
-Release: %mkrel 1
-Summary: KDE Micro-Blogging Client
-Source0: http://choqok.gnufolks.org/pkgs/%{name}-%{version}.tar.bz2
-Patch0: choqok-0.9.85-dbus-service-dir.patch
-License: GPLv2+
-Group: Office
-Url:          http://choqok.gnufolks.org/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: kdelibs4-devel
-BuildRequires: qjson-devel
-BuildRequires: qoauth-devel
-BuildRequires: attica-devel
-BuildRequires: libindicate-qt-devel
-Requires:      kdebase4-runtime
+Name:		choqok
+Version:	1.0
+Release:	%mkrel 1
+Summary:	KDE Micro-Blogging Client
+Source0:	http://choqok.gnufolks.org/pkgs/%{name}-%{version}.tar.bz2
+Patch0:		choqok-0.9.85-dbus-service-dir.patch
+License:	GPLv3
+Group:		Internet
+Url:		http://choqok.gnufolks.org/
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	kdelibs4-devel
+BuildRequires:	qjson-devel
+BuildRequires:	qoauth-devel
+BuildRequires:	attica-devel
+BuildRequires:	libindicate-qt-devel
+Requires:	kdebase4-runtime
 
 %description
 Choqok is a Free/Open Source micro-blogging client for K Desktop 
