@@ -5,7 +5,7 @@ Summary:	KDE Micro-Blogging Client
 Source0:	http://choqok.gnufolks.org/pkgs/%{name}-%{version}.tar.bz2
 Patch0:		choqok-0.9.85-dbus-service-dir.patch
 License:	GPLv3
-Group:		Internet
+Group:		Graphical desktop/KDE
 Url:		http://choqok.gnufolks.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	kdelibs4-devel
