@@ -1,8 +1,8 @@
 Name:		choqok
-Version:	1.0
-Release:	%mkrel 3
+Version:	1.1
+Release:	%mkrel 1
 Summary:	KDE Micro-Blogging Client
-Source0:	http://choqok.gnufolks.org/pkgs/%{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		choqok-0.9.85-dbus-service-dir.patch
 Patch1:		disable-video-preview.patch
 License:	GPLv3
