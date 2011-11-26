@@ -1,6 +1,6 @@
 Name:		choqok
 Version:	1.2
-Release:	2
+Release:	3
 Summary:	KDE Micro-Blogging Client
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		choqok-0.9.85-dbus-service-dir.patch
