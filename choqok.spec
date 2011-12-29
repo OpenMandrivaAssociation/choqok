@@ -1,13 +1,12 @@
 Name:		choqok
 Version:	1.2
-Release:	3
+Release:	4
 Summary:	KDE Micro-Blogging Client
-Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-Patch0:		choqok-0.9.85-dbus-service-dir.patch
 License:	GPLv3
 Group:		Graphical desktop/KDE
-Url:		http://choqok.gnufolks.org/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+URL:		http://choqok.gnufolks.org/
+Source0:	http://downloads.sourceforge.net/choqok/%{name}-%{version}.tar.bz2
+Patch0:		choqok-0.9.85-dbus-service-dir.patch
 BuildRequires:	kdelibs4-devel
 BuildRequires:	qjson-devel
 BuildRequires:	qoauth-devel
@@ -19,51 +18,47 @@ Requires:	kdebase4-runtime
 Choqok is a Free/Open Source micro-blogging client for K Desktop 
 
 %files -f %name.lang
-%defattr(-,root,root)
-%_kde_bindir/choqok
-%_kde_libdir/kde4/*.so
-%_kde_datadir/applications/kde4/choqok.desktop
-%_kde_appsdir/choqok*
-%_kde_appsdir/khtml/kpartplugins/*
-%_kde_datadir/config.kcfg/*.kcfg
-%_kde_iconsdir/*/*/*/*
-%_kde_services/choqok_*.desktop
-%_kde_servicetypes/choqok*.desktop
-%_kde_services/ServiceMenus/*.desktop
-%_datadir/dbus-1/services/org.kde.choqok.service
-%doc %_defaultdocdir/HTML/*/%name
+%{_datadir}/dbus-1/services/org.kde.choqok.service
+%{_bindir}/choqok
+%{_libdir}/kde4/*.so
+%{_datadir}/applications/kde4/choqok.desktop
+%{_datadir}/apps/choqok*
+%{_datadir}/apps/khtml/kpartplugins/*
+%{_datadir}/config.kcfg/*.kcfg
+%{_iconsdir}/*/*/*/*
+%{_datadir}/kde4/services/choqok_*.desktop
+%{_datadir}/kde4/services/ServiceMenus/*.desktop
+%{_datadir}/kde4/servicetypes/choqok*.desktop
 
 #-------------------------------------------------------------------
 
 %define choqok_major 1
 %define libchoqok %mklibname choqok %{choqok_major}
 
-%package -n %libchoqok
+%package -n %{libchoqok}
 Summary: %name library
 Group: System/Libraries
 
-%description -n %libchoqok
+%description -n %{libchoqok}
 %name library.
 
-%files -n %libchoqok
-%defattr(-,root,root)
-%_kde_libdir/libchoqok.so.%{choqok_major}*
+%files -n %{libchoqok}
+%{_libdir}/libchoqok.so.%{choqok_major}*
 
 #-------------------------------------------------------------------
 
 %define twitterapihelper_major 1
 %define libtwitterapihelper %mklibname twitterapihelper %twitterapihelper_major
 
-%package -n %libtwitterapihelper
-Summary: %name library
+%package -n %{libtwitterapihelper}
+Summary: %{name} library
 Group: System/Libraries
 
-%description -n %libtwitterapihelper
+%description -n %{libtwitterapihelper}
 %name library.
 
-%files -n %libtwitterapihelper
-%defattr(-,root,root)
-%_kde_libdir/libtwitterapihelper.so.%{twitterapihelper_major}*
+%files -n %{libtwitterapihelper}
+%{_libdir}/libtwitterapihelper.so.%{twitterapihelper_major}*
 
 #-------------------------------------------------------------------
 
@@ -75,27 +70,24 @@ Conflicts: %{name} < 0.2.3
 
 %description devel
 This package contains header files needed if you wish to build applications
-based on %name.
+based on %{name}.
 
 %files devel
-%defattr(-,root,root)
-%_kde_libdir/libchoqok.so
-%_kde_libdir/libtwitterapihelper.so
-%_kde_includedir/choqok
-%_kde_appsdir/cmake/modules/*
+%{_libdir}/libchoqok.so
+%{_libdir}/libtwitterapihelper.so
+%{_includedir}/choqok
+%{_datadir}/apps/cmake/modules/*.cmake
 
 #--------------------------------------------------------------------
-
 %prep
 %setup -q
 %patch0 -p0
 
 %build
-%cmake_kde4
+%cmake
 %make
 
 %install
 %{makeinstall_std} -C build
 
 %find_lang %name --with-html
-
