@@ -19,16 +19,16 @@ Choqok is a Free/Open Source micro-blogging client for K Desktop
 
 %files -f %name.lang
 %{_datadir}/dbus-1/services/org.kde.choqok.service
-%{_bindir}/choqok
-%{_libdir}/kde4/*.so
-%{_datadir}/applications/kde4/choqok.desktop
-%{_datadir}/apps/choqok*
-%{_datadir}/apps/khtml/kpartplugins/*
-%{_datadir}/config.kcfg/*.kcfg
-%{_iconsdir}/*/*/*/*
-%{_datadir}/kde4/services/choqok_*.desktop
-%{_datadir}/kde4/services/ServiceMenus/*.desktop
-%{_datadir}/kde4/servicetypes/choqok*.desktop
+%{_kde_bindir}/choqok
+%{_kde_libdir}/kde4/*.so
+%{_kde_applicationsdir}/choqok.desktop
+%{_kde_appsdir}/choqok*
+%{_kde_appsdir}/khtml/kpartplugins/*
+%{_kde_datadir}/config.kcfg/*.kcfg
+%{_kde_iconsdir}/*/*/*/*
+%{_kde_services}/choqok_*.desktop
+%{_kde_services}/ServiceMenus/*.desktop
+%{_kde_servicetypes}/choqok*.desktop
 
 #-------------------------------------------------------------------
 
@@ -43,7 +43,7 @@ Group: System/Libraries
 %name library.
 
 %files -n %{libchoqok}
-%{_libdir}/libchoqok.so.%{choqok_major}*
+%{_kde_libdir}/libchoqok.so.%{choqok_major}*
 
 #-------------------------------------------------------------------
 
@@ -58,12 +58,12 @@ Group: System/Libraries
 %name library.
 
 %files -n %{libtwitterapihelper}
-%{_libdir}/libtwitterapihelper.so.%{twitterapihelper_major}*
+%{_kde_libdir}/libtwitterapihelper.so.%{twitterapihelper_major}*
 
 #-------------------------------------------------------------------
 
 %package devel
-Summary: %name development files
+Summary: %{name} development files
 Group: Development/KDE and Qt
 Requires: %{libchoqok} = %{version}-%{release}
 Conflicts: %{name} < 0.2.3
@@ -73,10 +73,10 @@ This package contains header files needed if you wish to build applications
 based on %{name}.
 
 %files devel
-%{_libdir}/libchoqok.so
-%{_libdir}/libtwitterapihelper.so
-%{_includedir}/choqok
-%{_datadir}/apps/cmake/modules/*.cmake
+%{_kde_libdir}/libchoqok.so
+%{_kde_libdir}/libtwitterapihelper.so
+%{_kde_includedir}/choqok
+%{_kde_appsdir}/cmake/modules/*.cmake
 
 #--------------------------------------------------------------------
 %prep
@@ -84,7 +84,7 @@ based on %{name}.
 %patch0 -p0
 
 %build
-%cmake
+%cmake_kde4
 %make
 
 %install
