@@ -1,12 +1,13 @@
 Name:		choqok
 Version:	1.2
-Release:	4
+Release:	5
 Summary:	KDE Micro-Blogging Client
 License:	GPLv3
 Group:		Graphical desktop/KDE
 URL:		http://choqok.gnufolks.org/
 Source0:	http://downloads.sourceforge.net/choqok/%{name}-%{version}.tar.bz2
 Patch0:		choqok-0.9.85-dbus-service-dir.patch
+Patch1:		choqok-1.2-l10n-ru.patch
 BuildRequires:	kdelibs4-devel
 BuildRequires:	qjson-devel
 BuildRequires:	qoauth-devel
@@ -82,6 +83,7 @@ based on %{name}.
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p1
 
 %build
 %cmake_kde4
