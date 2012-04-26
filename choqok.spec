@@ -1,6 +1,6 @@
 Name:		choqok
-Version:	1.2
-Release:	5
+Version:	1.3
+Release:	1
 Summary:	KDE Micro-Blogging Client
 License:	GPLv3
 Group:		Graphical desktop/KDE
@@ -83,7 +83,7 @@ based on %{name}.
 %prep
 %setup -q
 %patch0 -p0
-%patch1 -p1
+#%patch1 -p1
 
 %build
 %cmake_kde4
