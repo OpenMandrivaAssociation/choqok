@@ -1,0 +1,4788 @@
+diff -urN choqok-1.2.orig/choqok/choqok.desktop choqok-1.2/choqok/choqok.desktop
+--- choqok-1.2.orig/choqok/choqok.desktop	2011-11-01 08:02:32.000000000 -0400
++++ choqok-1.2/choqok/choqok.desktop	2012-01-17 20:14:16.000000000 -0500
+@@ -52,6 +52,7 @@
+ GenericName[nl]=Micro-blogging-client
+ GenericName[pt]=Cliente de micro-blogs
+ GenericName[pt_BR]=Cliente de microblogging
++GenericName[ru]=Клиент микроблогов
+ GenericName[sv]=Klient för mikrobloggar
+ GenericName[uk]=Клієнт мікроблогів
+ GenericName[x-test]=xxMicro-blogging Clientxx
+diff -urN choqok-1.2.orig/po/ru/choqok.po choqok-1.2/po/ru/choqok.po
+--- choqok-1.2.orig/po/ru/choqok.po	2011-11-01 08:11:27.000000000 -0400
++++ choqok-1.2/po/ru/choqok.po	2012-01-17 20:14:41.000000000 -0500
+@@ -11,119 +11,28 @@
+ msgid ""
+ msgstr ""
+ "Project-Id-Version: choqok\n"
+-"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+-"POT-Creation-Date: 2011-10-31 03:54+0100\n"
+-"PO-Revision-Date: 2011-01-09 18:43+0300\n"
+-"Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
++"Report-Msgid-Bugs-To: \n"
++"POT-Creation-Date: 2011-12-28 17:21-0500\n"
++"PO-Revision-Date: 2011-12-26 19:48+0300\n"
++"Last-Translator: Svetlana Kolyada <kolyadas89@gmail.com>\n"
+ "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+ "Language: ru\n"
+ "MIME-Version: 1.0\n"
+ "Content-Type: text/plain; charset=UTF-8\n"
+ "Content-Transfer-Encoding: 8bit\n"
+-"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
++"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+ "X-Generator: Lokalize 1.2\n"
+ "X-Environment: kde\n"
+ "X-Accelerator-Marker: &\n"
+ "X-Text-Markup: kde4\n"
+ 
+-#: choqok/config/accounts/accountswidget.cpp:94
+-#, kde-format
+-msgid "Cannot load the %1 plugin. Please check your installation."
+-msgstr "Невозможно загрузить модуль %1. Проверьте правильность установки."
+-
+-#: choqok/config/accounts/accountswidget.cpp:108
+-msgid "Cannot find the desired account."
+-msgstr "Невозможно найти желаемую учётную запись."
+-
+-#: choqok/config/accounts/accountswidget.cpp:126
+-msgid "Are you sure you want to remove the selected account?"
+-msgstr "Удалить выбранную учётную запись?"
+-
+-#: choqok/config/accounts/accountswidget.cpp:131
+-msgid "Cannot remove the account."
+-msgstr "Не удалось удалить учётную запись."
+-
+-#: choqok/config/accounts/accountswidget.cpp:237
+-msgid "Select Micro-Blogging Service"
+-msgstr "Выберите службу микроблоггинга"
+-
+-#: choqok/config/accounts/accountswidget.cpp:292
+-msgid ""
+-"You need to restart Choqok for the accounts priority changes to take effect."
+-msgstr ""
+-"Вы должны перезапустить Choqok, чтобы внесённые изменения вступили в силу."
+-
+-#: choqok/config/accounts/addaccountdialog.cpp:40
+-msgid "Add New Account"
+-msgstr "Добавление учётной записи"
+-
+-#: choqok/config/accounts/addaccountdialog.cpp:60
+-msgid "The Account registration failed."
+-msgstr "Не удалось зарегистрировать учётную запись."
+-
+-#: choqok/config/accounts/addaccountdialog.cpp:66
+-#: choqok/config/accounts/editaccountdialog.cpp:63
+-msgid ""
+-"Cannot validate your input information.\n"
+-"Please check the fields' data.\n"
+-"Maybe a required field is empty?"
+-msgstr ""
+-"Не удалось подтвердить правильность введённой информации.\n"
+-"Проверьте заполненные поля.\n"
+-"Может быть не заполнены обязательные поля?"
+-
+-#: choqok/config/accounts/editaccountdialog.cpp:41
+-msgid "Edit Account"
+-msgstr "Изменение учётной записи"
+-
+-#: choqok/config/appearance/appearanceconfig.cpp:73
+-msgid "Appearance"
+-msgstr "Внешний вид"
+-
+-#: choqok/config/behavior/behaviorconfig_shorten.cpp:82
+-msgid "None"
+-msgstr "Нет"
+-
+-#: choqok/config/behavior/behaviorconfig.cpp:74
+-msgid "&General"
+-msgstr "&Общие"
+-
+-#: choqok/config/behavior/behaviorconfig.cpp:75
+-msgid " Minute"
+-msgid_plural " Minutes"
+-msgstr[0] " минута"
+-msgstr[1] " минуты"
+-msgstr[2] " минут"
+-msgstr[3] " минута"
+-
+-#: choqok/config/behavior/behaviorconfig.cpp:82
+-msgid "&Notifications"
+-msgstr "&Уведомления"
+-
+-#: choqok/config/behavior/behaviorconfig.cpp:83
+-msgid " Second"
+-msgid_plural " Seconds"
+-msgstr[0] " секунда"
+-msgstr[1] " секунды"
+-msgstr[2] " секунд"
+-msgstr[3] " секунда"
+-
+-#: choqok/config/behavior/behaviorconfig.cpp:94
+-msgid "URL &Shortening"
+-msgstr "&Сокращение ссылок"
+-
+-#: choqok/config/plugins/choqokpluginconfig.cpp:60
+-msgid "General Plugins"
+-msgstr "Модули"
+-
+-#: choqok/main.cpp:33
+-msgid "KDE Micro-Blogging Client."
+-msgstr "Клиент микроблоггинга для KDE."
+-
+-#: choqok/main.cpp:40 choqok/systrayicon.cpp:116 choqok/systrayicon.cpp:122
+-#: choqok/mainwindow.cpp:85 choqok/mainwindow.cpp:503
+-#: choqok/mainwindow.cpp:572 choqok/mainwindow.cpp:620
++#: choqok/main.cpp:40
++#: choqok/systrayicon.cpp:116
++#: choqok/systrayicon.cpp:122
++#: choqok/mainwindow.cpp:85
++#: choqok/mainwindow.cpp:503
++#: choqok/mainwindow.cpp:572
++#: choqok/mainwindow.cpp:620
+ msgid "Choqok"
+ msgstr "Choqok"
+ 
+@@ -147,7 +56,8 @@
+ msgid "Andrey Esin"
+ msgstr "Andrey Esin"
+ 
+-#: choqok/main.cpp:45 choqok/main.cpp:50
++#: choqok/main.cpp:45
++#: choqok/main.cpp:50
+ msgid "Developer"
+ msgstr "Разработчик"
+ 
+@@ -187,15 +97,6 @@
+ msgid "DBus and konqueror plugin"
+ msgstr "Поддержка DBus и модуль Konqueror"
+ 
+-#: choqok/systrayicon.cpp:116
+-#, kde-format
+-msgid "1 unread post"
+-msgid_plural "%1 unread posts"
+-msgstr[0] "%1 непрочитанное сообщение"
+-msgstr[1] "%1 непрочитанных сообщения"
+-msgstr[2] "%1 непрочитанных сообщений"
+-msgstr[3] "Одно непрочитанное сообщение"
+-
+ #: choqok/systrayicon.cpp:125
+ msgid "Choqok - Disabled"
+ msgstr "Choqok — Отключено"
+@@ -204,7 +105,8 @@
+ msgid "Update Timelines"
+ msgstr "Обновить ленты сообщений"
+ 
+-#: choqok/mainwindow.cpp:212 libchoqok/ui/quickpost.cpp:110
++#: choqok/mainwindow.cpp:212
++#: libchoqok/ui/quickpost.cpp:110
+ msgid "Quick Post"
+ msgstr "Быстрое сообщение"
+ 
+@@ -212,11 +114,13 @@
+ msgid "Mark All As Read"
+ msgstr "Отметить все сообщения как прочитанные"
+ 
+-#: choqok/mainwindow.cpp:229 choqok/mainwindow.cpp:567
++#: choqok/mainwindow.cpp:229
++#: choqok/mainwindow.cpp:567
+ msgid "Minimize"
+ msgstr "Свернуть"
+ 
+-#: choqok/mainwindow.cpp:231 choqok/mainwindow.cpp:561
++#: choqok/mainwindow.cpp:231
++#: choqok/mainwindow.cpp:561
+ msgid "Restore"
+ msgstr "Восстановить"
+ 
+@@ -230,7 +134,7 @@
+ 
+ #: choqok/mainwindow.cpp:250
+ msgid "Hide Menubar"
+-msgstr ""
++msgstr "Скрыть строку меню"
+ 
+ #: choqok/mainwindow.cpp:257
+ msgid "Clear Avatar Cache"
+@@ -246,24 +150,18 @@
+ 
+ #: choqok/mainwindow.cpp:269
+ msgid "Donate"
+-msgstr ""
++msgstr "Подарить"
+ 
+ #: choqok/mainwindow.cpp:311
+-msgid ""
+-"No account created. You have to create an account before being able to make "
+-"posts."
+-msgstr ""
+-"Не создана учётная запись. Необходимо создать её, чтобы иметь возможность "
+-"отправлять сообщения."
++msgid "No account created. You have to create an account before being able to make posts."
++msgstr "Не создана учётная запись. Необходимо создать её, чтобы иметь возможность отправлять сообщения."
+ 
+ #: choqok/mainwindow.cpp:340
+ msgid ""
+-"In order to use Choqok you need an account at one of the supported micro-"
+-"blogging services.\n"
++"In order to use Choqok you need an account at one of the supported micro-blogging services.\n"
+ "Would you like to add your account now?"
+ msgstr ""
+-"Для того, чтобы пользоваться Choqok, вам необходимо иметь учётную запись в "
+-"одной из поддерживаемых служб микроблоггинга.\n"
++"Для того, чтобы пользоваться Choqok, вам необходимо иметь учётную запись в одной из поддерживаемых служб микроблоггинга.\n"
+ "Создать учётную запись прямо сейчас?"
+ 
+ #: choqok/mainwindow.cpp:501
+@@ -275,944 +173,198 @@
+ msgid "Loading timelines..."
+ msgstr "Загрузка лент сообщений..."
+ 
+-#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:55
+-msgid "Send Private Message"
+-msgstr "Отправить личное сообщение"
+-
+-#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:69
+-msgctxt "Send private message"
+-msgid "Send"
+-msgstr "Отправить"
++#: choqok/config/accounts/accountswidget.cpp:94
++#, kde-format
++msgid "Cannot load the %1 plugin. Please check your installation."
++msgstr "Невозможно загрузить модуль %1. Проверьте правильность установки."
+ 
+-#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:82
+-msgctxt "Send message to"
+-msgid "To:"
+-msgstr "Получатель:"
++#: choqok/config/accounts/accountswidget.cpp:108
++msgid "Cannot find the desired account."
++msgstr "Невозможно найти желаемую учётную запись."
+ 
+-#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:87
+-msgid "Reload friends list"
+-msgstr "Перезагрузить список друзей"
++#: choqok/config/accounts/accountswidget.cpp:126
++msgid "Are you sure you want to remove the selected account?"
++msgstr "Удалить выбранную учётную запись?"
+ 
+-#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:114
+-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:314
+-#: microblogs/laconica/laconicaconversationtimelinewidget.cpp:36
+-msgid "Please wait..."
+-msgstr "Подождите..."
++#: choqok/config/accounts/accountswidget.cpp:131
++msgid "Cannot remove the account."
++msgstr "Не удалось удалить учётную запись."
+ 
+-#: helperlibs/twitterapihelper/twitterapisearchdialog.cpp:58
+-#: helperlibs/twitterapihelper/twitterapisearchdialog.cpp:90
+-msgid "Search"
+-msgstr "Поиск"
++#: choqok/config/accounts/accountswidget.cpp:237
++msgid "Select Micro-Blogging Service"
++msgstr "Выберите службу микроблоггинга"
+ 
+-#: helperlibs/twitterapihelper/twitterapisearchdialog.cpp:83
+-msgctxt "Search query"
+-msgid "Query:"
+-msgstr "Запрос:"
++#: choqok/config/accounts/accountswidget.cpp:292
++msgid "You need to restart Choqok for the accounts priority changes to take effect."
++msgstr "Вы должны перезапустить Choqok, чтобы внесённые изменения вступили в силу."
+ 
+-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:167
+-msgid "Cannot load user information."
+-msgstr "Не удалось загрузить информацию о пользователе."
++#: choqok/config/accounts/addaccountdialog.cpp:40
++msgid "Add New Account"
++msgstr "Добавление учётной записи"
+ 
+-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:253
+-msgid "Close"
+-msgstr "Закрыть"
++#: choqok/config/accounts/addaccountdialog.cpp:60
++msgid "The Account registration failed."
++msgstr "Не удалось зарегистрировать учётную запись."
+ 
+-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:265
+-msgctxt "User posts"
+-msgid "Posts"
+-msgstr "Сообщения"
++#: choqok/config/accounts/addaccountdialog.cpp:66
++#: choqok/config/accounts/editaccountdialog.cpp:63
++msgid ""
++"Cannot validate your input information.\n"
++"Please check the fields' data.\n"
++"Maybe a required field is empty?"
++msgstr ""
++"Не удалось подтвердить правильность введённой информации.\n"
++"Проверьте заполненные поля.\n"
++"Может быть не заполнены обязательные поля?"
+ 
+-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:266
+-msgctxt "User friends"
+-msgid "Friends"
+-msgstr "Друзья"
++#: choqok/config/accounts/editaccountdialog.cpp:41
++msgid "Edit Account"
++msgstr "Изменение учётной записи"
+ 
+-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:267
+-msgctxt "User followers"
+-msgid "Followers"
+-msgstr "Подписчики"
++#: choqok/config/appearance/appearanceconfig.cpp:73
++msgid "Appearance"
++msgstr "Внешний вид"
+ 
+-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:276
+-#, kde-format
+-msgid "<table><tr><b>Last Status:</b> %1</tr></table>"
+-msgstr "<table><tr><b>Последний статус:</b> %1</tr></table>"
++#: choqok/config/behavior/behaviorconfig_shorten.cpp:82
++msgid "None"
++msgstr "Нет"
+ 
+-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:280
+-#, kde-format
+-msgid "<h3>%1</h3>"
+-msgstr "<h3>%1</h3>"
++#: choqok/config/behavior/behaviorconfig.cpp:74
++msgid "&General"
++msgstr "&Общие"
+ 
+-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:387
+-msgid "Unsubscribe"
+-msgstr "Отписаться"
++#: choqok/config/behavior/behaviorconfig.cpp:82
++msgid "&Notifications"
++msgstr "&Уведомления"
+ 
+-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:392
+-msgid "Subscribe"
+-msgstr "Подписаться"
++#: choqok/config/behavior/behaviorconfig.cpp:94
++msgid "URL &Shortening"
++msgstr "&Сокращение ссылок"
+ 
+-#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:397
+-msgid "Block"
+-msgstr "Блокировать"
++#: choqok/config/plugins/choqokpluginconfig.cpp:60
++msgid "General Plugins"
++msgstr "Модули"
+ 
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:105
+-msgctxt "Timeline Name"
+-msgid "Home"
+-msgstr "Главная"
++#: microblogs/twitter/twittermicroblog.cpp:136
++#, kde-format
++msgid "Retweet of %1"
++msgstr "Ретвит %1"
+ 
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:106
+-msgctxt "Timeline description"
+-msgid "You and your friends"
+-msgstr "Вы и ваши друзья"
++#: microblogs/twitter/twittermicroblog.cpp:138
++#, kde-format
++msgid "Retweeted by %1"
++msgstr "Повторено %1"
+ 
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:111
+-msgctxt "Timeline Name"
+-msgid "Reply"
+-msgstr "Ответы"
++#: microblogs/twitter/twittermicroblog.cpp:143
++msgid "Retweet to your followers?"
++msgstr "Повторить сообщение вашим подписчикам?"
+ 
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:112
+-msgctxt "Timeline description"
+-msgid "Replies to you"
+-msgstr "Ответы вам"
++#: microblogs/twitter/twittermicroblog.cpp:150
++msgid "Add User List..."
++msgstr "Добавить пользовательский список..."
+ 
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:117
+-msgctxt "Timeline Name"
+-msgid "Inbox"
+-msgstr "Входящие"
++#: microblogs/twitter/twittermicroblog.cpp:204
++#, kde-format
++msgid "Fetching %1's lists failed. %2"
++msgstr "Не удалось получить списки %1. %2"
+ 
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:118
+-msgctxt "Timeline description"
+-msgid "Your incoming private messages"
+-msgstr "Полученные личные сообщения"
++#: microblogs/twitter/twittermicroblog.cpp:212
++#, kde-format
++msgid "There's no list record for user %1"
++msgstr "Нет списка для пользователя %1"
+ 
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:123
+-msgctxt "Timeline Name"
+-msgid "Outbox"
+-msgstr "Исходящие"
++#: microblogs/twitter/twitterpostwidget.cpp:52
++#: microblogs/laconica/laconicapostwidget.cpp:84
++msgid "Manual ReSend"
++msgstr "Ручная пересылка"
+ 
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:124
+-msgctxt "Timeline description"
+-msgid "Private messages you have sent"
+-msgstr "Отправленные личные сообщения"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:129
+-msgctxt "Timeline Name"
+-msgid "Favorite"
+-msgstr "Избранное"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:130
+-msgctxt "Timeline description"
+-msgid "Your favorites"
+-msgstr "Ваше избранное"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:135
+-msgctxt "Timeline Name"
+-msgid "Public"
+-msgstr "Общая"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:136
+-msgctxt "Timeline description"
+-msgid "Public timeline"
+-msgstr "Общая лента сообщений"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:141
+-msgctxt "Timeline Name"
+-msgid "ReTweets"
+-msgstr "Ретвиты"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:142
+-msgctxt "Timeline description"
+-msgid "Your posts that were ReTweeted by others"
+-msgstr "Ваши сообщения, повторенные другими пользователями"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:157
+-msgid "Send Private Message..."
+-msgstr "Отправить личное сообщение..."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:162
+-#: plugins/searchaction/searchaction.cpp:41
+-msgid "Search..."
+-msgstr "Поиск..."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:167
+-msgid "Update Friends List"
+-msgstr "Обновить список друзей"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:305
+-msgid "Creating the new post failed. Text is empty."
+-msgstr "Ошибка создания сообщения. Не введён текст."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:403
+-#, kde-format
+-msgid "Creating the new post failed. %1"
+-msgstr "Ошибка создания сообщения. %1"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:421
+-msgid "Creating the new post failed. The result data could not be parsed."
+-msgstr "Ошибка создания нового сообщения. Данные не могут быть обработаны."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:425
+-#, kde-format
+-msgid "Creating the new post failed, with error: %1"
+-msgstr "Ошибка создания сообщения: %1"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:429
+-#: microblogs/laconica/laconicacomposerwidget.cpp:119
+-msgid "New post submitted successfully"
+-msgstr "Сообщение успешно отправлено."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:433
+-msgid "Private message sent successfully"
+-msgstr "Личное сообщение успешно отправлено"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:497
+-#, kde-format
+-msgid "Fetching the new post failed. %1"
+-msgstr "Ошибка получения нового сообщения. %1"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:514
+-msgid "Fetching new post failed. The result data could not be parsed."
+-msgstr "Ошибка получения нового сообщения. Данные не могут быть обработаны."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:519
+-#, kde-format
+-msgid "Fetching new post failed, with error: %1"
+-msgstr "Не удалось получить новое сообщение, ошибка: %1"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:568
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:577
+-#, kde-format
+-msgid "Removing the post failed. %1"
+-msgstr "Не удалось удалить сообщение. %1"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:614
+-#, kde-format
+-msgid "Favorite creation failed. %1"
+-msgstr "Не удалось создать избранное. %1"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:659
+-#, kde-format
+-msgid "Removing the favorite failed. %1"
+-msgstr "Не удалось удалить избранное. %1"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:701
+-#, kde-format
+-msgid "Updating friends list for account %1 ..."
+-msgstr "Обновление списка друзей учётной записи %1..."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:710
+-#, kde-format
+-msgid ""
+-"Friends list for account %1 could not be updated:\n"
+-"%2"
+-msgstr ""
+-"Не удалось обновить список друзей учётной записи %1:\n"
+-"%2"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:722
+-#, kde-format
+-msgid "Friends list for account %1 has been updated."
+-msgstr "Список друзей учётной записи %1 обновлён."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:798
+-#, kde-format
+-msgid "Timeline update failed, %1"
+-msgstr "Не удалось обновить ленту сообщений. %1"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1104
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1660
+-#: microblogs/laconica/laconicamicroblog.cpp:293
+-msgid ""
+-"Retrieving the friends list failed. The data returned from the server is "
+-"corrupted."
+-msgstr ""
+-"Не удалось получить список друзей. Данные, полученные от сервера, повреждены."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1258
+-#, kde-format
+-msgid "Creating friendship with %1 failed. %2"
+-msgstr "Попытка подружиться с %1 не удалась. %2"
+-
+-# "ожидаете" не очень подходит: человек ведь не только этим занимается, что ждет сообщений --aspotashev
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1265
+-#, kde-format
+-msgid "You are now listening to %1's posts."
+-msgstr "Сейчас вы ожидаете сообщения от %1"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1273
+-#, kde-format
+-msgid "Creating friendship with %1 failed: the server returned invalid data."
+-msgstr ""
+-"Попытка подружиться с %1 не удалась: сервер прислал недопустимые данные."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1278
+-#, kde-format
+-msgid "Creating friendship with %1 failed: %2"
+-msgstr "Попытка подружиться с %1 не удалась: %2"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1316
+-#, kde-format
+-msgid "Destroying friendship with %1 failed. %2"
+-msgstr "Прекращение дружбы с %1 не удалось. %2"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1323
+-#, kde-format
+-msgid "You will not receive %1's updates."
+-msgstr "Вы не будете получать обновлений от %1."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1331
+-#, kde-format
+-msgid "Destroying friendship with %1 failed: the server returned invalid data."
+-msgstr ""
+-"Прекращение дружбы с %1 не удалось: сервер прислал недопустимые данные."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1336
+-#, kde-format
+-msgid "Destroying friendship with %1 failed: %2"
+-msgstr "Прекращение дружбы с %1 не удалось: %2"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1373
+-#, kde-format
+-msgid "Blocking %1 failed. %2"
+-msgstr "Блокирование %1 не удалось. %2"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1379
+-#, kde-format
+-msgid "You will no longer be disturbed by %1."
+-msgstr "%1 больше не будет вас беспокоить."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1383
+-#, kde-format
+-msgid "Blocking %1 failed: the server returned invalid data."
+-msgstr "Блокирование %1 не удалось: сервер прислал недопустимые данные."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1488
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1511
+-#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1570
+-msgid "Could not parse the data that has been received from the server."
+-msgstr "Невозможно разобрать данные, полученные от сервера."
+-
+-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:72
+-msgctxt "@info:tooltip"
+-msgid "Reply"
+-msgstr "Ответить"
+-
+-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:75
+-#, kde-format
+-msgid "Reply to %1"
+-msgstr "Ответить %1"
+-
+-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:80
+-#, kde-format
+-msgid "Write to %1"
+-msgstr "Написать %1"
+-
+-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:86
+-msgid "Reply to all"
+-msgstr "Ответить всем"
+-
+-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:95
+-msgctxt "@info:tooltip"
+-msgid "Favorite"
+-msgstr "Добавить в избранное"
+-
+-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:129
+-#, kde-format
+-msgid "<a href='%1' title='Sent from %2 via OStatus'>%2</a>"
+-msgstr "<a href='%1' title='Отправлено с %2 через OStatus'>%2</a>"
+-
+-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:139
+-msgid "Show Conversation"
+-msgstr "Показать разговор"
+-
+-#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:146
+-#, fuzzy, kde-format
+-#| msgid ""
+-#| "<a href='replyto://%1'>in reply to</a>&nbsp;<a href=\"%2\" title=\"%2\">"
+-#| "%3</a>"
+-msgid ""
+-"<a href='replyto://%1'>in reply to</a> @<a href='user://%4'>%4</a>&nbsp;<a "
+-"href=\"%2\" title=\"%2\">%3</a>"
+-msgstr ""
+-"<a href='replyto://%1'>ответ </a>&nbsp;<a href=\"%2\" title=\"%2\">%3</a>"
+-
+-#: helperlibs/twitterapihelper/twitterapishowthread.cpp:49
+-#: microblogs/laconica/laconicaconversationtimelinewidget.cpp:64
+-msgid "Conversation"
+-msgstr "Разговор"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblogwidget.cpp:101
+-msgid "The search result is empty."
+-msgstr "Ничего не найдено."
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblogwidget.cpp:227
+-msgid "Close Timeline"
+-msgstr "Закрыть ленту"
+-
+-#: helperlibs/twitterapihelper/twitterapimicroblogwidget.cpp:228
+-msgid "Close All"
+-msgstr "Закрыть все"
+-
+-#: helperlibs/twitterapihelper/twitterapisearchtimelinewidget.cpp:69
+-#: libchoqok/ui/timelinewidget.cpp:56
+-#, kde-format
+-msgid "Search results for %1"
+-msgstr "Результаты поиска для %1"
+-
+-#: helperlibs/twitterapihelper/twitterapisearchtimelinewidget.cpp:98
+-#, fuzzy
+-#| msgid "Custom Search"
+-msgid "Close Search"
+-msgstr "Расширенный поиск"
+-
+-#: helperlibs/twitterapihelper/twitterapisearchtimelinewidget.cpp:105
+-msgid "Previous"
+-msgstr "Предыдущая"
+-
+-#: helperlibs/twitterapihelper/twitterapisearchtimelinewidget.cpp:110
+-msgid "Next"
+-msgstr "Следующая"
+-
+-#: helperlibs/twitterapihelper/twitterapisearchtimelinewidget.cpp:117
+-msgid "Page Number"
+-msgstr "Номер страницы"
+-
+-#: libchoqok/accountmanager.cpp:111 libchoqok/accountmanager.cpp:142
+-#, kde-format
+-msgid "There is no account with alias %1."
+-msgstr "Нет учётной записи с псевдонимом %1."
+-
+-#: libchoqok/accountmanager.cpp:159
+-msgid ""
+-"An account with this alias already exists: a unique alias has to be "
+-"specified."
+-msgstr ""
+-"Учётная запись с таким псевдонимом уже существует, укажите уникальное имя."
+-
+-#: libchoqok/notifymanager.h:41
+-msgid "Error"
+-msgstr "Ошибка"
+-
+-#: libchoqok/notifymanager.h:42
+-msgid "Success"
+-msgstr "Выполнено"
+-
+-#: libchoqok/notifymanager.h:44
+-msgid "New posts"
+-msgstr "Новые сообщения"
+-
+-#: libchoqok/notifymanager.h:45
+-msgid "Shortening a URL"
+-msgstr "Сокращение ссылок"
+-
+-#: libchoqok/ui/quickpost.cpp:83
+-msgctxt "Submit post"
+-msgid "Submit"
+-msgstr "Отправить"
+-
+-#: libchoqok/ui/quickpost.cpp:92
+-msgid "All"
+-msgstr "Все"
+-
+-#: libchoqok/ui/quickpost.cpp:96
+-#: microblogs/laconica/laconicacomposerwidget.cpp:60
+-msgid "Attach a file"
+-msgstr "Присоединить файл"
+-
+-#: libchoqok/ui/quickpost.cpp:163
+-msgid ""
+-"Please configure at least one account to be included in \"Quick Post\".\n"
+-"Settings -> Configure Choqok... -> Accounts"
+-msgstr ""
+-"Настройте хотя бы одну учётную запись для отправки «Быстрого сообщения».\n"
+-"Настройка -> Настроить Choqok... -> Учётные записи"
+-
+-#: libchoqok/ui/quickpost.cpp:276
+-msgid ""
+-"Link to uploaded medium will be added here after uploading process succeed."
+-msgstr "Ссылка на загруженный файл будет добавлена после завершения загрузки."
+-
+-#: libchoqok/ui/textbrowser.cpp:112
+-msgid "Copy"
+-msgstr "Копировать"
+-
+-#: libchoqok/ui/textbrowser.cpp:118
+-msgid "Copy Link Location"
+-msgstr "Копировать адрес ссылки"
+-
+-#: libchoqok/ui/textbrowser.cpp:123
+-msgid "Select All"
+-msgstr "Выделить всё"
+-
+-#: libchoqok/ui/uploadmediadialog.cpp:61
+-msgid "Upload Medium"
+-msgstr "Загрузка файла"
+-
+-#: libchoqok/ui/uploadmediadialog.cpp:63
+-msgid "Upload"
+-msgstr "Загрузить"
+-
+-#: libchoqok/ui/uploadmediadialog.cpp:113
+-msgid "Uploading..."
+-msgstr "Загрузка..."
+-
+-#: libchoqok/ui/uploadmediadialog.cpp:247
+-msgid "Medium uploading failed."
+-msgstr "Ошибка загрузки файла."
+-
+-#: libchoqok/ui/choqoktextedit.cpp:60
+-msgid ""
+-"<strong>Note:</strong><br/><em>Ctrl+S</em> to enable/disable auto spell "
+-"checker."
+-msgstr ""
+-"<strong>Примечание: используйте </strong><br/><em>Ctrl+S</em> для включения/"
+-"выключения автоматической проверки орфографии."
+-
+-#: libchoqok/ui/choqoktextedit.cpp:179
+-msgid "Set spell check language"
+-msgstr "Язык проверки правописания"
+-
+-#: libchoqok/ui/choqoktextedit.cpp:183
+-#, fuzzy
+-#| msgctxt "Replcae URLs by a shortened URL"
+-#| msgid "Shorten URLs"
+-msgctxt "Replace URLs by a shortened URL"
+-msgid "Shorten URLs"
+-msgstr "Укорачивать веб-адреса"
+-
+-#: libchoqok/ui/composerwidget.cpp:68
+-#, fuzzy
+-#| msgid "Disabled"
+-msgid "Discard Reply"
+-msgstr "Отключено"
+-
+-#: libchoqok/ui/composerwidget.cpp:108
+-#, fuzzy, kde-format
+-#| msgid "Reply to %1"
+-msgid "Replying to <b>%1</b>"
+-msgstr "Ответить %1"
+-
+-#: libchoqok/ui/composerwidget.cpp:135
+-#: microblogs/laconica/laconicacomposerwidget.cpp:97
+-msgid "Abort"
+-msgstr "Прервать"
+-
+-#: libchoqok/ui/microblogwidget.cpp:279 libchoqok/ui/timelinewidget.cpp:223
+-msgid "Mark all as read"
+-msgstr "Отметить все прочитанными"
+-
+-#: libchoqok/ui/microblogwidget.cpp:386
+-msgid "More"
+-msgstr "Больше"
+-
+-#: libchoqok/ui/microblogwidget.cpp:388
+-msgid "Latest update:"
+-msgstr "Последнее обновление:"
+-
+-#: libchoqok/ui/postwidget.cpp:198
+-msgctxt "@info:tooltip"
+-msgid "Remove"
+-msgstr "Удалить"
+-
+-#: libchoqok/ui/postwidget.cpp:202
+-msgctxt "@info:tooltip"
+-msgid "ReSend"
+-msgstr "Повторить эту запись"
+-
+-#: libchoqok/ui/postwidget.cpp:427
+-msgid "Just now"
+-msgstr "Прямо сейчас"
+-
+-#: libchoqok/ui/postwidget.cpp:432
+-#, kde-format
+-msgid "1 sec ago"
+-msgid_plural "%1 secs ago"
+-msgstr[0] "%1 секунду назад"
+-msgstr[1] "%1 секунды назад"
+-msgstr[2] "%1 секунд назад"
+-msgstr[3] "1 секунду назад"
+-
+-#: libchoqok/ui/postwidget.cpp:438
+-#, kde-format
+-msgid "1 min ago"
+-msgid_plural "%1 mins ago"
+-msgstr[0] "%1 минуту назад"
+-msgstr[1] "%1 минуты назад"
+-msgstr[2] "%1 минут назад"
+-msgstr[3] "1 минуту назад"
+-
+-#: libchoqok/ui/postwidget.cpp:444
+-#, kde-format
+-msgid "1 hour ago"
+-msgid_plural "%1 hours ago"
+-msgstr[0] "%1 час назад"
+-msgstr[1] "%1 часа назад"
+-msgstr[2] "%1 часов назад"
+-msgstr[3] "1 час назад"
+-
+-#: libchoqok/ui/postwidget.cpp:449
+-#, kde-format
+-msgid "1 day ago"
+-msgid_plural "%1 days ago"
+-msgstr[0] "%1 день назад"
+-msgstr[1] "%1 дня назад"
+-msgstr[2] "%1 дней назад"
+-msgstr[3] "1 день назад"
+-
+-#: libchoqok/ui/postwidget.cpp:454
+-msgid "Are you sure you want to remove this post from the server?"
+-msgstr "Удалить сообщение с сервера?"
+-
+-#: libchoqok/ui/timelinewidget.cpp:209
+-#, kde-format
+-msgid "1 new post in %2(%3)"
+-msgid_plural "%1 new posts in %2(%3)"
+-msgstr[0] "%1 новое сообщение в %2(%3)"
+-msgstr[1] "%1 новых сообщения в %2(%3)"
+-msgstr[2] "%1 новых сообщений в %2(%3)"
+-msgstr[3] "1 новое сообщение в %2(%3)"
+-
+-#: libchoqok/notifymanager.cpp:74
+-msgctxt "Show Choqok MainWindow"
+-msgid "Show Choqok"
+-msgstr "Показать Choqok"
+-
+-#: libchoqok/choqoktools.cpp:50
+-msgid "No Error"
+-msgstr "Нет ошибок"
+-
+-#: libchoqok/choqoktools.cpp:52
+-msgid "Bad request"
+-msgstr "Неправильный запрос"
+-
+-#: libchoqok/choqoktools.cpp:55
+-msgid "Consumer Key or Secret has not been provided"
+-msgstr "Пользовательский ключ или пароль не был введён."
+-
+-#: libchoqok/choqoktools.cpp:57
+-msgid "Forbidden"
+-msgstr "Нет доступа"
+-
+-#: libchoqok/choqoktools.cpp:59
+-msgid "Timeout on server"
+-msgstr "Истекло время ожидания сервера"
+-
+-#: libchoqok/choqoktools.cpp:61 microblogs/twitter/twittereditaccount.cpp:137
+-#: microblogs/twitter/twittereditaccount.cpp:167
+-msgid "Authorization Error"
+-msgstr "Ошибка авторизации"
+-
+-#: libchoqok/choqoktools.cpp:63
+-msgid "Internal Error"
+-msgstr "Внутренняя ошибка"
+-
+-#: libchoqok/choqoktools.cpp:68
+-msgid "Unknown Error"
+-msgstr "Неизвестная ошибка"
+-
+-#: libchoqok/microblog.cpp:85
+-msgid "The server returned an error"
+-msgstr "Сервер сообщил об ошибке"
+-
+-#: libchoqok/microblog.cpp:88
+-msgid "Error on communication with server"
+-msgstr "Ошибка соединения с сервером"
+-
+-#: libchoqok/microblog.cpp:91
+-msgid "Error on parsing results"
+-msgstr "Ошибка при распознавании результатов"
+-
+-#: libchoqok/microblog.cpp:94
+-msgid "Authentication error"
+-msgstr "Ошибка входа в систему"
+-
+-#: libchoqok/microblog.cpp:97
+-msgid "The server does not support this feature"
+-msgstr "Сервер не поддерживает данной возможности"
+-
+-#: libchoqok/microblog.cpp:100
+-msgid "Unknown error"
+-msgstr "Неизвестная ошибка"
+-
+-#: libchoqok/passwordmanager.cpp:73
+-msgid ""
+-"Cannot open KDE Wallet manager, your secrets will be stored as plain text, "
+-"install KWallet to fix this."
+-msgstr ""
+-"Не удалось открыть KWalletManager, все ваши пароли будут сохранены как "
+-"обычный текст. Установите KWallet, чтобы это исправить."
+-
+-#: libchoqok/mediamanager.cpp:107
+-msgid "Cannot create a KDE Job. Please check your installation."
+-msgstr "Невозможно создать задание KDE. Проверьте правильность установки."
+-
+-#: libchoqok/mediamanager.cpp:126
+-#, kde-format
+-msgid "Cannot download image from %1."
+-msgstr "Невозможно загрузить изображение из %1."
+-
+-#: libchoqok/mediamanager.cpp:137
+-msgid "The download failed. The returned file is corrupted."
+-msgstr "Ошибка загрузки. Полученный файл повреждён."
+-
+-#: libchoqok/mediamanager.cpp:167
+-msgid "No pluginId specified, And last used plugin is null."
+-msgstr "pluginId не указан, последних использованных модулей нет."
+-
+-#: libchoqok/mediamanager.cpp:185 libchoqok/mediamanager.cpp:191
+-#: microblogs/laconica/laconicamicroblog.cpp:168
+-#: microblogs/laconica/laconicamicroblog.cpp:175
+-msgid "Uploading medium failed: cannot read the medium file."
+-msgstr "Загрузка файла не удалась: невозможно прочитать файл."
+-
+-#: microblogs/laconica/laconicaeditaccount.cpp:146
+-msgid ""
+-"Sorry! OAuth Method just works with Identi.ca server. You have to use basic "
+-"authentication for other StatusNet servers."
+-msgstr ""
+-"Метод аутентификации OAuth работает только с сервером Identi.ca. С серверами "
+-"StatusNet следует использовать обычную аутентификацию."
+-
+-#: microblogs/laconica/laconicaeditaccount.cpp:179
+-#: microblogs/laconica/laconicaeditaccount.cpp:212
+-msgid "Authentication Error"
+-msgstr "Ошибка аутентификации"
+-
+-#: microblogs/laconica/laconicaeditaccount.cpp:188
+-msgid "Security code"
+-msgstr "Секретный код"
+-
+-#: microblogs/laconica/laconicaeditaccount.cpp:190
+-msgctxt "Security code recieved from StatusNet"
+-msgid "Enter security code:"
+-msgstr "Введите секретный код:"
+-
+-#: microblogs/laconica/laconicaeditaccount.cpp:207
+-#: microblogs/twitter/twittereditaccount.cpp:163
+-msgid "Choqok is authorized successfully."
+-msgstr "Choqok успешно авторизован."
+-
+-#: microblogs/laconica/laconicaeditaccount.cpp:208
+-#: microblogs/twitter/twittereditaccount.cpp:164
+-msgid "Authorized"
+-msgstr "Авторизован"
+-
+-#: microblogs/laconica/laconicaeditaccount.cpp:265
+-#: microblogs/twitter/twittereditaccount.cpp:179
+-msgid "Authenticated"
+-msgstr "Вход выполнен"
+-
+-#: microblogs/laconica/laconicaeditaccount.cpp:269
+-#: microblogs/twitter/twittereditaccount.cpp:183
+-msgid "Not Authenticated"
+-msgstr "Вход не выполнен"
+-
+-#: microblogs/laconica/laconicasearch.cpp:45
+-msgctxt "Dents are Identica posts"
+-msgid "Dents Including This Hashtag"
+-msgstr "Сообщения, включающие эту метку"
+-
+-#: microblogs/laconica/laconicasearch.cpp:48
+-msgctxt "Dents are Identica posts"
+-msgid "Dents Including This Group"
+-msgstr "Сообщения, включающие эту группу"
+-
+-#: microblogs/laconica/laconicasearch.cpp:51
+-msgctxt "Dents are Identica posts"
+-msgid "Dents From This User"
+-msgstr "Сообщения от этого пользователя"
+-
+-#: microblogs/laconica/laconicasearch.cpp:54
+-msgctxt "Dents are Identica posts"
+-msgid "Dents To This User"
+-msgstr "Сообщения к этому пользователю"
+-
+-#: microblogs/laconica/laconicasearch.cpp:133
+-#: microblogs/twitter/twittersearch.cpp:90
+-msgid "Unable to fetch search results."
+-msgstr "Невозможно получить результаты поиска."
+-
+-#: microblogs/laconica/laconicasearch.cpp:141
+-#: microblogs/twitter/twittersearch.cpp:98
+-#, kde-format
+-msgid "Unable to fetch search results: %1"
+-msgstr "Невозможно получить результаты поиска: %1"
+-
+-#: microblogs/laconica/laconicamicroblog.cpp:62
+-msgctxt "Timeline name"
+-msgid "Repeated"
+-msgstr "Повторенные"
+-
+-#: microblogs/laconica/laconicamicroblog.cpp:63
+-msgctxt "Timeline description"
+-msgid "Your posts that were repeated by others"
+-msgstr "Ваши сообщения, повторенные другими"
+-
+-#: microblogs/laconica/laconicamicroblog.cpp:217
+-#, kde-format
+-msgid "Repeat of %1"
+-msgstr "Повтор %1"
+-
+-#: microblogs/laconica/laconicamicroblog.cpp:219
+-#, kde-format
+-msgid "Repeated by %1"
+-msgstr "Повторил %1"
+-
+-#: microblogs/laconica/laconicamicroblog.cpp:224
+-msgid "Repeat this notice?"
+-msgstr "Повторить это сообщение?"
+-
+-#: microblogs/laconica/laconicamicroblog.cpp:355
+-#, fuzzy, kde-format
+-#| msgid "Fetching the new post failed. %1"
+-msgid "Fetching conversation failed. %1"
+-msgstr "Ошибка получения нового сообщения. %1"
+-
+-#: microblogs/laconica/laconicaconversationtimelinewidget.cpp:34
+-#, fuzzy, kde-format
+-#| msgid "Conversation"
+-msgid "Conversation %1"
+-msgstr "Разговор"
+-
+-#: microblogs/laconica/laconicacomposerwidget.cpp:134
+-msgid "Select Media to Upload"
+-msgstr "Выберите медиафайл для загрузки"
+-
+-#: microblogs/laconica/laconicacomposerwidget.cpp:143
+-msgid "Discard Attachment"
+-msgstr "Отменить присоединение файла"
+-
+-#: microblogs/laconica/laconicacomposerwidget.cpp:150
+-#, kde-format
+-msgid "Attaching <b>%1</b>"
+-msgstr ""
+-
+-#: microblogs/laconica/laconicapostwidget.cpp:84
+-#: microblogs/twitter/twitterpostwidget.cpp:52
+-msgid "Manual ReSend"
+-msgstr "Ручная пересылка"
+-
+-#: microblogs/laconica/laconicapostwidget.cpp:86
+-msgid "Repeat"
+-msgstr "Повторить"
+-
+-#: microblogs/laconica/laconicapostwidget.cpp:87
+-msgid "Repeat post using API"
+-msgstr "Повторить отправку, используя API"
+-
+-#: microblogs/laconica/laconicapostwidget.cpp:151
+-#, kde-format
+-msgid "Search for %1"
+-msgstr "Искать %1"
+-
+-#: microblogs/laconica/laconicapostwidget.cpp:153
+-msgid "Open tag page in browser"
+-msgstr "Открыть страницу метки в браузере"
+-
+-#: microblogs/laconica/laconicapostwidget.cpp:169
+-msgid "Show latest group posts"
+-msgstr "Показать последние сообщения группы"
++#: microblogs/twitter/twitterpostwidget.cpp:54
++msgid "Retweet"
++msgstr "Ретвит"
+ 
+-#: microblogs/laconica/laconicapostwidget.cpp:171
+-msgid "Open group page in browser"
+-msgstr "Открыть страницу группы в браузере"
++#: microblogs/twitter/twitterpostwidget.cpp:55
++msgid "Retweet post using API"
++msgstr "Повторить сообщение, используя API"
+ 
+-#: microblogs/laconica/laconicapostwidget.cpp:188
+ #: microblogs/twitter/twitterpostwidget.cpp:107
++#: microblogs/laconica/laconicapostwidget.cpp:188
+ #, kde-format
+ msgctxt "Who is user"
+ msgid "Who is %1"
+ msgstr "Кто такой %1"
+ 
+-#: microblogs/laconica/laconicapostwidget.cpp:190
+ #: microblogs/twitter/twitterpostwidget.cpp:109
++#: microblogs/laconica/laconicapostwidget.cpp:190
+ #, kde-format
+ msgctxt "Posts from user"
+ msgid "Posts from %1"
+ msgstr "Сообщения от %1"
+ 
+-#: microblogs/laconica/laconicapostwidget.cpp:192
+ #: microblogs/twitter/twitterpostwidget.cpp:111
++#: microblogs/laconica/laconicapostwidget.cpp:192
+ #, kde-format
+ msgctxt "Replies to user"
+ msgid "Replies to %1"
+ msgstr "Ответы %1"
+ 
+-#: microblogs/laconica/laconicapostwidget.cpp:196
++#: microblogs/twitter/twitterpostwidget.cpp:114
++#, kde-format
++msgctxt "Including user name"
++msgid "Including %1"
++msgstr "Сообщения с именем %1"
++
+ #: microblogs/twitter/twitterpostwidget.cpp:119
++#: microblogs/laconica/laconicapostwidget.cpp:196
+ msgctxt "Open profile page in browser"
+ msgid "Open profile in browser"
+ msgstr "Открыть профиль в браузере"
+ 
+-#: microblogs/laconica/laconicapostwidget.cpp:213
+ #: microblogs/twitter/twitterpostwidget.cpp:136
++#: microblogs/laconica/laconicapostwidget.cpp:213
+ msgid "Actions"
+ msgstr "Действия"
+ 
+-#: microblogs/laconica/laconicapostwidget.cpp:214
+ #: microblogs/twitter/twitterpostwidget.cpp:137
++#: microblogs/laconica/laconicapostwidget.cpp:214
+ #, kde-format
+ msgctxt "Write a message to user attention"
+ msgid "Write to %1"
+ msgstr "Написать %1"
+ 
+-#: microblogs/laconica/laconicapostwidget.cpp:219
+ #: microblogs/twitter/twitterpostwidget.cpp:143
++#: microblogs/laconica/laconicapostwidget.cpp:219
+ #, kde-format
+ msgctxt "Send direct message to user"
+ msgid "Send private message to %1"
+ msgstr "Отправить личное сообщение %1"
+ 
+-#: microblogs/laconica/laconicapostwidget.cpp:225
++#: microblogs/twitter/twitterpostwidget.cpp:149
+ #, kde-format
+-msgctxt "Unsubscribe from user"
+-msgid "Unsubscribe from %1"
+-msgstr "Отписаться от %1"
++msgctxt "Unfollow user"
++msgid "Unfollow %1"
++msgstr "Отписаться от сообщений %1"
+ 
+-#: microblogs/laconica/laconicapostwidget.cpp:230
++#: microblogs/twitter/twitterpostwidget.cpp:154
+ #, kde-format
+-msgctxt "Subscribe to user"
+-msgid "Subscribe to %1"
+-msgstr "Подписаться на %1"
++msgctxt "Follow user"
++msgid "Follow %1"
++msgstr "Подписаться на сообщения %1"
+ 
+-#: microblogs/laconica/laconicapostwidget.cpp:235
+ #: microblogs/twitter/twitterpostwidget.cpp:158
++#: microblogs/laconica/laconicapostwidget.cpp:235
+ #, kde-format
+ msgctxt "Block user"
+ msgid "Block %1"
+ msgstr "Блокировать %1"
+ 
+-#: microblogs/ocs/ocsconfigurewidget.cpp:36
+-msgid "Loading..."
+-msgstr "Загрузка..."
+-
+-#: microblogs/ocs/ocsconfigurewidget.cpp:65
+-msgid "You have to wait for providers list to be loaded."
+-msgstr "Вы должны подождать, пока загрузится список поставщиков услуг."
+-
+-#: microblogs/ocs/ocsmicroblog.cpp:153
+-msgid "OCS plugin is not initialized yet. Try again later."
+-msgstr "Модуль OCS ещё не инициализирован. Попробуйте позже."
+-
+-#: microblogs/ocs/ocsmicroblog.cpp:186 microblogs/ocs/ocsmicroblog.cpp:193
+-msgid "Not Supported"
+-msgstr "Не поддерживается"
+-
+-#: microblogs/ocs/ocsmicroblog.cpp:259
+-msgctxt "Timeline Name"
+-msgid "Activity"
+-msgstr "Активность"
+-
+-#: microblogs/ocs/ocsmicroblog.cpp:260
+-msgid "Social activities"
+-msgstr "Социальная активность"
+-
+ #: microblogs/twitter/twitterlistdialog.cpp:50
+ msgid "Add List"
+ msgstr "Добавить список"
+ 
+ #. i18n: file: plugins/filter/filterprefs.ui:73
+ #. i18n: ectx: property (toolTip), widget (KPushButton, btnAdd)
+-#: microblogs/twitter/twitterlistdialog.cpp:61 rc.cpp:371
++#: microblogs/twitter/twitterlistdialog.cpp:61
++#: rc.cpp:360
+ msgid "Add"
+ msgstr "Добавить"
+ 
+@@ -1224,34 +376,6 @@
+ msgid "No User!"
+ msgstr "Нет пользователя"
+ 
+-#: microblogs/twitter/twittermicroblog.cpp:136
+-#, kde-format
+-msgid "Retweet of %1"
+-msgstr "Ретвит %1"
+-
+-#: microblogs/twitter/twittermicroblog.cpp:138
+-#, kde-format
+-msgid "Retweeted by %1"
+-msgstr "Повторено %1"
+-
+-#: microblogs/twitter/twittermicroblog.cpp:143
+-msgid "Retweet to your followers?"
+-msgstr "Повторить сообщение вашим подписчикам?"
+-
+-#: microblogs/twitter/twittermicroblog.cpp:150
+-msgid "Add User List..."
+-msgstr "Добавить пользовательский список..."
+-
+-#: microblogs/twitter/twittermicroblog.cpp:204
+-#, kde-format
+-msgid "Fetching %1's lists failed. %2"
+-msgstr "Не удалось получить списки %1. %2"
+-
+-#: microblogs/twitter/twittermicroblog.cpp:212
+-#, kde-format
+-msgid "There's no list record for user %1"
+-msgstr "Нет списка для пользователя %1"
+-
+ #: microblogs/twitter/twittersearch.cpp:48
+ msgctxt "Posts sent to user"
+ msgid "To:"
+@@ -1286,798 +410,820 @@
+ msgid "Tweets Including This Hashtag"
+ msgstr "Сообщения с этой меткой"
+ 
++#: microblogs/twitter/twittersearch.cpp:90
++#: microblogs/laconica/laconicasearch.cpp:133
++msgid "Unable to fetch search results."
++msgstr "Невозможно получить результаты поиска."
++
++#: microblogs/twitter/twittersearch.cpp:98
++#: microblogs/laconica/laconicasearch.cpp:141
++#, kde-format
++msgid "Unable to fetch search results: %1"
++msgstr "Невозможно получить результаты поиска: %1"
++
++#: microblogs/twitter/twittereditaccount.cpp:137
++#: microblogs/twitter/twittereditaccount.cpp:167
++#: libchoqok/choqoktools.cpp:61
++msgid "Authorization Error"
++msgstr "Ошибка авторизации"
++
+ #: microblogs/twitter/twittereditaccount.cpp:146
+ msgid "PIN"
+-msgstr ""
++msgstr "PIN"
+ 
+ #: microblogs/twitter/twittereditaccount.cpp:147
+-#, fuzzy
+-#| msgid "Enter PIN number received from Twitter:"
+ msgid "Enter the PIN received from Twitter:"
+ msgstr "Введите PIN, полученный от Twitter:"
+ 
+-#: microblogs/twitter/twitterpostwidget.cpp:54
+-msgid "Retweet"
+-msgstr "Ретвит"
++#: microblogs/twitter/twittereditaccount.cpp:163
++#: microblogs/laconica/laconicaeditaccount.cpp:207
++msgid "Choqok is authorized successfully."
++msgstr "Choqok успешно авторизован."
+ 
+-#: microblogs/twitter/twitterpostwidget.cpp:55
+-msgid "Retweet post using API"
+-msgstr "Повторить сообщение, используя API"
++#: microblogs/twitter/twittereditaccount.cpp:164
++#: microblogs/laconica/laconicaeditaccount.cpp:208
++msgid "Authorized"
++msgstr "Авторизован"
+ 
+-#: microblogs/twitter/twitterpostwidget.cpp:114
++#: microblogs/twitter/twittereditaccount.cpp:179
++#: microblogs/laconica/laconicaeditaccount.cpp:265
++msgid "Authenticated"
++msgstr "Вход выполнен"
++
++#: microblogs/twitter/twittereditaccount.cpp:183
++#: microblogs/laconica/laconicaeditaccount.cpp:269
++msgid "Not Authenticated"
++msgstr "Вход не выполнен"
++
++#: microblogs/laconica/laconicapostwidget.cpp:86
++msgid "Repeat"
++msgstr "Повторить"
++
++#: microblogs/laconica/laconicapostwidget.cpp:87
++msgid "Repeat post using API"
++msgstr "Повторить отправку, используя API"
++
++#: microblogs/laconica/laconicapostwidget.cpp:151
+ #, kde-format
+-msgctxt "Including user name"
+-msgid "Including %1"
+-msgstr "Сообщения с именем %1"
++msgid "Search for %1"
++msgstr "Искать %1"
+ 
+-#: microblogs/twitter/twitterpostwidget.cpp:149
++#: microblogs/laconica/laconicapostwidget.cpp:153
++msgid "Open tag page in browser"
++msgstr "Открыть страницу метки в браузере"
++
++#: microblogs/laconica/laconicapostwidget.cpp:169
++msgid "Show latest group posts"
++msgstr "Показать последние сообщения группы"
++
++#: microblogs/laconica/laconicapostwidget.cpp:171
++msgid "Open group page in browser"
++msgstr "Открыть страницу группы в браузере"
++
++#: microblogs/laconica/laconicapostwidget.cpp:225
+ #, kde-format
+-msgctxt "Unfollow user"
+-msgid "Unfollow %1"
+-msgstr "Отписаться от сообщений %1"
++msgctxt "Unsubscribe from user"
++msgid "Unsubscribe from %1"
++msgstr "Отписаться от %1"
+ 
+-#: microblogs/twitter/twitterpostwidget.cpp:154
++#: microblogs/laconica/laconicapostwidget.cpp:230
+ #, kde-format
+-msgctxt "Follow user"
+-msgid "Follow %1"
+-msgstr "Подписаться на сообщения %1"
++msgctxt "Subscribe to user"
++msgid "Subscribe to %1"
++msgstr "Подписаться на %1"
+ 
+-#: plugins/filter/addeditfilter.cpp:41
+-msgid "Define new filter rules"
+-msgstr "Определение новых правил для фильтра"
++#: microblogs/laconica/laconicamicroblog.cpp:62
++msgctxt "Timeline name"
++msgid "Repeated"
++msgstr "Повторенные"
+ 
+-#: plugins/filter/addeditfilter.cpp:50
+-msgid "Modify filter rules"
+-msgstr "Изменение правил для фильтра"
++#: microblogs/laconica/laconicamicroblog.cpp:63
++msgctxt "Timeline description"
++msgid "Your posts that were repeated by others"
++msgstr "Ваши сообщения, повторенные другими"
+ 
+-#: plugins/filter/configurefilters.cpp:43
+-msgid "Configure Filters"
+-msgstr "Настройка фильтров"
++#: microblogs/laconica/laconicamicroblog.cpp:168
++#: microblogs/laconica/laconicamicroblog.cpp:175
++#: libchoqok/mediamanager.cpp:185
++#: libchoqok/mediamanager.cpp:191
++msgid "Uploading medium failed: cannot read the medium file."
++msgstr "Загрузка файла не удалась: невозможно прочитать файл."
+ 
+-#: plugins/filter/filtersettings.cpp:46
+-msgid "Author Username"
+-msgstr "Имя пользователя автора"
++#: microblogs/laconica/laconicamicroblog.cpp:217
++#, kde-format
++msgid "Repeat of %1"
++msgstr "Повтор %1"
+ 
+-#: plugins/filter/filtersettings.cpp:47
+-msgid "Post Text"
+-msgstr "Текст сообщения"
++#: microblogs/laconica/laconicamicroblog.cpp:219
++#, kde-format
++msgid "Repeated by %1"
++msgstr "Повторил %1"
+ 
+-#: plugins/filter/filtersettings.cpp:48
+-msgid "Author Client"
+-msgstr "Клиент автора"
++#: microblogs/laconica/laconicamicroblog.cpp:224
++msgid "Repeat this notice?"
++msgstr "Повторить это сообщение?"
+ 
+-#: plugins/filter/filtersettings.cpp:49
+-msgid "Reply to User"
+-msgstr "Ответить пользователю"
++#: microblogs/laconica/laconicamicroblog.cpp:293
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1104
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1660
++msgid "Retrieving the friends list failed. The data returned from the server is corrupted."
++msgstr "Не удалось получить список друзей. Данные, полученные от сервера, повреждены."
+ 
+-#: plugins/filter/filtersettings.cpp:51
+-msgid "Contain"
+-msgstr "Содержит"
++#: microblogs/laconica/laconicamicroblog.cpp:355
++#, kde-format
++msgid "Fetching conversation failed. %1"
++msgstr "Ошибка получения разговора. %1"
+ 
+-#: plugins/filter/filtersettings.cpp:52
+-msgid "Does Not Contain"
+-msgstr "Не содержит"
++#: microblogs/laconica/laconicasearch.cpp:45
++msgctxt "Dents are Identica posts"
++msgid "Dents Including This Hashtag"
++msgstr "Сообщения, включающие эту метку"
+ 
+-#: plugins/filter/filtersettings.cpp:53
+-msgid "Exact Match"
+-msgstr "Точное совпадение"
++#: microblogs/laconica/laconicasearch.cpp:48
++msgctxt "Dents are Identica posts"
++msgid "Dents Including This Group"
++msgstr "Сообщения, включающие эту группу"
++
++#: microblogs/laconica/laconicasearch.cpp:51
++msgctxt "Dents are Identica posts"
++msgid "Dents From This User"
++msgstr "Сообщения от этого пользователя"
++
++#: microblogs/laconica/laconicasearch.cpp:54
++msgctxt "Dents are Identica posts"
++msgid "Dents To This User"
++msgstr "Сообщения к этому пользователю"
++
++#: microblogs/laconica/laconicaeditaccount.cpp:146
++msgid "Sorry! OAuth Method just works with Identi.ca server. You have to use basic authentication for other StatusNet servers."
++msgstr "Метод аутентификации OAuth работает только с сервером Identi.ca. С серверами StatusNet следует использовать обычную аутентификацию."
++
++#: microblogs/laconica/laconicaeditaccount.cpp:179
++#: microblogs/laconica/laconicaeditaccount.cpp:212
++msgid "Authentication Error"
++msgstr "Ошибка аутентификации"
++
++#: microblogs/laconica/laconicaeditaccount.cpp:188
++msgid "Security code"
++msgstr "Секретный код"
++
++#: microblogs/laconica/laconicaeditaccount.cpp:190
++msgctxt "Security code recieved from StatusNet"
++msgid "Enter security code:"
++msgstr "Введите секретный код:"
+ 
+-#: plugins/filter/filtersettings.cpp:54
+-msgid "Regular Expression"
+-msgstr "Регулярное выражение"
++#: microblogs/laconica/laconicacomposerwidget.cpp:60
++#: libchoqok/ui/quickpost.cpp:96
++msgid "Attach a file"
++msgstr "Присоединить файл"
+ 
+-#: plugins/filter/filtermanager.cpp:48
+-msgid "Configure Filters..."
+-msgstr "Настроить фильтры..."
++#: microblogs/laconica/laconicacomposerwidget.cpp:97
++#: libchoqok/ui/composerwidget.cpp:135
++msgid "Abort"
++msgstr "Прервать"
+ 
+-#: plugins/filter/filtermanager.cpp:56
+-msgid "Hide Post"
+-msgstr "Скрыть сообщение"
++#: microblogs/laconica/laconicacomposerwidget.cpp:119
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:429
++msgid "New post submitted successfully"
++msgstr "Сообщение успешно отправлено."
+ 
+-#: plugins/filter/filtermanager.cpp:221
+-#, kde-format
+-msgid "Hide all posts from <b>@%1</b>"
+-msgstr "Скрыть все сообщения от <b>@%1</b>"
++#: microblogs/laconica/laconicacomposerwidget.cpp:134
++msgid "Select Media to Upload"
++msgstr "Выберите медиафайл для загрузки"
+ 
+-#: plugins/konqueror/konqchoqok.cpp:54 plugins/konqueror/konqchoqok.cpp:117
+-msgid "Post Text with Choqok"
+-msgstr "Отправить текст с помощью Choqok"
++#: microblogs/laconica/laconicacomposerwidget.cpp:143
++msgid "Discard Attachment"
++msgstr "Отменить присоединение файла"
+ 
+-#: plugins/konqueror/konqchoqok.cpp:59
+-msgid "Shorten Url on Paste"
+-msgstr "Сокращать ссылки при вставке"
++#: microblogs/laconica/laconicacomposerwidget.cpp:150
++#, kde-format
++msgid "Attaching <b>%1</b>"
++msgstr "Присоединение <b>%1</b>"
+ 
+-#: plugins/konqueror/konqchoqok.cpp:116
+-msgid "You need to select text to post."
+-msgstr "Нужно выбрать текст для сообщения."
++#: microblogs/laconica/laconicaconversationtimelinewidget.cpp:34
++#, kde-format
++msgid "Conversation %1"
++msgstr "Разговор %1"
+ 
+-#: plugins/nowlistening/nowlistening.cpp:46
+-msgid "Now Listening"
+-msgstr "Сейчас прослушивается"
++#: microblogs/laconica/laconicaconversationtimelinewidget.cpp:36
++#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:314
++#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:114
++msgid "Please wait..."
++msgstr "Подождите..."
+ 
+-#: plugins/nowlistening/nowlistening.cpp:242
+-msgctxt "Player is running, But it's not playing."
+-msgid "Play your desired music player."
+-msgstr "Начните воспроизведение музыки в проигрывателе."
++#: microblogs/laconica/laconicaconversationtimelinewidget.cpp:64
++#: helperlibs/twitterapihelper/twitterapishowthread.cpp:49
++msgid "Conversation"
++msgstr "Разговор"
+ 
+-#: plugins/nowlistening/nowlistening.cpp:245
+-msgid "No supported player found."
+-msgstr "Поддерживаемый проигрыватель не найден."
++#: microblogs/ocs/ocsconfigurewidget.cpp:36
++msgid "Loading..."
++msgstr "Загрузка..."
+ 
+-#: plugins/searchaction/searchaction.cpp:61
+-msgid "The Search action plugin does not support the current microblog."
+-msgstr "Поисковый модуль не поддерживает текущий микроблог."
++#: microblogs/ocs/ocsconfigurewidget.cpp:65
++msgid "You have to wait for providers list to be loaded."
++msgstr "Вы должны подождать, пока загрузится список поставщиков услуг."
+ 
+-#: plugins/shorteners/bit_ly/bit_ly.cpp:83
+-msgid "API key is invalid"
+-msgstr "Ключ API недействителен"
++#: microblogs/ocs/ocsmicroblog.cpp:153
++msgid "OCS plugin is not initialized yet. Try again later."
++msgstr "Модуль OCS ещё не инициализирован. Попробуйте позже."
+ 
+-#: plugins/shorteners/bit_ly/bit_ly.cpp:85
+-msgid "Login is invalid"
+-msgstr "Имя пользователя недействительно"
++#: microblogs/ocs/ocsmicroblog.cpp:186
++#: microblogs/ocs/ocsmicroblog.cpp:193
++msgid "Not Supported"
++msgstr "Не поддерживается"
+ 
+-#: plugins/shorteners/bit_ly/bit_ly.cpp:87
+-msgid "Rate limit exceeded. Try another shortener."
+-msgstr ""
+-"Превышен допустимый трафик. Попробуйте использовать другую службу сокращения "
+-"ссылок."
++#: microblogs/ocs/ocsmicroblog.cpp:259
++msgctxt "Timeline Name"
++msgid "Activity"
++msgstr "Активность"
+ 
+-#: plugins/shorteners/bit_ly/bit_ly.cpp:89
+-#: plugins/shorteners/bit_ly/bit_ly.cpp:92
+-msgid "bit.ly error"
+-msgstr "Ошибка службы bit.ly"
++#: microblogs/ocs/ocsmicroblog.cpp:260
++msgid "Social activities"
++msgstr "Социальная активность"
+ 
+-#: plugins/shorteners/bit_ly/bit_ly_config.cpp:60
+-msgid ""
+-"You can find your API key <a href=\"http://bit.ly/a/your_api_key\">here</a>"
+-msgstr ""
+-"Вы можете найти свой ключ API <a href=\"http://bit.ly/a/your_api_key"
+-"\">здесь</a>"
++#: libchoqok/ui/uploadmediadialog.cpp:61
++msgid "Upload Medium"
++msgstr "Загрузка файла"
+ 
+-#: plugins/shorteners/bit_ly/bit_ly_config.cpp:106
+-msgid "Checking..."
+-msgstr "Проверка..."
++#: libchoqok/ui/uploadmediadialog.cpp:63
++msgid "Upload"
++msgstr "Загрузить"
+ 
+-#: plugins/shorteners/bit_ly/bit_ly_config.cpp:127
+-msgid ""
+-"Provided data is invalid. Try another login or API key.\n"
+-"You can find it on http://bit.ly/a/your_api_key"
+-msgstr ""
+-"Информация недействительна. Попробуйте ввести другое имя пользователя или "
+-"ключ API.\n"
+-"Вы можете найти его здесь: http://bit.ly/a/your_api_key"
++#: libchoqok/ui/uploadmediadialog.cpp:113
++msgid "Uploading..."
++msgstr "Загрузка..."
+ 
+-#: plugins/shorteners/bit_ly/bit_ly_config.cpp:129
+-msgid "You entered valid information!"
+-msgstr "Вы ввели верные данные"
++#: libchoqok/ui/uploadmediadialog.cpp:247
++msgid "Medium uploading failed."
++msgstr "Ошибка загрузки файла."
+ 
+-#: plugins/shorteners/bit_ly/bit_ly_config.cpp:132
+-msgid "bit.ly config error"
+-msgstr "Ошибка конфигурации bit.ly"
++#: libchoqok/ui/microblogwidget.cpp:279
++#: libchoqok/ui/timelinewidget.cpp:223
++msgid "Mark all as read"
++msgstr "Отметить все прочитанными"
+ 
+-#. i18n: file: plugins/shorteners/bit_ly/bit_ly_prefs.ui:49
+-#. i18n: ectx: property (text), widget (QPushButton, validate_button)
+-#: plugins/shorteners/bit_ly/bit_ly_config.cpp:136 rc.cpp:448
+-msgid "Validate"
+-msgstr "Проверить"
++#: libchoqok/ui/microblogwidget.cpp:386
++msgid "More"
++msgstr "Больше"
+ 
+-#: plugins/shorteners/goo_gl/goo_gl.cpp:61
+-msgid "Error when creating job"
+-msgstr "Ошибка во время создания задания"
++#: libchoqok/ui/microblogwidget.cpp:388
++msgid "Latest update:"
++msgstr "Последнее обновление:"
+ 
+-#: plugins/shorteners/goo_gl/goo_gl.cpp:61
+-#: plugins/shorteners/goo_gl/goo_gl.cpp:75
+-#: plugins/shorteners/goo_gl/goo_gl.cpp:80
+-#: plugins/shorteners/goo_gl/goo_gl.cpp:82
+-msgid "Goo.gl error"
+-msgstr "Ошибка службы Goo.gl"
++#: libchoqok/ui/choqoktextedit.cpp:60
++msgid "<strong>Note:</strong><br/><em>Ctrl+S</em> to enable/disable auto spell checker."
++msgstr "<strong>Примечание: используйте </strong><br/><em>Ctrl+S</em> для включения/выключения автоматической проверки орфографии."
+ 
+-#: plugins/shorteners/goo_gl/goo_gl.cpp:80
+-#: plugins/shorteners/is_gd/is_gd.cpp:83
+-msgid "Malformed response\n"
+-msgstr "Неправильный ответ\n"
++#: libchoqok/ui/choqoktextedit.cpp:179
++msgid "Set spell check language"
++msgstr "Язык проверки правописания"
+ 
+-#: plugins/shorteners/goo_gl/goo_gl.cpp:82
+-#: plugins/shorteners/is_gd/is_gd.cpp:87
+-#: plugins/shorteners/three_ly/three_ly.cpp:68
+-#: plugins/shorteners/tinyarro_ws/tinyarro_ws.cpp:75
+-#: plugins/shorteners/yourls/yourls.cpp:92
+-#, kde-format
+-msgid ""
+-"Cannot create a short url.\n"
+-"%1"
+-msgstr ""
+-"Не удалось создать сокращённую ссылку.\n"
+-"%1"
++#: libchoqok/ui/choqoktextedit.cpp:183
++msgctxt "Replace URLs by a shortened URL"
++msgid "Shorten URLs"
++msgstr "Укороченные ссылки"
+ 
+-#: plugins/shorteners/is_gd/is_gd.cpp:75 plugins/shorteners/is_gd/is_gd.cpp:83
+-#: plugins/shorteners/is_gd/is_gd.cpp:87
+-#, fuzzy
+-#| msgid "bit.ly error"
+-msgid "is.gd error"
+-msgstr "Ошибка службы bit.ly"
++#: libchoqok/ui/textbrowser.cpp:112
++msgid "Copy"
++msgstr "Копировать"
+ 
+-#: plugins/shorteners/three_ly/three_ly.cpp:65
+-msgid "3.ly error"
+-msgstr "Ошибка службы 3.ly"
++#: libchoqok/ui/textbrowser.cpp:118
++msgid "Copy Link Location"
++msgstr "Копировать адрес ссылки"
+ 
+-#: plugins/shorteners/tinyarro_ws/tinyarro_ws.cpp:73
+-msgid "Tinyarro.ws error"
+-msgstr "Ошибка службы Tinyarro.ws"
++#: libchoqok/ui/textbrowser.cpp:123
++msgid "Select All"
++msgstr "Выделить всё"
+ 
+-#: plugins/shorteners/tinyarro_ws/tinyarro_ws_config.cpp:59
+-msgid "Random host"
+-msgstr "Случайный хост"
++#: libchoqok/ui/quickpost.cpp:83
++msgctxt "Submit post"
++msgid "Submit"
++msgstr "Отправить"
+ 
+-#: plugins/shorteners/yourls/yourls.cpp:87
+-msgid "Yourls Error"
+-msgstr "Ошибка службы Yourls"
++#: libchoqok/ui/quickpost.cpp:92
++msgid "All"
++msgstr "Все"
+ 
+-#: plugins/translator/sharedtools.cpp:33
+-msgctxt "Translation Language"
+-msgid "Chinese Simplified"
++#: libchoqok/ui/quickpost.cpp:163
++msgid ""
++"Please configure at least one account to be included in \"Quick Post\".\n"
++"Settings -> Configure Choqok... -> Accounts"
+ msgstr ""
++"Настройте хотя бы одну учётную запись для отправки «Быстрого сообщения».\n"
++"Настройка -> Настроить Choqok... -> Учётные записи"
+ 
+-#: plugins/translator/sharedtools.cpp:34
+-msgctxt "Translation Language"
+-msgid "Chinese Traditional"
+-msgstr ""
++#: libchoqok/ui/quickpost.cpp:276
++msgid "Link to uploaded medium will be added here after uploading process succeed."
++msgstr "Ссылка на загруженный файл будет добавлена после завершения загрузки."
+ 
+-#: plugins/translator/sharedtools.cpp:35
+-msgctxt "Translation Language"
+-msgid "Filipino"
+-msgstr ""
++#: libchoqok/ui/composerwidget.cpp:68
++msgid "Discard Reply"
++msgstr "Отменить ответ"
+ 
+-#: plugins/translator/sharedtools.cpp:36
+-msgctxt "Translation Language"
+-msgid "Haitian Creole"
+-msgstr ""
++#: libchoqok/ui/composerwidget.cpp:108
++#, kde-format
++msgid "Replying to <b>%1</b>"
++msgstr "Ответ <b>%1</b>"
+ 
+-#: plugins/translator/sharedtools.cpp:37
+-msgctxt "Translation Language"
+-msgid "Hebrew"
+-msgstr ""
++#: libchoqok/ui/postwidget.cpp:198
++msgctxt "@info:tooltip"
++msgid "Remove"
++msgstr "Удалить"
+ 
+-#: plugins/translator/sharedtools.cpp:38
+-msgctxt "Translation Language"
+-msgid "Norwegian"
+-msgstr ""
++#: libchoqok/ui/postwidget.cpp:202
++msgctxt "@info:tooltip"
++msgid "ReSend"
++msgstr "Повторить эту запись"
+ 
+-#: plugins/translator/translator.cpp:54
+-msgid "Translate to ..."
+-msgstr "Перевести на..."
++#: libchoqok/ui/postwidget.cpp:427
++msgid "Just now"
++msgstr "Прямо сейчас"
+ 
+-#: plugins/translator/translator.cpp:106
+-#, fuzzy, kde-format
+-#| msgid ""
+-#| "<span style=\"color:%2; font-size:small;\">Translated from %1:</span>"
+-msgid ""
+-"<span style=\"color:%2; font-size:small;\">Translated from %1: (<a "
+-"href='choqok://showoriginalpost' style=\"text-decoration:none\" >original "
+-"post</a>)</span>"
+-msgstr "<span style=\"color:%2; font-size:small;\">Переведено с %1:</span>"
++#: libchoqok/ui/postwidget.cpp:454
++msgid "Are you sure you want to remove this post from the server?"
++msgstr "Удалить сообщение с сервера?"
+ 
+-#: plugins/translator/translator.cpp:117
++#: libchoqok/ui/timelinewidget.cpp:56
++#: helperlibs/twitterapihelper/twitterapisearchtimelinewidget.cpp:69
+ #, kde-format
+-msgid "Translation failed: %1"
+-msgstr "Не удалось перевести: %1"
++msgid "Search results for %1"
++msgstr "Результаты поиска для %1"
+ 
+-#: plugins/translator/translator.cpp:136
+-#, fuzzy
+-#| msgid "Configure Filters"
+-msgid "Configure Translator"
+-msgstr "Настройка фильтров"
++#: libchoqok/choqoktools.cpp:50
++msgid "No Error"
++msgstr "Нет ошибок"
+ 
+-#: plugins/uploaders/flickr/flickr.cpp:170
+-msgid "The photo required argument was missing"
+-msgstr "Необходимый аргумент фотографии пропущен"
++#: libchoqok/choqoktools.cpp:52
++msgid "Bad request"
++msgstr "Неправильный запрос"
+ 
+-#: plugins/uploaders/flickr/flickr.cpp:173
+-msgid "The file was not correctly uploaded"
+-msgstr "Не удалось правильно отправить файл"
++#: libchoqok/choqoktools.cpp:55
++msgid "Consumer Key or Secret has not been provided"
++msgstr "Пользовательский ключ или пароль не был введён."
+ 
+-#: plugins/uploaders/flickr/flickr.cpp:176
+-msgid "The file was zero bytes in length"
+-msgstr "Файл имеет размер 0 байт"
++#: libchoqok/choqoktools.cpp:57
++msgid "Forbidden"
++msgstr "Нет доступа"
+ 
+-#: plugins/uploaders/flickr/flickr.cpp:179
+-msgid "Filetype was not recognised"
+-msgstr "Неизвестный тип файла"
++#: libchoqok/choqoktools.cpp:59
++msgid "Timeout on server"
++msgstr "Истекло время ожидания сервера"
+ 
+-#: plugins/uploaders/flickr/flickr.cpp:182
+-msgid "The calling user has reached their monthly bandwidth limit"
+-msgstr "Вызывающий пользователь достиг месячного предела трафика"
++#: libchoqok/choqoktools.cpp:63
++msgid "Internal Error"
++msgstr "Внутренняя ошибка"
+ 
+-#: plugins/uploaders/flickr/flickr.cpp:186
+-#: plugins/uploaders/flickr/flickrconfig.cpp:161
+-msgid "Signature problem. Please try again later"
+-msgstr ""
++#: libchoqok/choqoktools.cpp:68
++msgid "Unknown Error"
++msgstr "Неизвестная ошибка"
+ 
+-#: plugins/uploaders/flickr/flickr.cpp:193
+-msgid "Login failed. Please re-authenticate Choqok"
+-msgstr "Не удалось войти. Разрешите вход из Choqok ещё раз."
++#: libchoqok/passwordmanager.cpp:73
++msgid "Cannot open KDE Wallet manager, your secrets will be stored as plain text, install KWallet to fix this."
++msgstr "Не удалось открыть KWalletManager, все ваши пароли будут сохранены как обычный текст. Установите KWallet, чтобы это исправить."
+ 
+-#: plugins/uploaders/flickr/flickr.cpp:196
+-#: plugins/uploaders/flickr/flickrconfig.cpp:164
+-#: plugins/uploaders/flickr/flickrconfig.cpp:235
+-msgid "The requested service is temporarily unavailable. Try again later"
+-msgstr "Запрашиваемая служба временно недоступна. Попробуйте позже."
++#: libchoqok/microblog.cpp:85
++msgid "The server returned an error"
++msgstr "Сервер сообщил об ошибке"
+ 
+-#: plugins/uploaders/flickr/flickr.cpp:199
+-#: plugins/uploaders/flickr/flickrconfig.cpp:167
+-#, fuzzy, kde-format
+-#| msgid "Something happens wrong. Error %1. Try again later"
+-msgid "Unknown Error: %1. Please try again later"
+-msgstr "Что-то не так. Ошибка %1. Попробуйте позже."
++#: libchoqok/microblog.cpp:88
++msgid "Error on communication with server"
++msgstr "Ошибка соединения с сервером"
+ 
+-#: plugins/uploaders/flickr/flickr.cpp:206
+-#: plugins/uploaders/flickr/flickr.cpp:212
+-#: plugins/uploaders/flickr/flickrconfig.cpp:172
+-#: plugins/uploaders/flickr/flickrconfig.cpp:177
+-#: plugins/uploaders/flickr/flickrconfig.cpp:243
+-#: plugins/uploaders/flickr/flickrconfig.cpp:248
+-#: plugins/uploaders/imageshack/imageshack.cpp:130
+-#: plugins/uploaders/mobypicture/mobypicture.cpp:169
+-#: plugins/uploaders/posterous/posterous.cpp:196
+-#: plugins/uploaders/twitgoo/twitgoo.cpp:131
+-#: plugins/uploaders/twitpic/twitpic.cpp:130
+-msgid "Malformed response"
+-msgstr "Неправильный ответ"
++#: libchoqok/microblog.cpp:91
++msgid "Error on parsing results"
++msgstr "Ошибка при распознавании результатов"
+ 
+-#: plugins/uploaders/flickr/flickrconfig.cpp:183
+-#: plugins/uploaders/flickr/flickrconfig.cpp:255
+-msgid "Flickr authorization"
+-msgstr "Авторизация в службе Flickr"
++#: libchoqok/microblog.cpp:94
++msgid "Authentication error"
++msgstr "Ошибка входа в систему"
+ 
+-#: plugins/uploaders/flickr/flickrconfig.cpp:232
+-msgid "Something happens with signature. Please retry"
+-msgstr "Что-то с подписью. Попробуйте снова."
++#: libchoqok/microblog.cpp:97
++msgid "The server does not support this feature"
++msgstr "Сервер не поддерживает данной возможности"
+ 
+-#: plugins/uploaders/flickr/flickrconfig.cpp:238
+-#, kde-format
+-msgid "Something happens wrong. Error %1. Try again later"
+-msgstr "Что-то не так. Ошибка %1. Попробуйте позже."
++#: libchoqok/microblog.cpp:100
++msgid "Unknown error"
++msgstr "Неизвестная ошибка"
+ 
+-#: plugins/uploaders/flickr/flickrconfig.cpp:275
++#: libchoqok/mediamanager.cpp:107
++msgid "Cannot create a KDE Job. Please check your installation."
++msgstr "Невозможно создать задание KDE. Проверьте правильность установки."
++
++#: libchoqok/mediamanager.cpp:126
+ #, kde-format
+-msgid "Authorized as %1"
+-msgstr "Авторизован как %1"
++msgid "Cannot download image from %1."
++msgstr "Невозможно загрузить изображение из %1."
+ 
+-#: plugins/uploaders/flickr/flickrconfig.cpp:281
+-msgid "Not authorized"
+-msgstr "Не авторизован"
++#: libchoqok/mediamanager.cpp:137
++msgid "The download failed. The returned file is corrupted."
++msgstr "Ошибка загрузки. Полученный файл повреждён."
+ 
+-#: plugins/uploaders/flickr/flickrconfig.cpp:296
+-msgid "Click here when you authorized Choqok"
+-msgstr "Нажмите здесь, когда вы авторизуете Choqok"
++#: libchoqok/mediamanager.cpp:167
++msgid "No pluginId specified, And last used plugin is null."
++msgstr "pluginId не указан, последних использованных модулей нет."
+ 
+-#: plugins/uploaders/imageshack/imageshack.cpp:55
+-msgid "Just supporting image uploading"
+-msgstr "Поддержка загрузки изображений"
++#: libchoqok/accountmanager.cpp:111
++#: libchoqok/accountmanager.cpp:142
++#, kde-format
++msgid "There is no account with alias %1."
++msgstr "Нет учётной записи с псевдонимом %1."
+ 
+-#: plugins/uploaders/mobypicture/mobypicture.cpp:65
+-#: plugins/uploaders/posterous/posterous.cpp:124
+-#: plugins/uploaders/twitgoo/twitgoo.cpp:62
+-#: plugins/uploaders/twitpic/twitpic.cpp:62
+-msgid "There's no Twitter account configured to use."
+-msgstr "Нет настроенной учётной записи Twitter."
++#: libchoqok/accountmanager.cpp:159
++msgid "An account with this alias already exists: a unique alias has to be specified."
++msgstr "Учётная запись с таким псевдонимом уже существует, укажите уникальное имя."
+ 
+-#: plugins/uploaders/mobypicture/mobypictureconfig.cpp:87
+-#: plugins/uploaders/posterous/posterousconfig.cpp:87
+-#: plugins/uploaders/twitgoo/twitgooconfig.cpp:77
+-#: plugins/uploaders/twitpic/twitpicconfig.cpp:77
+-msgid "You have to configure at least one twitter account to use this plugin."
+-msgstr ""
+-"Вы должны настроить как минимум одну учётную запись Twitter, чтобы "
+-"использовать данный модуль"
++#: libchoqok/notifymanager.h:41
++msgid "Error"
++msgstr "Ошибка"
+ 
+-#: plugins/quickfilter/quickfilter.cpp:49
+-msgid "Filter by author"
+-msgstr ""
++#: libchoqok/notifymanager.h:42
++msgid "Success"
++msgstr "Выполнено"
+ 
+-#: plugins/quickfilter/quickfilter.cpp:51
+-#, fuzzy
+-#| msgid "Filter &Type:"
+-msgid "Filter by content"
+-msgstr "Тип фи&льтра:"
++#: libchoqok/notifymanager.h:44
++msgid "New posts"
++msgstr "Новые сообщения"
+ 
+-#: plugins/quickfilter/quickfilter.cpp:111
+-msgid "Filter out timeline by author"
+-msgstr ""
++#: libchoqok/notifymanager.h:45
++msgid "Shortening a URL"
++msgstr "Сокращение ссылок"
+ 
+-#: plugins/quickfilter/quickfilter.cpp:113
+-msgid "Filter out timeline by text"
+-msgstr ""
++#: libchoqok/notifymanager.cpp:74
++msgctxt "Show Choqok MainWindow"
++msgid "Show Choqok"
++msgstr "Показать Choqok"
+ 
+-#: plugins/quickfilter/quickfilter.cpp:126
+-#, fuzzy
+-#| msgid "Authorized"
+-msgid "Author"
+-msgstr "Авторизован"
++#. i18n: file: choqok/choqokui.rc:4
++#. i18n: ectx: Menu (file)
++#: rc.cpp:3
++msgid "File"
++msgstr "Файл"
+ 
+-#: plugins/quickfilter/quickfilter.cpp:127
+-#, fuzzy
+-#| msgid "&Text:"
+-msgid "Text"
+-msgstr "&Текст:"
++#. i18n: file: choqok/choqokui.rc:11
++#. i18n: ectx: Menu (tools)
++#. i18n: file: plugins/filter/filterui.rc:4
++#. i18n: ectx: Menu (tools)
++#. i18n: file: plugins/nowlistening/nowlisteningui.rc:4
++#. i18n: ectx: Menu (tools)
++#. i18n: file: plugins/quickfilter/quickfilterui.rc:4
++#. i18n: ectx: Menu (tools)
++#. i18n: file: plugins/searchaction/searchactionui.rc:4
++#. i18n: ectx: Menu (tools)
++#. i18n: file: choqok/choqokui.rc:11
++#. i18n: ectx: Menu (tools)
++#. i18n: file: plugins/filter/filterui.rc:4
++#. i18n: ectx: Menu (tools)
++#. i18n: file: plugins/nowlistening/nowlisteningui.rc:4
++#. i18n: ectx: Menu (tools)
++#. i18n: file: plugins/quickfilter/quickfilterui.rc:4
++#. i18n: ectx: Menu (tools)
++#. i18n: file: plugins/searchaction/searchactionui.rc:4
++#. i18n: ectx: Menu (tools)
++#: rc.cpp:6
++#: rc.cpp:345
++#: rc.cpp:480
++#: rc.cpp:560
++#: rc.cpp:563
++msgid "Tools"
++msgstr "Сервис"
+ 
+-#: plugins/betternotify/notification.cpp:34
+-#, fuzzy
+-#| msgid "Enable Notifications"
+-msgid "Ignore notifications"
+-msgstr "Включить уведомления"
++#. i18n: file: choqok/choqokui.rc:15
++#. i18n: ectx: Menu (settings)
++#. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:82
++#. i18n: ectx: attribute (title), widget (QWidget, settingsTab)
++#. i18n: file: choqok/choqokui.rc:15
++#. i18n: ectx: Menu (settings)
++#. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:82
++#. i18n: ectx: attribute (title), widget (QWidget, settingsTab)
++#: rc.cpp:9
++#: rc.cpp:426
++msgid "Settings"
++msgstr "Настройка"
+ 
+-#: rc.cpp:1
+-msgctxt "NAME OF TRANSLATORS"
+-msgid "Your names"
+-msgstr "Николай Ерёмин,Александр Наталенко,Максим Воробьёв,Валерий Харитонов"
+-
+-#: rc.cpp:2
+-msgctxt "EMAIL OF TRANSLATORS"
+-msgid "Your emails"
+-msgstr ""
+-"doktorkster@gmail.com,pfactum@gmail.com,vmax0770@gmail.com,kharvd@gmail.com"
++#. i18n: file: choqok/choqokui.rc:20
++#. i18n: ectx: Menu (help)
++#: rc.cpp:12
++msgid "Help"
++msgstr "Справка"
+ 
+ #. i18n: file: choqok/config/accounts/accountswidget_base.ui:28
+ #. i18n: ectx: property (toolTip), widget (KPushButton, btnAdd)
+-#: rc.cpp:5
++#: rc.cpp:15
+ msgid "Add a new account"
+ msgstr "Добавить новую учётную запись"
+ 
+ #. i18n: file: choqok/config/accounts/accountswidget_base.ui:31
+ #. i18n: ectx: property (text), widget (KPushButton, btnAdd)
+-#: rc.cpp:8
++#: rc.cpp:18
+ msgid "&Add..."
+ msgstr "&Добавить..."
+ 
+ #. i18n: file: choqok/config/accounts/accountswidget_base.ui:41
+ #. i18n: ectx: property (toolTip), widget (KPushButton, btnEdit)
+-#: rc.cpp:11
++#: rc.cpp:21
+ msgid "Modify the selected account"
+ msgstr "Изменить выбранную учётную запись"
+ 
+ #. i18n: file: choqok/config/accounts/accountswidget_base.ui:44
+ #. i18n: ectx: property (text), widget (KPushButton, btnEdit)
+-#: rc.cpp:14
++#: rc.cpp:24
+ msgid "&Modify..."
+ msgstr "&Изменить..."
+ 
+ #. i18n: file: choqok/config/accounts/accountswidget_base.ui:54
+ #. i18n: ectx: property (toolTip), widget (KPushButton, btnRemove)
+-#: rc.cpp:17
++#: rc.cpp:27
+ msgid "Remove the selected account"
+ msgstr "Удалить выбранную учётную запись"
+ 
+ #. i18n: file: choqok/config/accounts/accountswidget_base.ui:57
+ #. i18n: ectx: property (text), widget (KPushButton, btnRemove)
+-#: rc.cpp:20
++#: rc.cpp:30
+ msgid "&Remove"
+ msgstr "&Удалить"
+ 
+ #. i18n: file: choqok/config/accounts/accountswidget_base.ui:130
+ #. i18n: ectx: property (text), widget (QTableWidget, accountsTable)
+-#: rc.cpp:23
++#: rc.cpp:33
+ msgid "Alias"
+ msgstr "Псевдоним"
+ 
+ #. i18n: file: choqok/config/accounts/accountswidget_base.ui:135
+ #. i18n: ectx: property (text), widget (QTableWidget, accountsTable)
+-#: rc.cpp:26
++#: rc.cpp:36
+ msgid "Micro-Blog"
+ msgstr "Микроблог"
+ 
+ #. i18n: file: choqok/config/accounts/accountswidget_base.ui:140
+ #. i18n: ectx: property (text), widget (QTableWidget, accountsTable)
+-#: rc.cpp:29
++#: rc.cpp:39
+ msgid "Read Only"
+ msgstr "Только для чтения"
+ 
+ #. i18n: file: choqok/config/accounts/accountswidget_base.ui:143
+ #. i18n: ectx: property (toolTip), widget (QTableWidget, accountsTable)
+-#: rc.cpp:32
++#: rc.cpp:42
+ msgid "Read Only account"
+ msgstr "Учётная запись только для чтения"
+ 
+ #. i18n: file: choqok/config/accounts/accountswidget_base.ui:148
+ #. i18n: ectx: property (text), widget (QTableWidget, accountsTable)
+-#: rc.cpp:35
++#: rc.cpp:45
+ msgid "Include in Quick Post"
+ msgstr "Включить при отправке быстрых сообщений"
+ 
+ #. i18n: file: choqok/config/accounts/accountswidget_base.ui:151
+ #. i18n: ectx: property (toolTip), widget (QTableWidget, accountsTable)
+-#: rc.cpp:38
++#: rc.cpp:48
+ msgid "Show in Quick Post"
+ msgstr "Показывать при отправке быстрых сообщений"
+ 
+ #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:17
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_isEmoticonsEnabled)
+-#: rc.cpp:41
++#: rc.cpp:51
+ msgid "Enable emoticons"
+ msgstr "Смайлики"
+ 
+ #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:24
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useReverseOrder)
+-#: rc.cpp:44
++#: rc.cpp:54
+ msgid "Show posts in reverse order (Needs restart to take effect)"
+ msgstr "Показывать сообщения в обратном порядке (необходим перезапуск)"
+ 
+ #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:31
+ #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_showRetweetsInChoqokWay)
+-#: rc.cpp:47
+-msgid ""
+-"You'll see post with retweeter name as author, plus Retweeted from original "
+-"author note."
+-msgstr ""
+-"Вы увидите сообщение с именем отправителя повторенного сообщения в качестве "
+-"автора, а также информацию о том, чьё сообщение это повторено."
++#: rc.cpp:57
++msgid "You'll see post with retweeter name as author, plus Retweeted from original author note."
++msgstr "Вы увидите сообщение с именем отправителя повторенного сообщения в качестве автора, а также информацию о том, чьё сообщение это повторено."
+ 
+ #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:34
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showRetweetsInChoqokWay)
+-#: rc.cpp:50
++#: rc.cpp:60
+ msgid "Show Retweeted/Repeated posts in Choqok way"
+ msgstr "Показывать повторенные сообщения способом Choqok"
+ 
+ #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:44
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_isCustomUi)
+-#: rc.cpp:53
+-#, fuzzy
+-#| msgid "Use custom colors"
++#: rc.cpp:63
+ msgid "Use custom appearance"
+-msgstr "Использовать собственные цвета"
++msgstr "Использовать внешний вид, заданный пользователем"
+ 
+ #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:76
+ #. i18n: ectx: property (text), widget (QLabel, label_4)
+-#: rc.cpp:56
+-#, fuzzy
+-#| msgid "Post Text"
++#: rc.cpp:66
+ msgid "Post Font:"
+-msgstr "Текст сообщения"
++msgstr "Шрифт сообщений:"
+ 
+ #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:95
+ #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+-#: rc.cpp:59
++#: rc.cpp:69
+ msgid "Post Color Preferences"
+ msgstr "Параметры цветов для сообщений"
+ 
+ #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:103
+ #. i18n: ectx: property (text), widget (QLabel, label_5)
+-#: rc.cpp:62
++#: rc.cpp:72
+ msgid "Background"
+ msgstr "Фон"
+ 
+ #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:113
+ #. i18n: ectx: property (text), widget (QLabel, label)
+-#: rc.cpp:65
++#: rc.cpp:75
+ msgid "Default color:"
+ msgstr "Цвет по умолчанию:"
+ 
+ #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:150
+ #. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:68
++#: rc.cpp:78
+ msgid "Unread post color:"
+ msgstr "Цвет непрочитанных сообщений:"
+ 
+ #. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:194
+ #. i18n: ectx: property (text), widget (QLabel, label_6)
+-#: rc.cpp:71
++#: rc.cpp:81
+ msgid "Foreground"
+ msgstr "Текст"
+ 
+-#. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:204
+-#. i18n: ectx: property (text), widget (QLabel, label_3)
+-#: rc.cpp:74
+-msgid "Own post color:"
+-msgstr "Цвет своих сообщений:"
++#. i18n: file: choqok/config/appearance/appearanceconfig_base.ui:204
++#. i18n: ectx: property (text), widget (QLabel, label_3)
++#: rc.cpp:84
++msgid "Own post color:"
++msgstr "Цвет своих сообщений:"
++
++#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:17
++#. i18n: ectx: property (text), widget (QCheckBox, kcfg_shortenOnPaste)
++#: rc.cpp:87
++msgid "Shorten &URLs on paste"
++msgstr "Со&кращать ссылки при вставке"
++
++#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:24
++#. i18n: ectx: property (text), widget (QCheckBox, kcfg_removeHttp)
++#: rc.cpp:90
++msgid "Remove \"http://\" from shortened URLs"
++msgstr "Удалять «http://» из укороченных ссылок"
++
++#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:33
++#. i18n: ectx: property (text), widget (QLabel, label)
++#: rc.cpp:93
++msgid "Shortening &service:"
++msgstr "Служба &сокращения:"
++
++#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:56
++#. i18n: ectx: property (toolTip), widget (KPushButton, configPlugin)
++#. i18n: file: libchoqok/ui/uploadmedia_base.ui:71
++#. i18n: ectx: property (toolTip), widget (KPushButton, configPlugin)
++#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:56
++#. i18n: ectx: property (toolTip), widget (KPushButton, configPlugin)
++#. i18n: file: libchoqok/ui/uploadmedia_base.ui:71
++#. i18n: ectx: property (toolTip), widget (KPushButton, configPlugin)
++#: rc.cpp:96
++#: rc.cpp:339
++msgid "Configure plugin"
++msgstr "Настроить модуль..."
++
++#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:69
++#. i18n: ectx: property (toolTip), widget (KPushButton, aboutPlugin)
++#. i18n: file: libchoqok/ui/uploadmedia_base.ui:90
++#. i18n: ectx: property (toolTip), widget (KPushButton, aboutPlugin)
++#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:69
++#. i18n: ectx: property (toolTip), widget (KPushButton, aboutPlugin)
++#. i18n: file: libchoqok/ui/uploadmedia_base.ui:90
++#. i18n: ectx: property (toolTip), widget (KPushButton, aboutPlugin)
++#: rc.cpp:99
++#: rc.cpp:342
++msgid "About plugin"
++msgstr "О модуле"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:17
+ #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+-#: rc.cpp:77
++#: rc.cpp:102
+ msgid "General Options"
+ msgstr "Основные параметры"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:23
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showSplashScreen)
+-#: rc.cpp:80
++#: rc.cpp:105
+ msgid "Show splash-screen on startup"
+ msgstr "Показывать окно приветствия при запуске"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:33
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_markAllAsReadOnExit)
+-#: rc.cpp:83
++#: rc.cpp:108
+ msgid "Mark all posts as read on exit"
+ msgstr "Помечать все сообщения как прочитанные при выходе"
+ 
+ # BUGME: слишком длинная строка перевода
+ #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:46
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_markAllAsReadOnHideToSystray)
+-#: rc.cpp:86
++#: rc.cpp:111
+ msgid "Mark all unread posts as read, when hiding to system tray"
+-msgstr ""
+-"Помечать все непрочитанные сообщения как прочитанные при сворачивании в "
+-"системный лоток"
++msgstr "Помечать все непрочитанные сообщения как прочитанные при сворачивании в системный лоток"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:56
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableSpellChecker)
+-#: rc.cpp:89
++#: rc.cpp:114
+ msgid "Enable automatic spellchecking in the message editor"
+-msgstr ""
+-"Включить автоматическую проверку правописания при редактировании сообщения"
++msgstr "Включить автоматическую проверку правописания при редактировании сообщения"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:71
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCustomBrowser)
+-#: rc.cpp:92
++#: rc.cpp:117
+ msgid "Use &custom web browser:"
+ msgstr "Использовать другой веб-&браузер:"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:89
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useCustomRT)
+-#: rc.cpp:95
++#: rc.cpp:120
+ msgid "Use custom prefix for ReSend [ReTweet]:"
+ msgstr "Использовать нестандартный префикс при повторе сообщения:"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:108
+ #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+-#: rc.cpp:98
++#: rc.cpp:123
+ msgid "Timelines Options"
+ msgstr "Параметры ленты сообщений"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:118
+ #. i18n: ectx: property (text), widget (QLabel, label)
+-#: rc.cpp:101
++#: rc.cpp:126
+ msgid "&Update interval:"
+ msgstr "Интервал &обновления:"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:137
+ #. i18n: ectx: property (text), widget (QLabel, label_5)
+-#: rc.cpp:104
++#: rc.cpp:129
+ msgid "&Number of posts to show in timelines:"
+ msgstr "&Число показываемых сообщений в ленте:"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_general.ui:154
+ #. i18n: ectx: property (specialValueText), widget (KIntSpinBox, kcfg_updateInterval)
+-#: rc.cpp:107
++#: rc.cpp:132
+ msgid "Disabled"
+ msgstr "Отключено"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_notifications.ui:17
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_showAllNotifiesInOne)
+-#: rc.cpp:110
++#: rc.cpp:135
+ msgid "&Show all new posts in one notification"
+ msgstr "&Показывать все новые сообщения в одном уведомлении"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_notifications.ui:26
+ #. i18n: ectx: property (text), widget (QLabel, label_4)
+-#: rc.cpp:113
++#: rc.cpp:138
+ msgid "&Notification duration:"
+ msgstr "Продолжительность &уведомления:"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_notifications.ui:54
+ #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+-#: rc.cpp:116
++#: rc.cpp:141
+ msgid "New post notifications"
+ msgstr "Уведомления о новых сообщениях"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_notifications.ui:60
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_knotify)
+-#: rc.cpp:119
++#: rc.cpp:144
+ msgid "Show notification using KNotify"
+ msgstr "Показывать уведомления с помощью KNotify"
+ 
+ #. i18n: file: choqok/config/behavior/behaviorconfig_notifications.ui:67
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_libindicate)
+-#: rc.cpp:122
++#: rc.cpp:147
+ msgid "Show notification using Message Indicator"
+ msgstr "Показывать уведомления с помощью Message Indicator"
+ 
+-#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:17
+-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_shortenOnPaste)
+-#: rc.cpp:125
+-msgid "Shorten &URLs on paste"
+-msgstr "Со&кращать ссылки при вставке"
+-
+-#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:24
+-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_removeHttp)
+-#: rc.cpp:128
+-msgid "Remove \"http://\" from shortened URLs"
+-msgstr "Удалять «http://» из укороченных ссылок"
++#. i18n: file: microblogs/twitter/twitterlistdialog_base.ui:23
++#. i18n: ectx: property (text), widget (QLabel, label_2)
++#: rc.cpp:150
++msgid "List name:"
++msgstr "Название списка:"
+ 
+-#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:33
++#. i18n: file: microblogs/twitter/twitterlistdialog_base.ui:49
+ #. i18n: ectx: property (text), widget (QLabel, label)
+-#: rc.cpp:131
+-msgid "Shortening &service:"
+-msgstr "Служба &сокращения:"
+-
+-#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:56
+-#. i18n: ectx: property (toolTip), widget (KPushButton, configPlugin)
+-#. i18n: file: libchoqok/ui/uploadmedia_base.ui:71
+-#. i18n: ectx: property (toolTip), widget (KPushButton, configPlugin)
+-#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:56
+-#. i18n: ectx: property (toolTip), widget (KPushButton, configPlugin)
+-#. i18n: file: libchoqok/ui/uploadmedia_base.ui:71
+-#. i18n: ectx: property (toolTip), widget (KPushButton, configPlugin)
+-#: rc.cpp:134 rc.cpp:158
+-msgid "Configure plugin"
+-msgstr "Настроить модуль..."
+-
+-#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:69
+-#. i18n: ectx: property (toolTip), widget (KPushButton, aboutPlugin)
+-#. i18n: file: libchoqok/ui/uploadmedia_base.ui:90
+-#. i18n: ectx: property (toolTip), widget (KPushButton, aboutPlugin)
+-#. i18n: file: choqok/config/behavior/behaviorconfig_shorten_base.ui:69
+-#. i18n: ectx: property (toolTip), widget (KPushButton, aboutPlugin)
+-#. i18n: file: libchoqok/ui/uploadmedia_base.ui:90
+-#. i18n: ectx: property (toolTip), widget (KPushButton, aboutPlugin)
+-#: rc.cpp:137 rc.cpp:161
+-msgid "About plugin"
+-msgstr "О модуле"
+-
+-#. i18n: file: choqok/choqokui.rc:4
+-#. i18n: ectx: Menu (file)
+-#: rc.cpp:140
+-msgid "File"
+-msgstr "Файл"
+-
+-#. i18n: file: choqok/choqokui.rc:11
+-#. i18n: ectx: Menu (tools)
+-#. i18n: file: plugins/filter/filterui.rc:4
+-#. i18n: ectx: Menu (tools)
+-#. i18n: file: plugins/nowlistening/nowlisteningui.rc:4
+-#. i18n: ectx: Menu (tools)
+-#. i18n: file: plugins/searchaction/searchactionui.rc:4
+-#. i18n: ectx: Menu (tools)
+-#. i18n: file: plugins/quickfilter/quickfilterui.rc:4
+-#. i18n: ectx: Menu (tools)
+-#. i18n: file: choqok/choqokui.rc:11
+-#. i18n: ectx: Menu (tools)
+-#. i18n: file: plugins/filter/filterui.rc:4
+-#. i18n: ectx: Menu (tools)
+-#. i18n: file: plugins/nowlistening/nowlisteningui.rc:4
+-#. i18n: ectx: Menu (tools)
+-#. i18n: file: plugins/searchaction/searchactionui.rc:4
+-#. i18n: ectx: Menu (tools)
+-#. i18n: file: plugins/quickfilter/quickfilterui.rc:4
+-#. i18n: ectx: Menu (tools)
+-#: rc.cpp:143 rc.cpp:395 rc.cpp:436 rc.cpp:439 rc.cpp:568
+-msgid "Tools"
+-msgstr "Сервис"
+-
+-#. i18n: file: choqok/choqokui.rc:15
+-#. i18n: ectx: Menu (settings)
+-#. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:82
+-#. i18n: ectx: attribute (title), widget (QWidget, settingsTab)
+-#. i18n: file: choqok/choqokui.rc:15
+-#. i18n: ectx: Menu (settings)
+-#. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:82
+-#. i18n: ectx: attribute (title), widget (QWidget, settingsTab)
+-#: rc.cpp:146 rc.cpp:493
+-msgid "Settings"
+-msgstr "Настройка"
+-
+-#. i18n: file: choqok/choqokui.rc:20
+-#. i18n: ectx: Menu (help)
+-#: rc.cpp:149
+-msgid "Help"
+-msgstr ""
++#: rc.cpp:153
++msgid "User name:"
++msgstr "Имя пользователя:"
+ 
+-#. i18n: file: libchoqok/ui/uploadmedia_base.ui:22
+-#. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:152
+-msgid "Medium to upload:"
+-msgstr "Файл для загрузки:"
++#. i18n: file: microblogs/twitter/twitterlistdialog_base.ui:75
++#. i18n: ectx: property (toolTip), widget (KPushButton, loadUserLists)
++#: rc.cpp:156
++msgid "Load User Lists"
++msgstr "Загрузить пользовательские списки"
+ 
+-#. i18n: file: libchoqok/ui/uploadmedia_base.ui:39
+-#. i18n: ectx: property (text), widget (QLabel, label)
+-#: rc.cpp:155
+-msgid "Upload via:"
+-msgstr "Отправить через:"
++#. i18n: file: microblogs/twitter/twitterlistdialog_base.ui:78
++#. i18n: ectx: property (text), widget (KPushButton, loadUserLists)
++#: rc.cpp:159
++msgid "Load lists"
++msgstr "Загрузить списки"
+ 
+-#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:21
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:21
+ #. i18n: ectx: attribute (title), widget (QWidget, tabAccount)
+-#: rc.cpp:164
+-msgid "StatusNet Account"
+-msgstr "Учётная запись StatusNet"
++#: rc.cpp:162
++msgid "Twitter Account"
++msgstr "Учётная запись Twitter"
+ 
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:27
++#. i18n: ectx: property (text), widget (QLabel, label_3)
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:29
+ #. i18n: ectx: property (text), widget (QLabel, label_3)
+ #. i18n: file: microblogs/ocs/ocsconfigurebase.ui:19
+@@ -2088,12 +1234,14 @@
+ #. i18n: ectx: property (text), widget (QLabel, label_3)
+ #. i18n: file: microblogs/ocs/ocsconfigurebase.ui:19
+ #. i18n: ectx: property (text), widget (QLabel, label_3)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:27
+-#. i18n: ectx: property (text), widget (QLabel, label_3)
+-#: rc.cpp:167 rc.cpp:258 rc.cpp:286
++#: rc.cpp:165
++#: rc.cpp:217
++#: rc.cpp:308
+ msgid "&Alias:"
+ msgstr "&Псевдоним:"
+ 
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:40
++#. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_alias)
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:42
+ #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_alias)
+ #. i18n: file: microblogs/ocs/ocsconfigurebase.ui:32
+@@ -2104,12 +1252,14 @@
+ #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_alias)
+ #. i18n: file: microblogs/ocs/ocsconfigurebase.ui:32
+ #. i18n: ectx: property (toolTip), widget (KLineEdit, cfg_alias)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:40
+-#. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_alias)
+-#: rc.cpp:170 rc.cpp:261 rc.cpp:289
++#: rc.cpp:168
++#: rc.cpp:220
++#: rc.cpp:311
+ msgid "The account alias"
+ msgstr "Псевдоним учётной записи"
+ 
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:43
++#. i18n: ectx: property (whatsThis), widget (KLineEdit, kcfg_alias)
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:45
+ #. i18n: ectx: property (whatsThis), widget (KLineEdit, kcfg_alias)
+ #. i18n: file: microblogs/ocs/ocsconfigurebase.ui:35
+@@ -2120,77 +1270,187 @@
+ #. i18n: ectx: property (whatsThis), widget (KLineEdit, kcfg_alias)
+ #. i18n: file: microblogs/ocs/ocsconfigurebase.ui:35
+ #. i18n: ectx: property (whatsThis), widget (KLineEdit, cfg_alias)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:43
+-#. i18n: ectx: property (whatsThis), widget (KLineEdit, kcfg_alias)
+-#: rc.cpp:173 rc.cpp:264 rc.cpp:292
++#: rc.cpp:171
++#: rc.cpp:223
++#: rc.cpp:314
++msgid "The alias is the name you want to give to your account. It should be unique. You can have several connections to the same service so the alias lets you give them names."
++msgstr "Псевдоним — это имя, которым вы можете назвать вашу учётную запись. Оно должно быть уникальным. У вас может быть несколько подключений к одной и той же службе, а псевдонимы позволяют дать им разные имена."
++
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:60
++#. i18n: ectx: property (text), widget (QLabel, label)
++#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:62
++#. i18n: ectx: property (text), widget (QLabel, label)
++#. i18n: file: microblogs/ocs/ocsconfigurebase.ui:52
++#. i18n: ectx: property (text), widget (QLabel, label_4)
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:60
++#. i18n: ectx: property (text), widget (QLabel, label)
++#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:62
++#. i18n: ectx: property (text), widget (QLabel, label)
++#. i18n: file: microblogs/ocs/ocsconfigurebase.ui:52
++#. i18n: ectx: property (text), widget (QLabel, label_4)
++#: rc.cpp:174
++#: rc.cpp:226
++#: rc.cpp:317
+ msgid ""
+-"The alias is the name you want to give to your account. It should be unique. "
+-"You can have several connections to the same service so the alias lets you "
+-"give them names."
++"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
++"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
++"p, li { white-space: pre-wrap; }\n"
++"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">Note:</span><span style=\" font-size:8pt;\"> The alias must be unique.</span></p></body></html>"
+ msgstr ""
+-"Псевдоним — это имя, которым вы можете назвать вашу учётную запись. Оно "
+-"должно быть уникальным. У вас может быть несколько подключений к одной и той "
+-"же службе, а псевдонимы позволяют дать им разные имена."
++"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
++"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
++"p, li { white-space: pre-wrap; }\n"
++"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">Примечание:</span><span style=\" font-size:8pt;\"> псевдоним должен быть уникален.</span></p></body></html>"
++
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:73
++#. i18n: ectx: property (title), widget (QGroupBox, kcfg_basicAuth)
++#: rc.cpp:181
++msgid "Credentials"
++msgstr "Параметры учётной записи"
++
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:79
++#. i18n: ectx: property (text), widget (QLabel, label_4)
++#. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:34
++#. i18n: ectx: property (text), widget (QLabel, label_2)
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:79
++#. i18n: ectx: property (text), widget (QLabel, label_4)
++#. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:34
++#. i18n: ectx: property (text), widget (QLabel, label_2)
++#: rc.cpp:184
++#: rc.cpp:527
++msgid "Username:"
++msgstr "Имя пользователя:"
++
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:92
++#. i18n: ectx: property (text), widget (QLabel, label_5)
++#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:74
++#. i18n: ectx: property (text), widget (QLabel, label_3)
++#. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:47
++#. i18n: ectx: property (text), widget (QLabel, label_8)
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:92
++#. i18n: ectx: property (text), widget (QLabel, label_5)
++#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:74
++#. i18n: ectx: property (text), widget (QLabel, label_3)
++#. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:47
++#. i18n: ectx: property (text), widget (QLabel, label_8)
++#: rc.cpp:187
++#: rc.cpp:408
++#: rc.cpp:530
++msgid "Password:"
++msgstr "Пароль:"
++
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:112
++#. i18n: ectx: property (title), widget (QGroupBox, kcfg_credentialsBox)
++#: rc.cpp:190
++msgid "OAuth Authentication "
++msgstr "Аутентификация OAuth"
++
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:124
++#. i18n: ectx: property (text), widget (QLabel, label_2)
++#: rc.cpp:193
++msgid "Click the below button, If everything goes well, you'll pointed to Twitter website to allow access to Choqok."
++msgstr "Нажмите на кнопку ниже Если не произойдёт ошибок, откроется сайт Twitter, чтобы разрешить доступ из Choqok."
++
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:151
++#. i18n: ectx: property (toolTip), widget (KPushButton, kcfg_authorize)
++#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:217
++#. i18n: ectx: property (toolTip), widget (KPushButton, kcfg_authorize)
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:151
++#. i18n: ectx: property (toolTip), widget (KPushButton, kcfg_authorize)
++#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:217
++#. i18n: ectx: property (toolTip), widget (KPushButton, kcfg_authorize)
++#: rc.cpp:196
++#: rc.cpp:263
++msgid "Verify Credentials"
++msgstr "Проверить параметры учётной записи"
++
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:154
++#. i18n: ectx: property (text), widget (KPushButton, kcfg_authorize)
++#: rc.cpp:199
++msgid "&Authenticate with Twitter service"
++msgstr "Вой&ти в службу Twitter"
++
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:178
++#. i18n: ectx: attribute (title), widget (QWidget, tabTimelines)
++#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:296
++#. i18n: ectx: attribute (title), widget (QWidget, tabTimelines)
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:178
++#. i18n: ectx: attribute (title), widget (QWidget, tabTimelines)
++#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:296
++#. i18n: ectx: attribute (title), widget (QWidget, tabTimelines)
++#: rc.cpp:202
++#: rc.cpp:284
++msgid "Timelines Configuration"
++msgstr "Настройка лент сообщений"
++
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:190
++#. i18n: ectx: property (text), widget (QLabel, label_6)
++#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:308
++#. i18n: ectx: property (text), widget (QLabel, label_6)
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:190
++#. i18n: ectx: property (text), widget (QLabel, label_6)
++#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:308
++#. i18n: ectx: property (text), widget (QLabel, label_6)
++#: rc.cpp:205
++#: rc.cpp:287
++msgid "Which timelines do you like to be enabled?"
++msgstr "Какие ленты сообщений вы хотите включить?"
++
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:198
++#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
++#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:316
++#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:198
++#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
++#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:316
++#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
++#: rc.cpp:208
++#: rc.cpp:290
++msgid "Name"
++msgstr "Имя"
++
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:203
++#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
++#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:321
++#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
++#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:203
++#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
++#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:321
++#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
++#: rc.cpp:211
++#: rc.cpp:293
++msgid "Enable"
++msgstr "Включить"
+ 
+-#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:62
+-#. i18n: ectx: property (text), widget (QLabel, label)
+-#. i18n: file: microblogs/ocs/ocsconfigurebase.ui:52
+-#. i18n: ectx: property (text), widget (QLabel, label_4)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:60
+-#. i18n: ectx: property (text), widget (QLabel, label)
+-#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:62
+-#. i18n: ectx: property (text), widget (QLabel, label)
+-#. i18n: file: microblogs/ocs/ocsconfigurebase.ui:52
+-#. i18n: ectx: property (text), widget (QLabel, label_4)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:60
+-#. i18n: ectx: property (text), widget (QLabel, label)
+-#: rc.cpp:176 rc.cpp:267 rc.cpp:295
+-msgid ""
+-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+-"REC-html40/strict.dtd\">\n"
+-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+-"\">\n"
+-"p, li { white-space: pre-wrap; }\n"
+-"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-"
+-"weight:400; font-style:normal;\">\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">Note:</span><span style=\" font-size:8pt;\"> "
+-"The alias must be unique.</span></p></body></html>"
+-msgstr ""
+-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+-"REC-html40/strict.dtd\">\n"
+-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+-"\">\n"
+-"p, li { white-space: pre-wrap; }\n"
+-"</style></head><body style=\" font-family:'DejaVu Sans'; font-size:9pt; font-"
+-"weight:400; font-style:normal;\">\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">Примечание:</span><span style=\" font-size:8pt;"
+-"\"> псевдоним должен быть уникален.</span></p></body></html>"
++#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:21
++#. i18n: ectx: attribute (title), widget (QWidget, tabAccount)
++#: rc.cpp:214
++msgid "StatusNet Account"
++msgstr "Учётная запись StatusNet"
+ 
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:77
+ #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+-#: rc.cpp:183
++#: rc.cpp:233
+ msgid "Server"
+ msgstr "Сервер"
+ 
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:83
+ #. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:186
++#: rc.cpp:236
+ msgid "StatusNet server:"
+ msgstr "Сервер StatusNet:"
+ 
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:103
+ #. i18n: ectx: property (text), widget (QLabel, label_4)
+-#: rc.cpp:189
++#: rc.cpp:239
+ msgid "API path:"
+ msgstr "Путь API:"
+ 
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:123
+ #. i18n: ectx: property (text), widget (QLabel, label_7)
+-#: rc.cpp:192
++#: rc.cpp:242
+ msgid "Authentication Type:"
+ msgstr "Метод аутентификации:"
+ 
+@@ -2202,7 +1462,8 @@
+ #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_authMethod)
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:150
+ #. i18n: ectx: property (title), widget (QGroupBox, kcfg_OAuthBox)
+-#: rc.cpp:195 rc.cpp:201
++#: rc.cpp:245
++#: rc.cpp:251
+ msgid "OAuth Authentication"
+ msgstr "Аутентификация OAuth"
+ 
+@@ -2214,7 +1475,8 @@
+ #. i18n: ectx: property (text), item, widget (KComboBox, kcfg_authMethod)
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:230
+ #. i18n: ectx: property (title), widget (QGroupBox, kcfg_BasicBox)
+-#: rc.cpp:198 rc.cpp:219
++#: rc.cpp:248
++#: rc.cpp:269
+ msgid "Basic Authentication"
+ msgstr "Обычная аутентификация"
+ 
+@@ -2226,7 +1488,8 @@
+ #. i18n: ectx: property (text), widget (QLabel, textLabel1)
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:266
+ #. i18n: ectx: property (text), widget (QLabel, textLabel1_2)
+-#: rc.cpp:204 rc.cpp:231
++#: rc.cpp:254
++#: rc.cpp:281
+ msgid "&Username:"
+ msgstr "&Имя пользователя:"
+ 
+@@ -2242,926 +1505,1282 @@
+ #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_basicUsername)
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:256
+ #. i18n: ectx: property (toolTip), widget (KLineEdit, kcfg_basicPassword)
+-#: rc.cpp:207 rc.cpp:222 rc.cpp:228
++#: rc.cpp:257
++#: rc.cpp:272
++#: rc.cpp:278
+ msgid "The name you use to connect to the service"
+ msgstr "Имя, используемое для подключения к службе"
+ 
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:207
+ #. i18n: ectx: property (text), widget (QLabel, label_5)
+-#: rc.cpp:210
+-msgid ""
+-"Click the below button, If everything goes well, you'll pointed to Identi.ca "
+-"website to allow access to Choqok."
+-msgstr ""
+-"Нажмите на кнопку ниже. Если не произойдёт ошибок, откроется сайт Identi.ca, "
+-"чтобы разрешить доступ из Choqok."
+-
+-#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:217
+-#. i18n: ectx: property (toolTip), widget (KPushButton, kcfg_authorize)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:151
+-#. i18n: ectx: property (toolTip), widget (KPushButton, kcfg_authorize)
+-#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:217
+-#. i18n: ectx: property (toolTip), widget (KPushButton, kcfg_authorize)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:151
+-#. i18n: ectx: property (toolTip), widget (KPushButton, kcfg_authorize)
+-#: rc.cpp:213 rc.cpp:317
+-msgid "Verify Credentials"
+-msgstr "Проверить параметры учётной записи"
++#: rc.cpp:260
++msgid "Click the below button, If everything goes well, you'll pointed to Identi.ca website to allow access to Choqok."
++msgstr "Нажмите на кнопку ниже. Если не произойдёт ошибок, откроется сайт Identi.ca, чтобы разрешить доступ из Choqok."
+ 
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:220
+ #. i18n: ectx: property (text), widget (KPushButton, kcfg_authorize)
+-#: rc.cpp:216
++#: rc.cpp:266
+ msgid "&Authenticate with StatusNet service"
+ msgstr "Войти в &службу StatusNet"
+ 
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:243
+ #. i18n: ectx: property (text), widget (QLabel, textLabel1_3)
+-#: rc.cpp:225
++#: rc.cpp:275
+ msgid "&Password:"
+ msgstr "&Пароль:"
+ 
+-#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:296
+-#. i18n: ectx: attribute (title), widget (QWidget, tabTimelines)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:178
+-#. i18n: ectx: attribute (title), widget (QWidget, tabTimelines)
+-#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:296
+-#. i18n: ectx: attribute (title), widget (QWidget, tabTimelines)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:178
+-#. i18n: ectx: attribute (title), widget (QWidget, tabTimelines)
+-#: rc.cpp:234 rc.cpp:323
+-msgid "Timelines Configuration"
+-msgstr "Настройка лент сообщений"
+-
+-#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:308
+-#. i18n: ectx: property (text), widget (QLabel, label_6)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:190
+-#. i18n: ectx: property (text), widget (QLabel, label_6)
+-#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:308
+-#. i18n: ectx: property (text), widget (QLabel, label_6)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:190
+-#. i18n: ectx: property (text), widget (QLabel, label_6)
+-#: rc.cpp:237 rc.cpp:326
+-msgid "Which timelines do you like to be enabled?"
+-msgstr "Какие ленты сообщений вы хотите включить?"
+-
+-#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:316
+-#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:198
+-#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
+-#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:316
+-#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:198
+-#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
+-#: rc.cpp:240 rc.cpp:329
+-msgid "Name"
+-msgstr "Имя"
+-
+-#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:321
+-#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:203
+-#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
+-#. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:321
+-#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:203
+-#. i18n: ectx: property (text), widget (QTableWidget, timelinesTable)
+-#: rc.cpp:243 rc.cpp:332
+-msgid "Enable"
+-msgstr "Включить"
+-
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:330
+ #. i18n: ectx: attribute (title), widget (QWidget, tabConf)
+-#: rc.cpp:246
++#: rc.cpp:296
+ msgid "Configuration"
+ msgstr "Настройка"
+ 
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:338
+ #. i18n: ectx: property (toolTip), widget (QCheckBox, kcfg_changeExclamationMark)
+-#: rc.cpp:249
+-msgid ""
+-"To prevent spamming on some groups, you can set here to change the "
+-"exclamation point (that used to refer to a group), to something else (e.g. "
+-"nothing.)"
+-msgstr ""
+-"Для предотвращения рассылки спама в некоторых группах, вы можете изменить "
+-"восклицательный знак (который используется для обозначения групп) на другой "
+-"знак (например, пустой символ)"
++#: rc.cpp:299
++msgid "To prevent spamming on some groups, you can set here to change the exclamation point (that used to refer to a group), to something else (e.g. nothing.)"
++msgstr "Для предотвращения рассылки спама в некоторых группах, вы можете изменить восклицательный знак (который используется для обозначения групп) на другой знак (например, пустой символ)"
+ 
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:341
+ #. i18n: ectx: property (text), widget (QCheckBox, kcfg_changeExclamationMark)
+-#: rc.cpp:252
++#: rc.cpp:302
+ msgid "On re-dent, change exclamation mark to:"
+ msgstr "При повторе сообщения заменять восклицательный знак на:"
+ 
+ #. i18n: file: microblogs/laconica/laconicaeditaccount_base.ui:351
+ #. i18n: ectx: property (text), widget (KLineEdit, kcfg_changeToString)
+-#: rc.cpp:255
++#: rc.cpp:305
+ msgid "#"
+ msgstr "#"
+ 
+ #. i18n: file: microblogs/ocs/ocsconfigurebase.ui:67
+ #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+-#: rc.cpp:274
++#: rc.cpp:324
+ msgid "Provider"
+ msgstr "Поставщик"
+ 
+ #. i18n: file: microblogs/ocs/ocsconfigurebase.ui:73
+ #. i18n: ectx: property (text), widget (QLabel, label)
+-#: rc.cpp:277
++#: rc.cpp:327
+ msgid "Select a social desktop provider to use:"
+ msgstr "Выберите поставщика услуг Social Desktop:"
+ 
+ #. i18n: file: microblogs/ocs/ocsconfigurebase.ui:83
+ #. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:280
+-msgid ""
+-"You can manage Social Desktop providers in KDE Social Desktop configurations."
+-msgstr ""
+-"Вы можете управлять поставщиками Social Desktop в модуле настройки Social "
+-"Desktop в KDE (в «Параметрах системы»)."
+-
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:21
+-#. i18n: ectx: attribute (title), widget (QWidget, tabAccount)
+-#: rc.cpp:283
+-msgid "Twitter Account"
+-msgstr "Учётная запись Twitter"
+-
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:73
+-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_basicAuth)
+-#: rc.cpp:302
+-msgid "Credentials"
+-msgstr "Параметры учётной записи"
+-
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:79
+-#. i18n: ectx: property (text), widget (QLabel, label_4)
+-#. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:34
+-#. i18n: ectx: property (text), widget (QLabel, label_2)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:79
+-#. i18n: ectx: property (text), widget (QLabel, label_4)
+-#. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:34
+-#. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:305 rc.cpp:472
+-msgid "Username:"
+-msgstr "Имя пользователя:"
+-
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:92
+-#. i18n: ectx: property (text), widget (QLabel, label_5)
+-#. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:47
+-#. i18n: ectx: property (text), widget (QLabel, label_8)
+-#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:74
+-#. i18n: ectx: property (text), widget (QLabel, label_3)
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:92
+-#. i18n: ectx: property (text), widget (QLabel, label_5)
+-#. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:47
+-#. i18n: ectx: property (text), widget (QLabel, label_8)
+-#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:74
+-#. i18n: ectx: property (text), widget (QLabel, label_3)
+-#: rc.cpp:308 rc.cpp:475 rc.cpp:556
+-msgid "Password:"
+-msgstr "Пароль:"
+-
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:112
+-#. i18n: ectx: property (title), widget (QGroupBox, kcfg_credentialsBox)
+-#: rc.cpp:311
+-msgid "OAuth Authentication "
+-msgstr "Аутентификация OAuth"
+-
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:124
+-#. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:314
+-msgid ""
+-"Click the below button, If everything goes well, you'll pointed to Twitter "
+-"website to allow access to Choqok."
+-msgstr ""
+-"Нажмите на кнопку ниже Если не произойдёт ошибок, откроется сайт Twitter, "
+-"чтобы разрешить доступ из Choqok."
+-
+-#. i18n: file: microblogs/twitter/twittereditaccount_base.ui:154
+-#. i18n: ectx: property (text), widget (KPushButton, kcfg_authorize)
+-#: rc.cpp:320
+-msgid "&Authenticate with Twitter service"
+-msgstr "Вой&ти в службу Twitter"
++#: rc.cpp:330
++msgid "You can manage Social Desktop providers in KDE Social Desktop configurations."
++msgstr "Вы можете управлять поставщиками Social Desktop в модуле настройки Social Desktop в KDE (в «Параметрах системы»)."
+ 
+-#. i18n: file: microblogs/twitter/twitterlistdialog_base.ui:23
++#. i18n: file: libchoqok/ui/uploadmedia_base.ui:22
+ #. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:335
+-msgid "List name:"
+-msgstr "Название списка:"
+-
+-#. i18n: file: microblogs/twitter/twitterlistdialog_base.ui:49
+-#. i18n: ectx: property (text), widget (QLabel, label)
+-#: rc.cpp:338
+-msgid "User name:"
+-msgstr "Имя пользователя:"
+-
+-#. i18n: file: microblogs/twitter/twitterlistdialog_base.ui:75
+-#. i18n: ectx: property (toolTip), widget (KPushButton, loadUserLists)
+-#: rc.cpp:341
+-msgid "Load User Lists"
+-msgstr "Загрузить пользовательские списки"
+-
+-#. i18n: file: microblogs/twitter/twitterlistdialog_base.ui:78
+-#. i18n: ectx: property (text), widget (KPushButton, loadUserLists)
+-#: rc.cpp:344
+-msgid "Load lists"
+-msgstr "Загрузить списки"
++#: rc.cpp:333
++msgid "Medium to upload:"
++msgstr "Файл для загрузки:"
+ 
+-#. i18n: file: plugins/filter/addeditfilter_base.ui:17
++#. i18n: file: libchoqok/ui/uploadmedia_base.ui:39
+ #. i18n: ectx: property (text), widget (QLabel, label)
+-#: rc.cpp:347
+-msgid "Filter &Field:"
+-msgstr "Поле &фильтра:"
+-
+-#. i18n: file: plugins/filter/addeditfilter_base.ui:30
+-#. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:350
+-msgid "Filter &Type:"
+-msgstr "Тип фи&льтра:"
+-
+-#. i18n: file: plugins/filter/addeditfilter_base.ui:43
+-#. i18n: ectx: property (text), widget (QLabel, label_3)
+-#: rc.cpp:353
+-msgid "&Text:"
+-msgstr "&Текст:"
+-
+-#. i18n: file: plugins/filter/addeditfilter_base.ui:56
+-#. i18n: ectx: property (text), widget (QCheckBox, dontHideReplies)
+-#: rc.cpp:356
+-msgid "Do not hide replies to me"
+-msgstr "Не скрывать ответы на мои сообщения"
++#: rc.cpp:336
++msgid "Upload via:"
++msgstr "Отправить через:"
+ 
+ #. i18n: file: plugins/filter/filterprefs.ui:21
+ #. i18n: ectx: attribute (title), widget (QWidget, tab)
+-#: rc.cpp:359
++#: rc.cpp:348
+ msgid "Rules"
+ msgstr "Правила"
+ 
+ #. i18n: file: plugins/filter/filterprefs.ui:40
+ #. i18n: ectx: property (text), widget (QTableWidget, filters)
+-#: rc.cpp:362
++#: rc.cpp:351
+ msgid "Field"
+ msgstr "Поле"
+ 
+ #. i18n: file: plugins/filter/filterprefs.ui:45
+ #. i18n: ectx: property (text), widget (QTableWidget, filters)
+-#: rc.cpp:365
++#: rc.cpp:354
+ msgid "Type"
+ msgstr "Тип"
+ 
+ #. i18n: file: plugins/filter/filterprefs.ui:50
+ #. i18n: ectx: property (text), widget (QTableWidget, filters)
+-#: rc.cpp:368
++#: rc.cpp:357
+ msgid "Filter"
+ msgstr "Фильтр"
+ 
+ #. i18n: file: plugins/filter/filterprefs.ui:80
+ #. i18n: ectx: property (toolTip), widget (KPushButton, btnEdit)
+-#: rc.cpp:374
++#: rc.cpp:363
+ msgid "Modify"
+ msgstr "Изменить"
+ 
+ #. i18n: file: plugins/filter/filterprefs.ui:100
+ #. i18n: ectx: property (toolTip), widget (KPushButton, btnRemove)
+-#: rc.cpp:377
++#: rc.cpp:366
+ msgid "Remove"
+ msgstr "Удалить"
+ 
+ #. i18n: file: plugins/filter/filterprefs.ui:110
+ #. i18n: ectx: attribute (title), widget (QWidget, tabSpecial)
+-#: rc.cpp:380
++#: rc.cpp:369
+ msgid "Special Rules"
+ msgstr "Особые правила"
+ 
+ #. i18n: file: plugins/filter/filterprefs.ui:116
+ #. i18n: ectx: property (toolTip), widget (QCheckBox, cfg_hideRepliesNotRelatedToMe)
+-#: rc.cpp:383
++#: rc.cpp:372
+ msgid "You'll see just replies came to you, or mentions you."
+ msgstr "Вы увидите только ответы на ваши сообщения и упоминания вашего имени."
+ 
+ #. i18n: file: plugins/filter/filterprefs.ui:119
+ #. i18n: ectx: property (text), widget (QCheckBox, cfg_hideRepliesNotRelatedToMe)
+-#: rc.cpp:386
++#: rc.cpp:375
+ msgid "Just show replies to me."
+ msgstr "Показывать только ответы на мои сообщения."
+ 
+ #. i18n: file: plugins/filter/filterprefs.ui:126
+ #. i18n: ectx: property (toolTip), widget (QCheckBox, cfg_hideNoneFriendsReplies)
+-#: rc.cpp:389
++#: rc.cpp:378
+ msgid "You'll see just replies between your friends."
+ msgstr "Вы увидите только ответы друзей."
+ 
+ #. i18n: file: plugins/filter/filterprefs.ui:129
+ #. i18n: ectx: property (text), widget (QCheckBox, cfg_hideNoneFriendsReplies)
+-#: rc.cpp:392
++#: rc.cpp:381
+ msgid "Just show replies to me and my friends."
+ msgstr "Показывать ответы на мои сообщения и сообщения моих друзей."
+ 
+-#. i18n: file: plugins/imstatus/imstatusprefs.ui:19
+-#. i18n: ectx: property (text), widget (QLabel, label_im)
+-#: rc.cpp:398
+-msgid "Instant Messenger:"
+-msgstr "Программа обмена сообщениями:"
+-
+-#. i18n: file: plugins/imstatus/imstatusprefs.ui:31
+-#. i18n: ectx: property (text), widget (QCheckBox, cfg_reply)
+-#: rc.cpp:401
+-msgid "Add replies to status"
+-msgstr "Добавлять ответы в статус"
+-
+-#. i18n: file: plugins/imstatus/imstatusprefs.ui:38
+-#. i18n: ectx: property (text), widget (QLabel, label_status_templ)
+-#: rc.cpp:404
+-msgid "Status template"
+-msgstr "Шаблон статуса"
+-
+-#. i18n: file: plugins/imstatus/imstatusprefs.ui:64
+-#. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:408
+-#, no-c-format
+-msgid ""
+-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+-"REC-html40/strict.dtd\">\n"
+-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+-"\">\n"
+-"p, li { white-space: pre-wrap; }\n"
+-"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+-"weight:400; font-style:normal;\">\n"
+-"<table border=\"0\" style=\"-qt-table-type: root; margin-top:4px; margin-"
+-"bottom:4px; margin-left:4px; margin-right:4px;\">\n"
+-"<tr>\n"
+-"<td style=\"border: none;\">\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt;\">Available markup:</span></p>\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">%status%</span><span style=\" font-size:8pt;\"> "
+-"- new status</span></p>\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">%time%</span><span style=\" font-size:8pt;\"> - "
+-"time of adding new status</span></p>\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">%url%</span><span style=\" font-size:8pt;\"> - "
+-"URL of new status</span></p>\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">%username%</span><span style=\" font-size:8pt;"
+-"\"> - your username</span></p>\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">%fullname%</span><span style=\" font-size:8pt;"
+-"\"> - your full name</span></p>\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">%client%</span><span style=\" font-size:8pt;\"> "
+-"- add </span><span style=\" font-size:8pt; font-style:italic;\">Choqok</"
+-"span><span style=\" font-size:8pt;\"> to status</span></p></td></tr></"
+-"table></body></html>"
+-msgstr ""
+-"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+-"REC-html40/strict.dtd\">\n"
+-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+-"\">\n"
+-"p, li { white-space: pre-wrap; }\n"
+-"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-"
+-"weight:400; font-style:normal;\">\n"
+-"<table border=\"0\" style=\"-qt-table-type: root; margin-top:4px; margin-"
+-"bottom:4px; margin-left:4px; margin-right:4px;\">\n"
+-"<tr>\n"
+-"<td style=\"border: none;\">\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt;\">Доступные строки для подстановки:</span></p>\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">%status%</span><span style=\" font-size:8pt;\"> "
+-"— новый статус</span></p>\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">%time%</span><span style=\" font-size:8pt;\"> — "
+-"время добавления нового статуса</span></p>\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">%url%</span><span style=\" font-size:8pt;\"> — "
+-"веб-адрес нового статуса</span></p>\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">%username%</span><span style=\" font-size:8pt;"
+-"\"> — ваше имя пользователя</span></p>\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">%fullname%</span><span style=\" font-size:8pt;"
+-"\"> — ваше полное имя</span></p>\n"
+-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+-"right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+-"size:8pt; font-weight:600;\">%client%</span><span style=\" font-size:8pt;\"> "
+-"— добавить название «</span><span style=\" font-size:8pt; font-style:italic;"
+-"\">Choqok</span><span style=\" font-size:8pt;\">» в статус</span></p></td></"
+-"tr></table></body></html>"
+-
+-#. i18n: file: plugins/imstatus/imstatusprefs.ui:87
+-#. i18n: ectx: property (text), widget (QCheckBox, cfg_repeat)
+-#: rc.cpp:424
+-msgid "Add repeats to status"
+-msgstr "Добавлять повторенные сообщения в статус"
+-
+-#. i18n: file: plugins/konqueror/konqchoqok.rc:4
+-#. i18n: ectx: Menu (tools)
+-#: rc.cpp:427
+-msgid "&Tools"
+-msgstr "С&ервис"
+-
+-#. i18n: file: plugins/nowlistening/nowlisteningprefs.ui:17
+-#. i18n: ectx: property (text), widget (QLabel, label_8)
+-#: rc.cpp:430
+-msgid "Valid metadata:"
+-msgstr "Правильные метаданные:"
+-
+-#. i18n: file: plugins/nowlistening/nowlisteningprefs.ui:51
+-#. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:433
+-msgid "Template:"
+-msgstr "Шаблон:"
+-
+-#. i18n: file: plugins/shorteners/bit_ly/bit_ly_prefs.ui:19
+-#. i18n: ectx: property (text), widget (QLabel, login)
+-#: rc.cpp:442
+-msgid "Bit.ly Login:"
+-msgstr "Имя пользователя bit.ly:"
+-
+-#. i18n: file: plugins/shorteners/bit_ly/bit_ly_prefs.ui:32
+-#. i18n: ectx: property (text), widget (QLabel, api_key)
+-#: rc.cpp:445
+-msgid "Bit.ly API Key:"
+-msgstr "Ключ API bit.ly:"
+-
+-#. i18n: file: plugins/shorteners/bit_ly/bit_ly_prefs.ui:58
+-#. i18n: ectx: property (text), widget (QLabel, help_label)
+-#: rc.cpp:451
+-msgid "You can find your API key here"
+-msgstr "Вы можете найти свои ключ API здесь"
+-
+-#. i18n: file: plugins/shorteners/bit_ly/bit_ly_prefs.ui:73
+-#. i18n: ectx: property (text), widget (QLabel, domain)
+-#: rc.cpp:454
+-msgid "Domain:"
+-msgstr "Домен:"
+-
+-#. i18n: file: plugins/shorteners/bit_ly/bit_ly_prefs.ui:86
+-#. i18n: ectx: property (text), widget (QLabel, label)
+-#: rc.cpp:457
+-msgid "(No matter for Bit.ly Pro accounts)"
+-msgstr "(не имеет значения для улучшенных учётных записей bit.ly)"
+-
+-#. i18n: file: plugins/shorteners/is_gd/is_gd_prefs.ui:19
+-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_logstats)
+-#: rc.cpp:460
+-msgid "Generate Statistics"
+-msgstr ""
++#. i18n: file: plugins/filter/addeditfilter_base.ui:17
++#. i18n: ectx: property (text), widget (QLabel, label)
++#: rc.cpp:384
++msgid "Filter &Field:"
++msgstr "Поле &фильтра:"
+ 
+-#. i18n: file: plugins/shorteners/tinyarro_ws/tinyarro_ws_prefs.ui:40
+-#. i18n: ectx: property (text), widget (QLabel, urlHostLabel)
+-#: rc.cpp:463
+-msgid "Shortener URL host:"
+-msgstr "Хост службы сокращения ссылок:"
++#. i18n: file: plugins/filter/addeditfilter_base.ui:30
++#. i18n: ectx: property (text), widget (QLabel, label_2)
++#: rc.cpp:387
++msgid "Filter &Type:"
++msgstr "Тип фи&льтра:"
+ 
+-#. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:17
++#. i18n: file: plugins/filter/addeditfilter_base.ui:43
+ #. i18n: ectx: property (text), widget (QLabel, label_3)
+-#: rc.cpp:466
+-msgid "Yourls API URL:"
+-msgstr "Адрес API Yourls:"
++#: rc.cpp:390
++msgid "&Text:"
++msgstr "&Текст:"
+ 
+-#. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:27
+-#. i18n: ectx: property (clickMessage), widget (KLineEdit, kcfg_yourlsHost)
+-#: rc.cpp:469
+-msgid "http://SomeDomain.com/yourls/yourls-api.php"
+-msgstr "http://SomeDomain.com/yourls/yourls-api.php"
++#. i18n: file: plugins/filter/addeditfilter_base.ui:56
++#. i18n: ectx: property (text), widget (QCheckBox, dontHideReplies)
++#: rc.cpp:393
++msgid "Do not hide replies to me"
++msgstr "Не скрывать ответы на мои сообщения"
+ 
+-#. i18n: file: plugins/translator/translatorprefs.ui:17
++#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:40
++#. i18n: ectx: property (text), widget (QRadioButton, cfg_oauth)
++#. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:40
++#. i18n: ectx: property (text), widget (QRadioButton, cfg_oauth)
++#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:40
++#. i18n: ectx: property (text), widget (QRadioButton, cfg_oauth)
++#. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:40
++#. i18n: ectx: property (text), widget (QRadioButton, cfg_oauth)
++#: rc.cpp:396
++#: rc.cpp:465
++msgid "Twitter account"
++msgstr "Учётная запись Twitter"
++
++#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:47
++#. i18n: ectx: property (text), widget (QRadioButton, cfg_basic)
++#: rc.cpp:399
++msgid "Posterous login and password:"
++msgstr "Имя пользователя и пароль Posterous:"
++
++#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:57
+ #. i18n: ectx: property (text), widget (QLabel, label)
+-#: rc.cpp:478
+-msgid "Select languages to be shown in translate menu"
+-msgstr "Выберите языки, показываемые в меню перевода:"
++#. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:57
++#. i18n: ectx: property (text), widget (QLabel, label)
++#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:57
++#. i18n: ectx: property (text), widget (QLabel, label)
++#. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:57
++#. i18n: ectx: property (text), widget (QLabel, label)
++#: rc.cpp:402
++#: rc.cpp:471
++msgid "Upload files using:"
++msgstr "Загрузить файлы, используя:"
+ 
+-#. i18n: file: plugins/untiny/untinyprefs.ui:17
+-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useUntinyDotCom)
+-#: rc.cpp:481
+-msgid "Use untiny.com service"
+-msgstr "Использовать службу untiny.com"
++#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:64
++#. i18n: ectx: property (text), widget (QLabel, label_2)
++#: rc.cpp:405
++msgid "E-mail:"
++msgstr "Адрес электронной почты:"
++
++#. i18n: file: plugins/uploaders/twitgoo/twitgooprefs.ui:17
++#. i18n: ectx: property (text), widget (QLabel, label_2)
++#. i18n: file: plugins/uploaders/twitpic/twitpicprefs.ui:17
++#. i18n: ectx: property (text), widget (QLabel, label_2)
++#. i18n: file: plugins/uploaders/twitgoo/twitgooprefs.ui:17
++#. i18n: ectx: property (text), widget (QLabel, label_2)
++#. i18n: file: plugins/uploaders/twitpic/twitpicprefs.ui:17
++#. i18n: ectx: property (text), widget (QLabel, label_2)
++#: rc.cpp:411
++#: rc.cpp:462
++msgid "Twitter account:"
++msgstr "Учётная запись Twitter:"
++
++#. i18n: file: plugins/uploaders/twitgoo/twitgooprefs.ui:50
++#. i18n: ectx: property (text), widget (QCheckBox, cfg_directLink)
++#: rc.cpp:414
++msgid "Get direct link to file"
++msgstr "Получить прямую ссылку на файл"
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:24
+ #. i18n: ectx: attribute (title), widget (QWidget, authTab)
+-#: rc.cpp:484
++#: rc.cpp:417
+ msgid "Authorization"
+ msgstr "Авторизация"
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:51
+ #. i18n: ectx: property (text), widget (QLabel, label)
+-#: rc.cpp:487
+-msgid ""
+-"Click the below button, If everything goes well, you'll pointed to Flickr."
+-"com website to allow access to Choqok."
+-msgstr ""
+-"Нажмите на кнопку ниже Если не произойдёт ошибок, откроется сайт Flickr.com, "
+-"чтобы разрешить доступ из Choqok."
++#: rc.cpp:420
++msgid "Click the below button, If everything goes well, you'll pointed to Flickr.com website to allow access to Choqok."
++msgstr "Нажмите на кнопку ниже Если не произойдёт ошибок, откроется сайт Flickr.com, чтобы разрешить доступ из Choqok."
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:61
+ #. i18n: ectx: property (text), widget (QPushButton, authButton)
+-#: rc.cpp:490
++#: rc.cpp:423
+ msgid "Click here to authorize Choqok on Flickr.com"
+ msgstr "Нажмите здесь, чтобы авторизовать Choqok на Flickr.com"
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:90
+ #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+-#: rc.cpp:496
++#: rc.cpp:429
+ msgid "Who can view photo"
+ msgstr "Кто может просматривать фотографии"
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:96
+ #. i18n: ectx: property (text), widget (QRadioButton, cfg_forprivate)
+-#: rc.cpp:499
++#: rc.cpp:432
+ msgid "Private"
+ msgstr "Только вы"
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:105
+ #. i18n: ectx: property (text), widget (QCheckBox, cfg_forfriends)
+-#: rc.cpp:502
++#: rc.cpp:435
+ msgid "Visible for friends"
+ msgstr "Только друзья"
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:112
+ #. i18n: ectx: property (text), widget (QCheckBox, cfg_forfamily)
+-#: rc.cpp:505
++#: rc.cpp:438
+ msgid "Visible for family"
+ msgstr "Только семья"
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:121
+ #. i18n: ectx: property (text), widget (QRadioButton, cfg_forpublic)
+-#: rc.cpp:508
++#: rc.cpp:441
+ msgid "Public"
+ msgstr "Все"
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:134
+ #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
+-#: rc.cpp:511
++#: rc.cpp:444
+ msgid "Set safety level"
+ msgstr "Уровень безопасности"
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:140
+ #. i18n: ectx: property (text), widget (QRadioButton, cfg_safe)
+-#: rc.cpp:514
++#: rc.cpp:447
+ msgid "Safe"
+ msgstr "Безопасный"
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:150
+ #. i18n: ectx: property (text), widget (QRadioButton, cfg_moderate)
+-#: rc.cpp:517
++#: rc.cpp:450
+ msgid "Moderate"
+ msgstr "Умеренный"
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:157
+ #. i18n: ectx: property (text), widget (QRadioButton, cfg_restricted)
+-#: rc.cpp:520
++#: rc.cpp:453
+ msgid "Restricted"
+ msgstr "Ограниченный"
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:169
+ #. i18n: ectx: property (text), widget (QCheckBox, cfg_hidefromsearch)
+-#: rc.cpp:523
++#: rc.cpp:456
+ msgid "Hide picture from public search"
+ msgstr "Скрыть фотографии из общего поиска"
+ 
+ #. i18n: file: plugins/uploaders/flickr/flickrprefs.ui:176
+ #. i18n: ectx: property (text), widget (QCheckBox, cfg_shorturl)
+-#: rc.cpp:526
++#: rc.cpp:459
+ msgid "Use Flic.kr to short URLs"
+ msgstr "Использовать Flic.kr для сокращения ссылок"
+ 
+-#. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:40
+-#. i18n: ectx: property (text), widget (QRadioButton, cfg_oauth)
+-#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:40
+-#. i18n: ectx: property (text), widget (QRadioButton, cfg_oauth)
+-#. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:40
+-#. i18n: ectx: property (text), widget (QRadioButton, cfg_oauth)
+-#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:40
+-#. i18n: ectx: property (text), widget (QRadioButton, cfg_oauth)
+-#: rc.cpp:529 rc.cpp:544
+-msgid "Twitter account"
+-msgstr "Учётная запись Twitter"
+-
+ #. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:47
+ #. i18n: ectx: property (text), widget (QRadioButton, cfg_basic)
+-#: rc.cpp:532
++#: rc.cpp:468
+ msgid "Mobypicture login and password:"
+ msgstr "Имя пользователя и пароль Mobypicture:"
+ 
+-#. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:57
+-#. i18n: ectx: property (text), widget (QLabel, label)
+-#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:57
+-#. i18n: ectx: property (text), widget (QLabel, label)
+-#. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:57
+-#. i18n: ectx: property (text), widget (QLabel, label)
+-#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:57
+-#. i18n: ectx: property (text), widget (QLabel, label)
+-#: rc.cpp:535 rc.cpp:550
+-msgid "Upload files using:"
+-msgstr "Загрузить файлы, используя:"
+-
+ #. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:64
+ #. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:538
++#: rc.cpp:474
+ msgid "Login:"
+ msgstr "Имя пользователя:"
+ 
+ #. i18n: file: plugins/uploaders/mobypicture/mobypictureprefs.ui:74
+ #. i18n: ectx: property (text), widget (QLabel, label_3)
+-#: rc.cpp:541
++#: rc.cpp:477
+ msgid "Password (PIN):"
+ msgstr "Пароль (PIN):"
+ 
+-#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:47
+-#. i18n: ectx: property (text), widget (QRadioButton, cfg_basic)
+-#: rc.cpp:547
+-msgid "Posterous login and password:"
+-msgstr "Имя пользователя и пароль Posterous:"
+-
+-#. i18n: file: plugins/uploaders/posterous/posterousprefs.ui:64
+-#. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:553
+-msgid "E-mail:"
+-msgstr "Адрес электронной почты:"
++#. i18n: file: plugins/nowlistening/nowlisteningprefs.ui:17
++#. i18n: ectx: property (text), widget (QLabel, label_8)
++#: rc.cpp:483
++msgid "Valid metadata:"
++msgstr "Правильные метаданные:"
+ 
+-#. i18n: file: plugins/uploaders/twitgoo/twitgooprefs.ui:17
+-#. i18n: ectx: property (text), widget (QLabel, label_2)
+-#. i18n: file: plugins/uploaders/twitpic/twitpicprefs.ui:17
+-#. i18n: ectx: property (text), widget (QLabel, label_2)
+-#. i18n: file: plugins/uploaders/twitgoo/twitgooprefs.ui:17
+-#. i18n: ectx: property (text), widget (QLabel, label_2)
+-#. i18n: file: plugins/uploaders/twitpic/twitpicprefs.ui:17
++#. i18n: file: plugins/nowlistening/nowlisteningprefs.ui:51
+ #. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:559 rc.cpp:565
+-msgid "Twitter account:"
+-msgstr "Учётная запись Twitter:"
+-
+-#. i18n: file: plugins/uploaders/twitgoo/twitgooprefs.ui:50
+-#. i18n: ectx: property (text), widget (QCheckBox, cfg_directLink)
+-#: rc.cpp:562
+-msgid "Get direct link to file"
+-msgstr "Получить прямую ссылку на файл"
++#: rc.cpp:486
++msgid "Template:"
++msgstr "Шаблон:"
+ 
+-#. i18n: file: plugins/betternotify/notifyprefs.ui:19
+-#. i18n: ectx: property (text), widget (QLabel, label_5)
+-#: rc.cpp:571
+-#, fuzzy
+-#| msgid "Notify &mode :"
+-msgid "Notify Interval:"
+-msgstr "&Режим уведомления :"
++#. i18n: file: plugins/imstatus/imstatusprefs.ui:19
++#. i18n: ectx: property (text), widget (QLabel, label_im)
++#: rc.cpp:489
++msgid "Instant Messenger:"
++msgstr "Программа обмена сообщениями:"
+ 
+-#. i18n: file: plugins/betternotify/notifyprefs.ui:36
+-#. i18n: ectx: property (text), widget (QLabel, label_6)
+-#: rc.cpp:574
+-#, fuzzy
+-#| msgid " Second"
+-#| msgid_plural " Seconds"
+-msgid "seconds"
+-msgstr " секунда"
++#. i18n: file: plugins/imstatus/imstatusprefs.ui:31
++#. i18n: ectx: property (text), widget (QCheckBox, cfg_reply)
++#: rc.cpp:492
++msgid "Add replies to status"
++msgstr "Добавлять ответы в статус"
+ 
+-#. i18n: file: plugins/betternotify/notifyprefs.ui:51
+-#. i18n: ectx: property (text), widget (QLabel, label_3)
+-#: rc.cpp:577
+-#, fuzzy
+-#| msgid "Close Timeline"
+-msgid "Select Timelines"
+-msgstr "Закрыть ленту"
++#. i18n: file: plugins/imstatus/imstatusprefs.ui:38
++#. i18n: ectx: property (text), widget (QLabel, label_status_templ)
++#: rc.cpp:495
++msgid "Status template"
++msgstr "Шаблон статуса"
+ 
+-#. i18n: file: plugins/betternotify/notifyprefs.ui:61
++#. i18n: file: plugins/imstatus/imstatusprefs.ui:64
+ #. i18n: ectx: property (text), widget (QLabel, label_2)
+-#: rc.cpp:580
+-#, fuzzy
+-#| msgid "Accounts"
+-msgid "Accounts"
+-msgstr "Учётные записи"
+-
+-#. i18n: file: plugins/betternotify/notifyprefs.ui:106
+-#. i18n: ectx: property (text), widget (QLabel, label)
+-#: rc.cpp:583
+-msgid "Select timelines you wish to see notifications for their new posts:"
+-msgstr ""
+-
+-#. i18n: file: plugins/betternotify/notifyprefs.ui:135
+-#. i18n: ectx: property (text), widget (QLabel, label_4)
+-#: rc.cpp:586
+-msgid "* Any change, needs plugin re-load (disable/enable) to take effect."
++#: rc.cpp:499
++#, no-c-format
++msgid ""
++"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
++"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
++"p, li { white-space: pre-wrap; }\n"
++"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
++"<table border=\"0\" style=\"-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;\">\n"
++"<tr>\n"
++"<td style=\"border: none;\">\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Available markup:</span></p>\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">%status%</span><span style=\" font-size:8pt;\"> - new status</span></p>\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">%time%</span><span style=\" font-size:8pt;\"> - time of adding new status</span></p>\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">%url%</span><span style=\" font-size:8pt;\"> - URL of new status</span></p>\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">%username%</span><span style=\" font-size:8pt;\"> - your username</span></p>\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">%fullname%</span><span style=\" font-size:8pt;\"> - your full name</span></p>\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">%client%</span><span style=\" font-size:8pt;\"> - add </span><span style=\" font-size:8pt; font-style:italic;\">Choqok</span><span style=\" font-size:8pt;\"> to status</span></p></td></tr></table></body></html>"
+ msgstr ""
++"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
++"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
++"p, li { white-space: pre-wrap; }\n"
++"</style></head><body style=\" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
++"<table border=\"0\" style=\"-qt-table-type: root; margin-top:4px; margin-bottom:4px; margin-left:4px; margin-right:4px;\">\n"
++"<tr>\n"
++"<td style=\"border: none;\">\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Доступные строки для подстановки:</span></p>\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">%status%</span><span style=\" font-size:8pt;\"> — новый статус</span></p>\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">%time%</span><span style=\" font-size:8pt;\"> — время добавления нового статуса</span></p>\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">%url%</span><span style=\" font-size:8pt;\"> — веб-адрес нового статуса</span></p>\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">%username%</span><span style=\" font-size:8pt;\"> — ваше имя пользователя</span></p>\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">%fullname%</span><span style=\" font-size:8pt;\"> — ваше полное имя</span></p>\n"
++"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">%client%</span><span style=\" font-size:8pt;\"> — добавить название «</span><span style=\" font-size:8pt; font-style:italic;\">Choqok</span><span style=\" font-size:8pt;\">» в статус</span></p></td></tr></table></body></html>"
+ 
++#. i18n: file: plugins/imstatus/imstatusprefs.ui:87
++#. i18n: ectx: property (text), widget (QCheckBox, cfg_repeat)
++#: rc.cpp:515
++msgid "Add repeats to status"
++msgstr "Добавлять повторенные сообщения в статус"
+ 
++#. i18n: file: plugins/shorteners/is_gd/is_gd_prefs.ui:19
++#. i18n: ectx: property (text), widget (QCheckBox, kcfg_logstats)
++#: rc.cpp:518
++msgid "Generate Statistics"
++msgstr "Вести статистику"
+ 
++#. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:17
++#. i18n: ectx: property (text), widget (QLabel, label_3)
++#: rc.cpp:521
++msgid "Yourls API URL:"
++msgstr "Адрес API Yourls:"
+ 
++#. i18n: file: plugins/shorteners/yourls/yourlsprefs.ui:27
++#. i18n: ectx: property (clickMessage), widget (KLineEdit, kcfg_yourlsHost)
++#: rc.cpp:524
++msgid "http://SomeDomain.com/yourls/yourls-api.php"
++msgstr "http://SomeDomain.com/yourls/yourls-api.php"
+ 
++#. i18n: file: plugins/shorteners/tinyarro_ws/tinyarro_ws_prefs.ui:40
++#. i18n: ectx: property (text), widget (QLabel, urlHostLabel)
++#: rc.cpp:533
++msgid "Shortener URL host:"
++msgstr "Хост службы сокращения ссылок:"
+ 
++#. i18n: file: plugins/shorteners/bit_ly/bit_ly_prefs.ui:19
++#. i18n: ectx: property (text), widget (QLabel, login)
++#: rc.cpp:536
++msgid "Bit.ly Login:"
++msgstr "Имя пользователя bit.ly:"
+ 
++#. i18n: file: plugins/shorteners/bit_ly/bit_ly_prefs.ui:32
++#. i18n: ectx: property (text), widget (QLabel, api_key)
++#: rc.cpp:539
++msgid "Bit.ly API Key:"
++msgstr "Ключ API bit.ly:"
+ 
++#. i18n: file: plugins/shorteners/bit_ly/bit_ly_prefs.ui:49
++#. i18n: ectx: property (text), widget (QPushButton, validate_button)
++#: rc.cpp:542
++#: plugins/shorteners/bit_ly/bit_ly_config.cpp:136
++msgid "Validate"
++msgstr "Проверить"
+ 
++#. i18n: file: plugins/shorteners/bit_ly/bit_ly_prefs.ui:58
++#. i18n: ectx: property (text), widget (QLabel, help_label)
++#: rc.cpp:545
++msgid "You can find your API key here"
++msgstr "Вы можете найти свои ключ API здесь"
+ 
++#. i18n: file: plugins/shorteners/bit_ly/bit_ly_prefs.ui:73
++#. i18n: ectx: property (text), widget (QLabel, domain)
++#: rc.cpp:548
++msgid "Domain:"
++msgstr "Домен:"
+ 
++#. i18n: file: plugins/shorteners/bit_ly/bit_ly_prefs.ui:86
++#. i18n: ectx: property (text), widget (QLabel, label)
++#: rc.cpp:551
++msgid "(No matter for Bit.ly Pro accounts)"
++msgstr "(не имеет значения для улучшенных учётных записей bit.ly)"
+ 
++#. i18n: file: plugins/konqueror/konqchoqok.rc:4
++#. i18n: ectx: Menu (tools)
++#: rc.cpp:554
++msgid "&Tools"
++msgstr "С&ервис"
+ 
++#. i18n: file: plugins/translator/translatorprefs.ui:17
++#. i18n: ectx: property (text), widget (QLabel, label)
++#: rc.cpp:557
++msgid "Select languages to be shown in translate menu"
++msgstr "Выберите языки, показываемые в меню перевода:"
+ 
+-#, fuzzy
+-
+-
+-
+-
+-#, fuzzy
+-
+-
+-
+-
+-
+-#, fuzzy
+-
+-
+-
+-
+-#, fuzzy
+-
+-
+-
+-
+-#, fuzzy
++#. i18n: file: plugins/untiny/untinyprefs.ui:17
++#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useUntinyDotCom)
++#: rc.cpp:566
++msgid "Use untiny.com service"
++msgstr "Использовать службу untiny.com"
+ 
++#: plugins/filter/filtermanager.cpp:48
++msgid "Configure Filters..."
++msgstr "Настроить фильтры..."
+ 
++#: plugins/filter/filtermanager.cpp:56
++msgid "Hide Post"
++msgstr "Скрыть сообщение"
+ 
++#: plugins/filter/filtermanager.cpp:221
++#, kde-format
++msgid "Hide all posts from <b>@%1</b>"
++msgstr "Скрыть все сообщения от <b>@%1</b>"
+ 
++#: plugins/filter/filtersettings.cpp:46
++msgid "Author Username"
++msgstr "Имя пользователя автора"
+ 
++#: plugins/filter/filtersettings.cpp:47
++msgid "Post Text"
++msgstr "Текст сообщения"
+ 
++#: plugins/filter/filtersettings.cpp:48
++msgid "Author Client"
++msgstr "Клиент автора"
+ 
++#: plugins/filter/filtersettings.cpp:49
++msgid "Reply to User"
++msgstr "Ответить пользователю"
+ 
++#: plugins/filter/filtersettings.cpp:51
++msgid "Contain"
++msgstr "Содержит"
+ 
++#: plugins/filter/filtersettings.cpp:52
++msgid "Does Not Contain"
++msgstr "Не содержит"
+ 
++#: plugins/filter/filtersettings.cpp:53
++msgid "Exact Match"
++msgstr "Точное совпадение"
+ 
++#: plugins/filter/filtersettings.cpp:54
++msgid "Regular Expression"
++msgstr "Регулярное выражение"
+ 
++#: plugins/filter/addeditfilter.cpp:41
++msgid "Define new filter rules"
++msgstr "Определение новых правил для фильтра"
+ 
++#: plugins/filter/addeditfilter.cpp:50
++msgid "Modify filter rules"
++msgstr "Изменение правил для фильтра"
+ 
+-#, fuzzy
++#: plugins/filter/configurefilters.cpp:43
++msgid "Configure Filters"
++msgstr "Настройка фильтров"
+ 
++#: plugins/uploaders/imageshack/imageshack.cpp:55
++msgid "Just supporting image uploading"
++msgstr "Поддержка загрузки изображений"
+ 
++#: plugins/uploaders/imageshack/imageshack.cpp:130
++#: plugins/uploaders/posterous/posterous.cpp:196
++#: plugins/uploaders/twitgoo/twitgoo.cpp:131
++#: plugins/uploaders/flickr/flickr.cpp:206
++#: plugins/uploaders/flickr/flickr.cpp:212
++#: plugins/uploaders/flickr/flickrconfig.cpp:172
++#: plugins/uploaders/flickr/flickrconfig.cpp:177
++#: plugins/uploaders/flickr/flickrconfig.cpp:243
++#: plugins/uploaders/flickr/flickrconfig.cpp:248
++#: plugins/uploaders/twitpic/twitpic.cpp:130
++#: plugins/uploaders/mobypicture/mobypicture.cpp:169
++msgid "Malformed response"
++msgstr "Неправильный ответ"
+ 
++#: plugins/uploaders/posterous/posterous.cpp:124
++#: plugins/uploaders/twitgoo/twitgoo.cpp:62
++#: plugins/uploaders/twitpic/twitpic.cpp:62
++#: plugins/uploaders/mobypicture/mobypicture.cpp:65
++msgid "There's no Twitter account configured to use."
++msgstr "Нет настроенной учётной записи Twitter."
+ 
+-#, fuzzy
++#: plugins/uploaders/posterous/posterousconfig.cpp:87
++#: plugins/uploaders/twitgoo/twitgooconfig.cpp:77
++#: plugins/uploaders/twitpic/twitpicconfig.cpp:77
++#: plugins/uploaders/mobypicture/mobypictureconfig.cpp:87
++msgid "You have to configure at least one twitter account to use this plugin."
++msgstr "Вы должны настроить как минимум одну учётную запись Twitter, чтобы использовать данный модуль"
+ 
++#: plugins/uploaders/flickr/flickr.cpp:170
++msgid "The photo required argument was missing"
++msgstr "Необходимый аргумент фотографии пропущен"
+ 
++#: plugins/uploaders/flickr/flickr.cpp:173
++msgid "The file was not correctly uploaded"
++msgstr "Не удалось правильно отправить файл"
+ 
++#: plugins/uploaders/flickr/flickr.cpp:176
++msgid "The file was zero bytes in length"
++msgstr "Файл имеет размер 0 байт"
+ 
+-#, fuzzy
++#: plugins/uploaders/flickr/flickr.cpp:179
++msgid "Filetype was not recognised"
++msgstr "Неизвестный тип файла"
+ 
++#: plugins/uploaders/flickr/flickr.cpp:182
++msgid "The calling user has reached their monthly bandwidth limit"
++msgstr "Вызывающий пользователь достиг месячного предела трафика"
+ 
++#: plugins/uploaders/flickr/flickr.cpp:186
++#: plugins/uploaders/flickr/flickrconfig.cpp:161
++msgid "Signature problem. Please try again later"
++msgstr "Проблема с подписью. Попробуйте позже ещё раз"
+ 
++#. TODO:
++#. Show auth dialog
++#.
++#: plugins/uploaders/flickr/flickr.cpp:193
++msgid "Login failed. Please re-authenticate Choqok"
++msgstr "Не удалось войти. Разрешите вход из Choqok ещё раз."
+ 
+-#, fuzzy
++#: plugins/uploaders/flickr/flickr.cpp:196
++#: plugins/uploaders/flickr/flickrconfig.cpp:164
++#: plugins/uploaders/flickr/flickrconfig.cpp:235
++msgid "The requested service is temporarily unavailable. Try again later"
++msgstr "Запрашиваемая служба временно недоступна. Попробуйте позже."
+ 
++#: plugins/uploaders/flickr/flickr.cpp:199
++#: plugins/uploaders/flickr/flickrconfig.cpp:167
++#, kde-format
++msgid "Unknown Error: %1. Please try again later"
++msgstr "Неизвестная ошибка: %1. Попробуйте позже ещё раз"
+ 
++#: plugins/uploaders/flickr/flickrconfig.cpp:183
++#: plugins/uploaders/flickr/flickrconfig.cpp:255
++msgid "Flickr authorization"
++msgstr "Авторизация в службе Flickr"
+ 
++#: plugins/uploaders/flickr/flickrconfig.cpp:232
++msgid "Something happens with signature. Please retry"
++msgstr "Что-то с подписью. Попробуйте снова."
+ 
+-#, fuzzy
++#: plugins/uploaders/flickr/flickrconfig.cpp:238
++#, kde-format
++msgid "Something happens wrong. Error %1. Try again later"
++msgstr "Что-то не так. Ошибка %1. Попробуйте позже."
+ 
++#: plugins/uploaders/flickr/flickrconfig.cpp:275
++#, kde-format
++msgid "Authorized as %1"
++msgstr "Авторизован как %1"
+ 
++#: plugins/uploaders/flickr/flickrconfig.cpp:281
++msgid "Not authorized"
++msgstr "Не авторизован"
+ 
++#: plugins/uploaders/flickr/flickrconfig.cpp:296
++msgid "Click here when you authorized Choqok"
++msgstr "Нажмите здесь, когда вы авторизуете Choqok"
+ 
+-#, fuzzy
++#: plugins/nowlistening/nowlistening.cpp:46
++msgid "Now Listening"
++msgstr "Сейчас прослушивается"
+ 
++#: plugins/nowlistening/nowlistening.cpp:242
++msgctxt "Player is running, But it's not playing."
++msgid "Play your desired music player."
++msgstr "Начните воспроизведение музыки в проигрывателе."
+ 
++#: plugins/nowlistening/nowlistening.cpp:245
++msgid "No supported player found."
++msgstr "Поддерживаемый проигрыватель не найден."
+ 
++#: plugins/shorteners/is_gd/is_gd.cpp:75
++#: plugins/shorteners/is_gd/is_gd.cpp:83
++#: plugins/shorteners/is_gd/is_gd.cpp:87
++msgid "is.gd error"
++msgstr "ошибка службы is.gd"
+ 
++#: plugins/shorteners/is_gd/is_gd.cpp:83
++#: plugins/shorteners/goo_gl/goo_gl.cpp:80
++msgid "Malformed response\n"
++msgstr "Неправильный ответ\n"
+ 
++#: plugins/shorteners/is_gd/is_gd.cpp:87
++#: plugins/shorteners/three_ly/three_ly.cpp:68
++#: plugins/shorteners/goo_gl/goo_gl.cpp:82
++#: plugins/shorteners/yourls/yourls.cpp:92
++#: plugins/shorteners/tinyarro_ws/tinyarro_ws.cpp:75
++#, kde-format
++msgid ""
++"Cannot create a short url.\n"
++"%1"
++msgstr ""
++"Не удалось создать сокращённую ссылку.\n"
++"%1"
+ 
++#: plugins/shorteners/three_ly/three_ly.cpp:65
++msgid "3.ly error"
++msgstr "Ошибка службы 3.ly"
+ 
++#: plugins/shorteners/goo_gl/goo_gl.cpp:61
++msgid "Error when creating job"
++msgstr "Ошибка во время создания задания"
+ 
++#: plugins/shorteners/goo_gl/goo_gl.cpp:61
++#: plugins/shorteners/goo_gl/goo_gl.cpp:75
++#: plugins/shorteners/goo_gl/goo_gl.cpp:80
++#: plugins/shorteners/goo_gl/goo_gl.cpp:82
++msgid "Goo.gl error"
++msgstr "Ошибка службы Goo.gl"
+ 
+-#, fuzzy
++#: plugins/shorteners/yourls/yourls.cpp:87
++msgid "Yourls Error"
++msgstr "Ошибка службы Yourls"
+ 
++#: plugins/shorteners/tinyarro_ws/tinyarro_ws_config.cpp:59
++msgid "Random host"
++msgstr "Случайный хост"
+ 
++#: plugins/shorteners/tinyarro_ws/tinyarro_ws.cpp:73
++msgid "Tinyarro.ws error"
++msgstr "Ошибка службы Tinyarro.ws"
+ 
++#: plugins/shorteners/bit_ly/bit_ly_config.cpp:60
++msgid "You can find your API key <a href=\"http://bit.ly/a/your_api_key\">here</a>"
++msgstr "Вы можете найти свой ключ API <a href=\"http://bit.ly/a/your_api_key\">здесь</a>"
+ 
++#: plugins/shorteners/bit_ly/bit_ly_config.cpp:106
++msgid "Checking..."
++msgstr "Проверка..."
+ 
++#: plugins/shorteners/bit_ly/bit_ly_config.cpp:127
++msgid ""
++"Provided data is invalid. Try another login or API key.\n"
++"You can find it on http://bit.ly/a/your_api_key"
++msgstr ""
++"Информация недействительна. Попробуйте ввести другое имя пользователя или ключ API.\n"
++"Вы можете найти его здесь: http://bit.ly/a/your_api_key"
+ 
++#: plugins/shorteners/bit_ly/bit_ly_config.cpp:129
++msgid "You entered valid information!"
++msgstr "Вы ввели верные данные"
+ 
++#: plugins/shorteners/bit_ly/bit_ly_config.cpp:132
++msgid "bit.ly config error"
++msgstr "Ошибка конфигурации bit.ly"
+ 
++#: plugins/shorteners/bit_ly/bit_ly.cpp:83
++msgid "API key is invalid"
++msgstr "Ключ API недействителен"
+ 
++#: plugins/shorteners/bit_ly/bit_ly.cpp:85
++msgid "Login is invalid"
++msgstr "Имя пользователя недействительно"
+ 
++#: plugins/shorteners/bit_ly/bit_ly.cpp:87
++msgid "Rate limit exceeded. Try another shortener."
++msgstr "Превышен допустимый трафик. Попробуйте использовать другую службу сокращения ссылок."
+ 
++#: plugins/shorteners/bit_ly/bit_ly.cpp:89
++#: plugins/shorteners/bit_ly/bit_ly.cpp:92
++msgid "bit.ly error"
++msgstr "Ошибка службы bit.ly"
+ 
++#: plugins/konqueror/konqchoqok.cpp:54
++#: plugins/konqueror/konqchoqok.cpp:117
++msgid "Post Text with Choqok"
++msgstr "Отправить текст с помощью Choqok"
+ 
++#: plugins/konqueror/konqchoqok.cpp:59
++msgid "Shorten Url on Paste"
++msgstr "Сокращать ссылки при вставке"
+ 
++#: plugins/konqueror/konqchoqok.cpp:116
++msgid "You need to select text to post."
++msgstr "Нужно выбрать текст для сообщения."
+ 
++#: plugins/translator/translator.cpp:54
++msgid "Translate to ..."
++msgstr "Перевести на..."
+ 
+-#, fuzzy
++#: plugins/translator/translator.cpp:106
++#, kde-format
++msgid "<span style=\"color:%2; font-size:small;\">Translated from %1: (<a href='choqok://showoriginalpost' style=\"text-decoration:none\" >original post</a>)</span>"
++msgstr "<span style=\"color:%2; font-size:small;\">Переведено с %1: (<a href='choqok://showoriginalpost' style=\"text-decoration:none\" >original post</a>)</span>"
+ 
++#: plugins/translator/translator.cpp:117
++#, kde-format
++msgid "Translation failed: %1"
++msgstr "Не удалось перевести: %1"
+ 
++#: plugins/translator/translator.cpp:136
++msgid "Configure Translator"
++msgstr "Настройка переводчика"
+ 
++#: plugins/translator/sharedtools.cpp:33
++msgctxt "Translation Language"
++msgid "Chinese Simplified"
++msgstr "Китайский упрощенный"
+ 
+-#, fuzzy
++#: plugins/translator/sharedtools.cpp:34
++msgctxt "Translation Language"
++msgid "Chinese Traditional"
++msgstr "Китайский традиционный"
+ 
++#: plugins/translator/sharedtools.cpp:35
++msgctxt "Translation Language"
++msgid "Filipino"
++msgstr "Филлипинский"
+ 
++#: plugins/translator/sharedtools.cpp:36
++msgctxt "Translation Language"
++msgid "Haitian Creole"
++msgstr "Гаитянский креольский"
+ 
++#: plugins/translator/sharedtools.cpp:37
++msgctxt "Translation Language"
++msgid "Hebrew"
++msgstr "Иврит"
+ 
+-#, fuzzy
++#: plugins/translator/sharedtools.cpp:38
++msgctxt "Translation Language"
++msgid "Norwegian"
++msgstr "Норвежский"
+ 
++#: plugins/quickfilter/quickfilter.cpp:49
++msgid "Filter by author"
++msgstr "Фильтр по автору"
+ 
++#: plugins/quickfilter/quickfilter.cpp:51
++msgid "Filter by content"
++msgstr "Фильтр по содержанию"
+ 
++#: plugins/quickfilter/quickfilter.cpp:111
++msgid "Filter out timeline by author"
++msgstr "Отфильтровать ленту сообщений по автору"
+ 
++#: plugins/quickfilter/quickfilter.cpp:113
++msgid "Filter out timeline by text"
++msgstr "Отфильтровать ленту сообщений по тексту"
+ 
++#: plugins/quickfilter/quickfilter.cpp:126
++msgid "Author"
++msgstr "Автор"
+ 
++#: plugins/quickfilter/quickfilter.cpp:127
++msgid "Text"
++msgstr "Текст"
+ 
++#: plugins/searchaction/searchaction.cpp:41
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:162
++msgid "Search..."
++msgstr "Поиск..."
+ 
+-#, fuzzy
++#: plugins/searchaction/searchaction.cpp:61
++msgid "The Search action plugin does not support the current microblog."
++msgstr "Поисковый модуль не поддерживает текущий микроблог."
+ 
++#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:167
++msgid "Cannot load user information."
++msgstr "Не удалось загрузить информацию о пользователе."
+ 
++#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:253
++msgid "Close"
++msgstr "Закрыть"
+ 
++#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:265
++msgctxt "User posts"
++msgid "Posts"
++msgstr "Сообщения"
+ 
+-#, fuzzy
++#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:266
++msgctxt "User friends"
++msgid "Friends"
++msgstr "Друзья"
+ 
++#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:267
++msgctxt "User followers"
++msgid "Followers"
++msgstr "Подписчики"
+ 
++#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:276
++#, kde-format
++msgid "<table><tr><b>Last Status:</b> %1</tr></table>"
++msgstr "<table><tr><b>Последний статус:</b> %1</tr></table>"
+ 
++#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:280
++#, kde-format
++msgid "<h3>%1</h3>"
++msgstr "<h3>%1</h3>"
+ 
++#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:387
++msgid "Unsubscribe"
++msgstr "Отписаться"
+ 
++#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:392
++msgid "Subscribe"
++msgstr "Подписаться"
+ 
++#: helperlibs/twitterapihelper/twitterapiwhoiswidget.cpp:397
++msgid "Block"
++msgstr "Блокировать"
+ 
++#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:72
++msgctxt "@info:tooltip"
++msgid "Reply"
++msgstr "Ответить"
+ 
++#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:75
++#, kde-format
++msgid "Reply to %1"
++msgstr "Ответить %1"
+ 
++#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:80
++#, kde-format
++msgid "Write to %1"
++msgstr "Написать %1"
+ 
+-#, fuzzy
++#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:86
++msgid "Reply to all"
++msgstr "Ответить всем"
+ 
++#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:95
++msgctxt "@info:tooltip"
++msgid "Favorite"
++msgstr "Добавить в избранное"
+ 
++#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:129
++#, kde-format
++msgid "<a href='%1' title='Sent from %2 via OStatus'>%2</a>"
++msgstr "<a href='%1' title='Отправлено с %2 через OStatus'>%2</a>"
+ 
++#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:139
++msgid "Show Conversation"
++msgstr "Показать разговор"
+ 
+-#, fuzzy
++#: helperlibs/twitterapihelper/twitterapipostwidget.cpp:146
++#, kde-format
++msgid "<a href='replyto://%1'>in reply to</a> @<a href='user://%4'>%4</a>&nbsp;<a href=\"%2\" title=\"%2\">%3</a>"
++msgstr "<a href='replyto://%1'>в ответе</a> @<a href='user://%4'>%4</a>&nbsp;<a href=\"%2\" title=\"%2\">%3</a>"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblogwidget.cpp:101
++msgid "The search result is empty."
++msgstr "Ничего не найдено."
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblogwidget.cpp:227
++msgid "Close Timeline"
++msgstr "Закрыть ленту"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblogwidget.cpp:228
++msgid "Close All"
++msgstr "Закрыть все"
+ 
+-#, fuzzy
++#: helperlibs/twitterapihelper/twitterapisearchdialog.cpp:58
++#: helperlibs/twitterapihelper/twitterapisearchdialog.cpp:90
++msgid "Search"
++msgstr "Поиск"
+ 
++#: helperlibs/twitterapihelper/twitterapisearchdialog.cpp:83
++msgctxt "Search query"
++msgid "Query:"
++msgstr "Запрос:"
+ 
++#: helperlibs/twitterapihelper/twitterapisearchtimelinewidget.cpp:98
++msgid "Close Search"
++msgstr "Закрыть поиск"
+ 
++#: helperlibs/twitterapihelper/twitterapisearchtimelinewidget.cpp:105
++msgid "Previous"
++msgstr "Предыдущая"
+ 
++#: helperlibs/twitterapihelper/twitterapisearchtimelinewidget.cpp:110
++msgid "Next"
++msgstr "Следующая"
+ 
++#: helperlibs/twitterapihelper/twitterapisearchtimelinewidget.cpp:117
++msgid "Page Number"
++msgstr "Номер страницы"
+ 
++#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:55
++msgid "Send Private Message"
++msgstr "Отправить личное сообщение"
+ 
++#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:69
++msgctxt "Send private message"
++msgid "Send"
++msgstr "Отправить"
+ 
++#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:82
++msgctxt "Send message to"
++msgid "To:"
++msgstr "Получатель:"
+ 
++#: helperlibs/twitterapihelper/twitterapidmessagedialog.cpp:87
++msgid "Reload friends list"
++msgstr "Перезагрузить список друзей"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:105
++msgctxt "Timeline Name"
++msgid "Home"
++msgstr "Главная"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:106
++msgctxt "Timeline description"
++msgid "You and your friends"
++msgstr "Вы и ваши друзья"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:111
++msgctxt "Timeline Name"
++msgid "Reply"
++msgstr "Ответы"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:112
++msgctxt "Timeline description"
++msgid "Replies to you"
++msgstr "Ответы вам"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:117
++msgctxt "Timeline Name"
++msgid "Inbox"
++msgstr "Входящие"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:118
++msgctxt "Timeline description"
++msgid "Your incoming private messages"
++msgstr "Полученные личные сообщения"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:123
++msgctxt "Timeline Name"
++msgid "Outbox"
++msgstr "Исходящие"
+ 
+-#, fuzzy
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:124
++msgctxt "Timeline description"
++msgid "Private messages you have sent"
++msgstr "Отправленные личные сообщения"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:129
++msgctxt "Timeline Name"
++msgid "Favorite"
++msgstr "Избранное"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:130
++msgctxt "Timeline description"
++msgid "Your favorites"
++msgstr "Ваше избранное"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:135
++msgctxt "Timeline Name"
++msgid "Public"
++msgstr "Общая"
+ 
+-#, fuzzy
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:136
++msgctxt "Timeline description"
++msgid "Public timeline"
++msgstr "Общая лента сообщений"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:141
++msgctxt "Timeline Name"
++msgid "ReTweets"
++msgstr "Ретвиты"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:142
++msgctxt "Timeline description"
++msgid "Your posts that were ReTweeted by others"
++msgstr "Ваши сообщения, повторенные другими пользователями"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:157
++msgid "Send Private Message..."
++msgstr "Отправить личное сообщение..."
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:167
++msgid "Update Friends List"
++msgstr "Обновить список друзей"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:305
++msgid "Creating the new post failed. Text is empty."
++msgstr "Ошибка создания сообщения. Не введён текст."
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:403
++#, kde-format
++msgid "Creating the new post failed. %1"
++msgstr "Ошибка создания сообщения. %1"
+ 
+-#, fuzzy
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:421
++msgid "Creating the new post failed. The result data could not be parsed."
++msgstr "Ошибка создания нового сообщения. Данные не могут быть обработаны."
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:425
++#, kde-format
++msgid "Creating the new post failed, with error: %1"
++msgstr "Ошибка создания сообщения: %1"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:433
++msgid "Private message sent successfully"
++msgstr "Личное сообщение успешно отправлено"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:497
++#, kde-format
++msgid "Fetching the new post failed. %1"
++msgstr "Ошибка получения нового сообщения. %1"
+ 
+-#, fuzzy
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:514
++msgid "Fetching new post failed. The result data could not be parsed."
++msgstr "Ошибка получения нового сообщения. Данные не могут быть обработаны."
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:519
++#, kde-format
++msgid "Fetching new post failed, with error: %1"
++msgstr "Не удалось получить новое сообщение, ошибка: %1"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:568
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:577
++#, kde-format
++msgid "Removing the post failed. %1"
++msgstr "Не удалось удалить сообщение. %1"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:614
++#, kde-format
++msgid "Favorite creation failed. %1"
++msgstr "Не удалось создать избранное. %1"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:659
++#, kde-format
++msgid "Removing the favorite failed. %1"
++msgstr "Не удалось удалить избранное. %1"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:701
++#, kde-format
++msgid "Updating friends list for account %1 ..."
++msgstr "Обновление списка друзей учётной записи %1..."
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:710
++#, kde-format
++msgid ""
++"Friends list for account %1 could not be updated:\n"
++"%2"
++msgstr ""
++"Не удалось обновить список друзей учётной записи %1:\n"
++"%2"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:722
++#, kde-format
++msgid "Friends list for account %1 has been updated."
++msgstr "Список друзей учётной записи %1 обновлён."
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:798
++#, kde-format
++msgid "Timeline update failed, %1"
++msgstr "Не удалось обновить ленту сообщений. %1"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1258
++#, kde-format
++msgid "Creating friendship with %1 failed. %2"
++msgstr "Попытка подружиться с %1 не удалась. %2"
+ 
++# "ожидаете" не очень подходит: человек ведь не только этим занимается, что ждет сообщений --aspotashev
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1265
++#, kde-format
++msgid "You are now listening to %1's posts."
++msgstr "Сейчас вы ожидаете сообщения от %1"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1273
++#, kde-format
++msgid "Creating friendship with %1 failed: the server returned invalid data."
++msgstr "Попытка подружиться с %1 не удалась: сервер прислал недопустимые данные."
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1278
++#, kde-format
++msgid "Creating friendship with %1 failed: %2"
++msgstr "Попытка подружиться с %1 не удалась: %2"
+ 
+-#, fuzzy
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1316
++#, kde-format
++msgid "Destroying friendship with %1 failed. %2"
++msgstr "Прекращение дружбы с %1 не удалось. %2"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1323
++#, kde-format
++msgid "You will not receive %1's updates."
++msgstr "Вы не будете получать обновлений от %1."
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1331
++#, kde-format
++msgid "Destroying friendship with %1 failed: the server returned invalid data."
++msgstr "Прекращение дружбы с %1 не удалось: сервер прислал недопустимые данные."
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1336
++#, kde-format
++msgid "Destroying friendship with %1 failed: %2"
++msgstr "Прекращение дружбы с %1 не удалось: %2"
+ 
+-#, fuzzy
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1373
++#, kde-format
++msgid "Blocking %1 failed. %2"
++msgstr "Блокирование %1 не удалось. %2"
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1379
++#, kde-format
++msgid "You will no longer be disturbed by %1."
++msgstr "%1 больше не будет вас беспокоить."
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1383
++#, kde-format
++msgid "Blocking %1 failed: the server returned invalid data."
++msgstr "Блокирование %1 не удалось: сервер прислал недопустимые данные."
+ 
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1488
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1511
++#: helperlibs/twitterapihelper/twitterapimicroblog.cpp:1570
++msgid "Could not parse the data that has been received from the server."
++msgstr "Невозможно разобрать данные, полученные от сервера."
+ 
++#~ msgctxt "Close a timeline"
+ 
++#~ msgid "Close Timeline"
++#~ msgstr "Закрыть ленту"
+ 
++#~ msgid "<a href='%1'>in context</a>"
++#~ msgstr "<a href='%1'>в контексте</a>"
+ 
+-#, fuzzy
+\ В конце файла нет новой строки
++#~ msgid "PIN number"
++#~ msgstr "PIN"
++
++#~ msgid " Minute"
++
++#~ msgid_plural " Minutes"
++#~ msgstr[0] " минута"
++#~ msgstr[1] " минуты"
++#~ msgstr[2] " минут"
++#~ msgstr[3] " минута"
++
++#~ msgid " Second"
++
++#~ msgid_plural " Seconds"
++#~ msgstr[0] " секунда"
++#~ msgstr[1] " секунды"
++#~ msgstr[2] " секунд"
++#~ msgstr[3] " секунда"
++
++#~ msgid "KDE Micro-Blogging Client."
++#~ msgstr "Клиент микроблоггинга для KDE."
++
++#~ msgid "1 unread post"
++
++#~ msgid_plural "%1 unread posts"
++#~ msgstr[0] "%1 непрочитанное сообщение"
++#~ msgstr[1] "%1 непрочитанных сообщения"
++#~ msgstr[2] "%1 непрочитанных сообщений"
++#~ msgstr[3] "Одно непрочитанное сообщение"
++
++#~ msgid "1 new post in %2(%3)"
++
++#~ msgid_plural "%1 new posts in %2(%3)"
++#~ msgstr[0] "%1 новое сообщение в %2(%3)"
++#~ msgstr[1] "%1 новых сообщения в %2(%3)"
++#~ msgstr[2] "%1 новых сообщений в %2(%3)"
++#~ msgstr[3] "1 новое сообщение в %2(%3)"
++
++#~ msgid "1 sec ago"
++
++#~ msgid_plural "%1 secs ago"
++#~ msgstr[0] "%1 секунду назад"
++#~ msgstr[1] "%1 секунды назад"
++#~ msgstr[2] "%1 секунд назад"
++#~ msgstr[3] "1 секунду назад"
++
++#~ msgid "1 min ago"
++
++#~ msgid_plural "%1 mins ago"
++#~ msgstr[0] "%1 минуту назад"
++#~ msgstr[1] "%1 минуты назад"
++#~ msgstr[2] "%1 минут назад"
++#~ msgstr[3] "1 минуту назад"
++
++#~ msgid "1 hour ago"
++
++#~ msgid_plural "%1 hours ago"
++#~ msgstr[0] "%1 час назад"
++#~ msgstr[1] "%1 часа назад"
++#~ msgstr[2] "%1 часов назад"
++#~ msgstr[3] "1 час назад"
++
++#~ msgid "1 day ago"
++
++#~ msgid_plural "%1 days ago"
++#~ msgstr[0] "%1 день назад"
++#~ msgstr[1] "%1 дня назад"
++#~ msgstr[2] "%1 дней назад"
++#~ msgstr[3] "1 день назад"
++#~ msgctxt "NAME OF TRANSLATORS"
++
++#~ msgid "Your names"
++#~ msgstr ""
++#~ "Николай Ерёмин,Александр Наталенко,Максим Воробьёв,Валерий Харитонов"
++#~ msgctxt "EMAIL OF TRANSLATORS"
++
++#~ msgid "Your emails"
++#~ msgstr ""
++#~ "doktorkster@gmail.com,pfactum@gmail.com,vmax0770@gmail.com,kharvd@gmail."
++#~ "com"
