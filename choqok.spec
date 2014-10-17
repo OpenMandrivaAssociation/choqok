@@ -11,6 +11,7 @@ BuildRequires:	kdelibs4-devel
 BuildRequires:	qjson-devel
 BuildRequires:	qoauth-devel
 BuildRequires:	attica-devel
+BuildRequires:	pkgconfig(qca2)
 Requires:	kdebase4-runtime
 
 %description
