@@ -11,7 +11,7 @@ BuildRequires:	kdelibs4-devel
 BuildRequires:	qjson-devel
 BuildRequires:	qoauth-devel
 BuildRequires:	attica-devel
-BuildRequires:	pkgconfig(qca2)
+BuildRequires:	qca-devel-qt4
 Requires:	kdebase4-runtime
 
 %description
@@ -84,6 +84,9 @@ based on %{name}.
 %patch0 -p0
 
 %build
+# our qca pkg config is in a non standard path due to qt5/4 split
+export PKG_CONFIG_PATH=%{_libdir}/qt4/pkgconfig
+
 %cmake_kde4
 %make
 
