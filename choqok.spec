@@ -1,6 +1,6 @@
 Name:		choqok
-Version:	1.4
-Release:	8
+Version:	1.5
+Release:	1
 Summary:	KDE Micro-Blogging Client
 License:	GPLv3
 Group:		Graphical desktop/KDE
@@ -29,6 +29,7 @@ Choqok is a Free/Open Source micro-blogging client for K Desktop
 %{_kde_services}/choqok_*.desktop
 %{_kde_services}/ServiceMenus/*.desktop
 %{_kde_servicetypes}/choqok*.desktop
+%{_datadir}/appdata/choqok.appdata.xml
 
 #-------------------------------------------------------------------
 
