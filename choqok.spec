@@ -1,6 +1,6 @@
 Name:		choqok
-Version:	1.4
-Release:	1
+Version:	1.5
+Release:	0.1
 Summary:	KDE Micro-Blogging Client
 License:	GPLv3
 Group:		Graphical desktop/KDE
@@ -11,6 +11,7 @@ BuildRequires:	kdelibs4-devel
 BuildRequires:	qjson-devel
 BuildRequires:	qoauth-devel
 BuildRequires:	attica-devel
+BuildRequires:	pkgconfig(qca2)
 Requires:	kdebase4-runtime
 
 %description
@@ -28,6 +29,7 @@ Choqok is a Free/Open Source micro-blogging client for K Desktop
 %{_kde_services}/choqok_*.desktop
 %{_kde_services}/ServiceMenus/*.desktop
 %{_kde_servicetypes}/choqok*.desktop
+%{_datadir}/appdata/choqok.appdata.xml
 
 #-------------------------------------------------------------------
 
@@ -83,6 +85,9 @@ based on %{name}.
 %patch0 -p0
 
 %build
+# our qca pkg config is in a non standard path due to qt5/4 split
+export PKG_CONFIG_PATH=%{_libdir}/qt4/pkgconfig
+
 %cmake_kde4
 %make
 
