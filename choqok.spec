@@ -1,35 +1,60 @@
 Name:		choqok
-Version:	1.5
-Release:	2
+Version:	1.6.0
+Release:	1
 Summary:	KDE Micro-Blogging Client
 License:	GPLv3
 Group:		Graphical desktop/KDE
 URL:		http://choqok.gnufolks.org/
-Source0:	http://downloads.sourceforge.net/choqok/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/choqok/1.6/src/%{name}-%{version}.tar.xz
 Patch0:		choqok-0.9.85-dbus-service-dir.patch
-BuildRequires:	kdelibs4-devel
-BuildRequires:	qjson-devel
-BuildRequires:	qoauth-devel
-BuildRequires:	attica-devel
-BuildRequires:	qca-devel-qt4
-Requires:	kdebase4-runtime
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF5Archive)
+BuildRequires:	cmake(KF5Attica)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5ConfigWidgets)
+BuildRequires:	cmake(KF5CoreAddons) 
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5Emoticons)
+BuildRequires:	cmake(KF5GlobalAccel)
+BuildRequires:	cmake(KF5GuiAddons)
+BuildRequires:	cmake(KF5KCMUtils)
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5Notifications)
+BuildRequires:	cmake(KF5NotifyConfig)
+BuildRequires:	cmake(KF5Parts)
+BuildRequires:	cmake(KF5Sonnet)
+BuildRequires:	cmake(KF5TextWidgets)
+BuildRequires:	cmake(KF5Wallet)
+BuildRequires:	cmake(KF5WidgetsAddons)
+BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	qt5-qttools
+BuildRequires:	pkgconfig(Qt5Concurrent)
+BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:	pkgconfig(Qt5DBus)
+BuildRequires:	pkgconfig(Qt5Gui)
+BuildRequires:	pkgconfig(Qt5Network)
+BuildRequires:	pkgconfig(Qt5Widgets)
+
+BuildRequires:	pkgconfig(qca2-qt5)
+BuildRequires:	pkgconfig(qoauth-qt5)
 
 %description
 Choqok is a Free/Open Source micro-blogging client for K Desktop 
 
 %files -f %{name}.lang
 %{_datadir}/dbus-1/services/org.kde.choqok.service
-%{_kde_bindir}/choqok
-%{_kde_libdir}/kde4/*.so
-%{_kde_applicationsdir}/choqok.desktop
-%{_kde_appsdir}/choqok*
-%{_kde_appsdir}/khtml/kpartplugins/*
-%{_kde_datadir}/config.kcfg/*.kcfg
-%{_kde_iconsdir}/*/*/*/*
-%{_kde_services}/choqok_*.desktop
-%{_kde_services}/ServiceMenus/*.desktop
-%{_kde_servicetypes}/choqok*.desktop
-%{_datadir}/appdata/choqok.appdata.xml
+%{_kde5_bindir}/choqok
+%{_qt5_plugindir}/*.so
+%{_kde5_applicationsdir}/org.kde.choqok.desktop
+%{_kde5_datadir}/choqok
+%{_kde5_datadir}/config.kcfg/*.kcfg
+%{_kde5_iconsdir}/*/*/*/*
+%{_kde5_services}/choqok_*.desktop
+%{_kde5_servicetypes}/choqok*.desktop
+%{_kde5_datadir}/kxmlgui5/*
+%{_kde5_datadir}/knotifications5/choqok
+%{_datadir}/metainfo/org.kde.choqok.appdata.xml
 
 #-------------------------------------------------------------------
 
@@ -44,7 +69,7 @@ Group:		System/Libraries
 %{name} library.
 
 %files -n %{libchoqok}
-%{_kde_libdir}/libchoqok.so.%{choqok_major}*
+%{_kde5_libdir}/libchoqok.so.%{choqok_major}*
 
 #-------------------------------------------------------------------
 
@@ -59,7 +84,23 @@ Group:		System/Libraries
 %{name} library.
 
 %files -n %{libtwitterapihelper}
-%{_kde_libdir}/libtwitterapihelper.so.%{twitterapihelper_major}*
+%{_kde5_libdir}/libtwitterapihelper.so.%{twitterapihelper_major}*
+
+#-------------------------------------------------------------------
+
+%define gnusocialapihelper_major 1
+%define libgnusocialapihelper %mklibname gnusocialapihelper %{gnusocialapihelper_major}
+
+%package -n %{libgnusocialapihelper}
+Summary:        %{name} library
+Group:          System/Libraries
+
+%description -n %{libgnusocialapihelper}
+%{name} library.
+
+%files -n %{libgnusocialapihelper}
+%{_kde5_libdir}/libgnusocialapihelper.so.%{gnusocialapihelper_major}*
+
 
 #-------------------------------------------------------------------
 
@@ -74,25 +115,27 @@ This package contains header files needed if you wish to build applications
 based on %{name}.
 
 %files devel
-%{_kde_libdir}/libchoqok.so
-%{_kde_libdir}/libtwitterapihelper.so
-%{_kde_includedir}/choqok
-%{_kde_appsdir}/cmake/modules/*.cmake
+%{_kde5_libdir}/libchoqok.so
+%{_kde5_libdir}/libgnusocialapihelper.so
+%{_kde5_libdir}/libtwitterapihelper.so
+%{_kde5_includedir}/choqok
+%{_datadir}/cmake/modules/*.cmake
 
 #--------------------------------------------------------------------
 %prep
 %setup -q
 %patch0 -p0
 
+# Find QtOauth-qt5
+sed -i -e 's|NAMES qoauth|NAMES qoauth5|' cmake/modules/FindQtOAuth.cmake
+sed -i -e 's|QUIET qoauth|QUIET qoauth-qt5|' cmake/modules/FindQtOAuth.cmake
+#sed -i -e 's|QtOAuth/interface.h|interface.h|' cmake/modules/FindQtOAuth.cmake
 %build
-# our qca pkg config is in a non standard path due to qt5/4 split
-export PKG_CONFIG_PATH=%{_libdir}/qt4/pkgconfig
-
-%cmake_kde4
-%make
+%cmake_kde5
+%ninja
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
 
 # Remove it to avoid file conflicts with kdepimlibs4-devel 4.10
 rm -f %{buildroot}%{_kde_appsdir}/cmake/modules/FindQtOAuth.cmake
