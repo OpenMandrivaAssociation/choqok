@@ -1,6 +1,6 @@
 Name:		choqok
 Version:	1.6.0
-Release:	2
+Release:	3
 Summary:	KDE Micro-Blogging Client
 License:	GPLv3
 Group:		Graphical desktop/KDE
@@ -44,17 +44,20 @@ Choqok is a Free/Open Source micro-blogging client for K Desktop
 
 %files -f %{name}.lang
 %{_datadir}/dbus-1/services/org.kde.choqok.service
-%{_kde5_bindir}/choqok
+%{_bindir}/choqok
 %{_qt5_plugindir}/*.so
 %{_kde5_applicationsdir}/org.kde.choqok.desktop
-%{_kde5_datadir}/choqok
-%{_kde5_datadir}/config.kcfg/*.kcfg
-%{_kde5_iconsdir}/*/*/*/*
+%{_datadir}/choqok
+%{_datadir}/config.kcfg/*.kcfg
+%{_iconsdir}/*/*/*/*
 %{_kde5_services}/choqok_*.desktop
 %{_kde5_servicetypes}/choqok*.desktop
-%{_kde5_datadir}/kxmlgui5/*
-%{_kde5_datadir}/knotifications5/choqok
+%{_datadir}/kxmlgui5/*
+%{_datadir}/knotifications5/choqok
 %{_datadir}/metainfo/org.kde.choqok.appdata.xml
+%{_libdir}/qt5/plugins/kf5/parts/konqchoqokplugin.so
+%{_datadir}/kservices5/ServiceMenus/choqok*.desktop
+%{_datadir}/kservices5/konqchoqok.desktop
 
 #-------------------------------------------------------------------
 
@@ -69,7 +72,7 @@ Group:		System/Libraries
 %{name} library.
 
 %files -n %{libchoqok}
-%{_kde5_libdir}/libchoqok.so.%{choqok_major}*
+%{_libdir}/libchoqok.so.%{choqok_major}*
 
 #-------------------------------------------------------------------
 
@@ -84,7 +87,7 @@ Group:		System/Libraries
 %{name} library.
 
 %files -n %{libtwitterapihelper}
-%{_kde5_libdir}/libtwitterapihelper.so.%{twitterapihelper_major}*
+%{_libdir}/libtwitterapihelper.so.%{twitterapihelper_major}*
 
 #-------------------------------------------------------------------
 
@@ -99,7 +102,7 @@ Group:          System/Libraries
 %{name} library.
 
 %files -n %{libgnusocialapihelper}
-%{_kde5_libdir}/libgnusocialapihelper.so.%{gnusocialapihelper_major}*
+%{_libdir}/libgnusocialapihelper.so.%{gnusocialapihelper_major}*
 
 
 #-------------------------------------------------------------------
@@ -115,10 +118,10 @@ This package contains header files needed if you wish to build applications
 based on %{name}.
 
 %files devel
-%{_kde5_libdir}/libchoqok.so
-%{_kde5_libdir}/libgnusocialapihelper.so
-%{_kde5_libdir}/libtwitterapihelper.so
-%{_kde5_includedir}/choqok
+%{_libdir}/libchoqok.so
+%{_libdir}/libgnusocialapihelper.so
+%{_libdir}/libtwitterapihelper.so
+%{_includedir}/choqok
 %{_datadir}/cmake/modules/*.cmake
 
 #--------------------------------------------------------------------
@@ -141,4 +144,3 @@ sed -i -e 's|QUIET qoauth|QUIET qoauth-qt5|' cmake/modules/FindQtOAuth.cmake
 rm -f %{buildroot}%{_kde_appsdir}/cmake/modules/FindQtOAuth.cmake
 
 %find_lang %{name} --with-html
-
