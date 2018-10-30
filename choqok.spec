@@ -1,6 +1,6 @@
 Name:		choqok
 Version:	1.6.0
-Release:	3
+Release:	4
 Summary:	KDE Micro-Blogging Client
 License:	GPLv3
 Group:		Graphical desktop/KDE
