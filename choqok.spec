@@ -140,6 +140,8 @@ sed -i -e 's|NAMES qoauth|NAMES qoauth5|' cmake/modules/FindQtOAuth.cmake
 sed -i -e 's|QUIET qoauth|QUIET qoauth-qt5|' cmake/modules/FindQtOAuth.cmake
 #sed -i -e 's|QtOAuth/interface.h|interface.h|' cmake/modules/FindQtOAuth.cmake
 %build
+export CC=gcc
+export CXX=g++
 %cmake_kde5
 %ninja
 
