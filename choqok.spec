@@ -1,11 +1,11 @@
 Name:		choqok
-Version:	1.6.0
-Release:	4
+Version:	1.7.0
+Release:	1
 Summary:	KDE Micro-Blogging Client
 License:	GPLv3
 Group:		Graphical desktop/KDE
 URL:		http://choqok.gnufolks.org/
-Source0:	http://download.kde.org/stable/choqok/1.6/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/choqok/1.7/src/%{name}-%{version}.tar.xz
 Patch0:		choqok-0.9.85-dbus-service-dir.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Archive)
@@ -23,6 +23,7 @@ BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5Notifications)
 BuildRequires:	cmake(KF5NotifyConfig)
 BuildRequires:	cmake(KF5Parts)
+BuildRequires:  cmake(KF5Purpose)
 BuildRequires:	cmake(KF5Service)
 BuildRequires:	cmake(KF5Sonnet)
 BuildRequires:	cmake(KF5TextWidgets)
@@ -36,10 +37,13 @@ BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5DBus)
 BuildRequires:	pkgconfig(Qt5Gui)
 BuildRequires:	pkgconfig(Qt5Network)
+BuildRequires:  pkgconfig(Qt5NetworkAuth)
 BuildRequires:	pkgconfig(Qt5Widgets)
 
 BuildRequires:	pkgconfig(qca2-qt5)
 BuildRequires:	pkgconfig(qoauth-qt5)
+
+BuildRequires:	qca
 
 %description
 Choqok is a Free/Open Source micro-blogging client for K Desktop 
