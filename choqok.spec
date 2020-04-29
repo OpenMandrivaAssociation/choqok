@@ -1,6 +1,3 @@
-%define _disable_ld_no_undefined 1
-%define _disable_lto 1
-
 Name:		choqok
 Version:	1.7.0
 Release:	1
@@ -64,8 +61,10 @@ Choqok is a Free/Open Source micro-blogging client for K Desktop
 %{_kde5_servicetypes}/choqok*.desktop
 %{_datadir}/kxmlgui5/*
 #{_datadir}/knotifications5/choqok
+#{_datadir}/knotifications5/choqok.notifyrc
 %{_datadir}/metainfo/org.kde.choqok.appdata.xml
 %{_libdir}/qt5/plugins/kf5/parts/konqchoqokplugin.so
+%{_libdir}/qt5/plugins/kf5/purpose/purposeplugin.so
 %{_datadir}/kservices5/ServiceMenus/choqok*.desktop
 %{_datadir}/kservices5/konqchoqok.desktop
 
