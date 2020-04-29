@@ -63,7 +63,7 @@ Choqok is a Free/Open Source micro-blogging client for K Desktop
 %{_kde5_services}/choqok_*.desktop
 %{_kde5_servicetypes}/choqok*.desktop
 %{_datadir}/kxmlgui5/*
-%{_datadir}/knotifications5/choqok
+#{_datadir}/knotifications5/choqok
 %{_datadir}/metainfo/org.kde.choqok.appdata.xml
 %{_libdir}/qt5/plugins/kf5/parts/konqchoqokplugin.so
 %{_datadir}/kservices5/ServiceMenus/choqok*.desktop
