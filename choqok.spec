@@ -10,6 +10,7 @@ Group:		Graphical desktop/KDE
 URL:		http://choqok.gnufolks.org/
 Source0:	http://download.kde.org/stable/choqok/1.7/src/%{name}-%{version}.tar.xz
 Patch0:		choqok-0.9.85-dbus-service-dir.patch
+Patch1:   https://github.com/KDE/choqok/commit/9c488d8f776b5e7462e8e57dc2b15db5fe28815a.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Archive)
 BuildRequires:	cmake(KF5Attica)
@@ -137,6 +138,7 @@ based on %{name}.
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p1
 
 # Find QtOauth-qt5
 sed -i -e 's|NAMES qoauth|NAMES qoauth5|' cmake/modules/FindQtOAuth.cmake
