@@ -1,6 +1,6 @@
 Name:		choqok
 Version:	1.7.0
-Release:	3
+Release:	4
 Summary:	KDE Micro-Blogging Client
 License:	GPLv3
 Group:		Graphical desktop/KDE
@@ -8,6 +8,9 @@ URL:		http://choqok.gnufolks.org/
 Source0:	http://download.kde.org/stable/choqok/1.7/src/%{name}-%{version}.tar.xz
 Patch0:		choqok-0.9.85-dbus-service-dir.patch
 Patch1:   https://github.com/KDE/choqok/commit/9c488d8f776b5e7462e8e57dc2b15db5fe28815a.patch
+# twitter third party clients no longer work
+# konqueror plugin is broken and obsolete
+Patch2:		choqok-1.7.0-disable_obsolete.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Archive)
 BuildRequires:	cmake(KF5Attica)
@@ -29,8 +32,6 @@ BuildRequires:	cmake(KF5Service)
 BuildRequires:	cmake(KF5Sonnet)
 BuildRequires:	cmake(KF5TextWidgets)
 BuildRequires:	cmake(KF5Wallet)
-BuildRequires:	cmake(KF5WebKit)
-BuildRequires:	cmake(KF5WidgetsAddons)
 BuildRequires:	cmake(KF5XmlGui)
 BuildRequires:	qt5-qttools
 BuildRequires:	pkgconfig(Qt5Concurrent)
@@ -62,10 +63,7 @@ Choqok is a Free/Open Source micro-blogging client for K Desktop
 %{_datadir}/kxmlgui5/*
 %{_datadir}/knotifications5/choqok.notifyrc
 %{_datadir}/metainfo/org.kde.choqok.appdata.xml
-%{_libdir}/qt5/plugins/kf5/parts/konqchoqokplugin.so
 %{_libdir}/qt5/plugins/kf5/purpose/purposeplugin.so
-%{_datadir}/kservices5/ServiceMenus/choqok*.desktop
-%{_datadir}/kservices5/konqchoqok.desktop
 
 #-------------------------------------------------------------------
 
@@ -134,9 +132,7 @@ based on %{name}.
 
 #--------------------------------------------------------------------
 %prep
-%setup -q
-%patch0 -p0
-%patch1 -p1
+%autosetup -p1
 
 # Find QtOauth-qt5
 sed -i -e 's|NAMES qoauth|NAMES qoauth5|' cmake/modules/FindQtOAuth.cmake

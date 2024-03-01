@@ -1,0 +1,26 @@
+--- choqok-1.7.0/plugins/CMakeLists.txt.orig	2024-03-01 15:41:37.590323803 +0000
++++ choqok-1.7.0/plugins/CMakeLists.txt	2024-03-01 15:41:48.298991485 +0000
+@@ -13,14 +13,6 @@
+ add_subdirectory(uploaders)
+ 
+ find_package(KF5Parts)
+-find_package(KF5WebKit)
+-
+-IF(KF5WebKit_FOUND AND KF5Parts_FOUND)
+-    message(STATUS "FOUND KF5::WebKit and KF5::Parts: Will build \"Konqueror Choqok\" plugin")
+-    add_subdirectory(konqueror)
+-ELSEIF(KF5WebKit_FOUND AND KF5Parts_FOUND)
+-    message(WARNING "Optional dependency \"KF5::WebKit\" or \"KF5::Parts\" NOT FOUND, won't build \"Konqueror Choqok\" plugin")
+-ENDIF(KF5WebKit_FOUND AND KF5Parts_FOUND)
+ 
+ if(KF5Purpose_FOUND)
+     message(STATUS "Found KF5::Purpose: Will build Share plugin")
+--- choqok-1.7.0/microblogs/CMakeLists.txt.orig	2024-03-01 15:40:54.034675137 +0000
++++ choqok-1.7.0/microblogs/CMakeLists.txt	2024-03-01 15:41:12.084115193 +0000
+@@ -1,6 +1,5 @@
+ find_package(KF5Attica)
+ 
+-add_subdirectory(twitter)
+ add_subdirectory(mastodon)
+ add_subdirectory(laconica)
+ add_subdirectory(friendica)
