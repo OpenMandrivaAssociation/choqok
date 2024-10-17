@@ -4,7 +4,7 @@ Release:	5
 Summary:	KDE Micro-Blogging Client
 License:	GPLv3
 Group:		Graphical desktop/KDE
-URL:		http://choqok.gnufolks.org/
+URL:		https://choqok.gnufolks.org/
 Source0:	http://download.kde.org/stable/choqok/1.7/src/%{name}-%{version}.tar.xz
 Patch0:		choqok-0.9.85-dbus-service-dir.patch
 Patch1:   https://github.com/KDE/choqok/commit/9c488d8f776b5e7462e8e57dc2b15db5fe28815a.patch
